@@ -5,9 +5,10 @@
 
 * [Introduction](#introduction)
 * [Problem](#problem)
+* [About](#about)
 * [Our solution](#our-solution)
 * [How it works](#how-it-works)
-* [Documentation](#full-documentation)
+* [Documentation](#documentation)
 * [Developers](#developers)
 
 ## Introduction
@@ -21,6 +22,10 @@ Currently, the search feature of the SPARC Portal is very limited:
 1) It does not account for nearby words. E.g.: when a word is misspelled.
 
 2) The result display is primitive. E.g.: Limited result filtering, or matched text results are not highlighted.
+
+## About AQUA
+
+AQUA is an application that aims at improving the search capabilities of the [SPARC Portal](https://sparc.science/). In particular, we are looking to make the search engine smarter at reading and understanding user input as search keywords. We also enhance the result display feature of the SPARC Portal by making it more user-friendly and providing users with more sophisticated result filtering and sorting options. Our end goal is to improve exponentially the visibility of the SPARC datasets. This in turn will benefit the SPARC community as a whole since their datasets will be more discoverable for reuse and subsequent collaboration. This project was created during the 2021 SPARC FAIR Codeathon.
 
 ## Our solution
 
