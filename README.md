@@ -1,11 +1,19 @@
 # AQUA
 ### An Advanced QUery Architecture for the SPARC Portal
 
-# Introduction
+## Table of Contents
+
+* [Introduction](#introduction)
+* [Problem](#problem)
+* [Our solution](#our-solution)
+* [How it works](#how-it-works)
+* [Developers](#developers)
+
+## Introduction
 
 In today's world where information retrieval is expected in a matter of miliseconds, a strong search engine is essential. Take Google and Facebook, 2 of the five most popular search engines in the world, for example. Every day, millions or even billions of queries are made, potentially with typos and close-matches. Facebook returns suggestions for a profile name we fuzzily search but do not know for sure. Google returns to us not only what we want, but also tons of related information. In the medical research world, unless published datasets are easy to find, their potential for reuse and collaboration will be limited. A search engine serves as the middleman between scientific discovery and scientific progress in that sense. The stronger and smarter the search engine is, the faster the progress.
 
-# Problem
+## Problem
 
 Currently, the search feature of the SPARC Portal is very limited: 
 
@@ -13,7 +21,7 @@ Currently, the search feature of the SPARC Portal is very limited:
 
 2) The result display is primitive. E.g.: Limited result filtering, or matched text results are not highlighted.
 
-# Solution
+## Our solution
 
 1) Apply Artificial Intelligence tools (Natural Language Processing) to the processing of users’ search keywords and to the implementation of predictive typing (suggestion-based typing). 
 
@@ -27,7 +35,7 @@ Currently, the search feature of the SPARC Portal is very limited:
 
 - Add a “Notify me when related datasets are published” when “No results” are returned. This will allow users to enter their email to be stored by the SPARC Portal for future alerts. 
 
-# Workflow 
+## How it works 
 
 
 <p align="left">
@@ -36,4 +44,10 @@ Currently, the search feature of the SPARC Portal is very limited:
   </img>
 </p>
 
+## Developers
 
+- Tram Ngo 
+- Laila Rasmy
+- Niloofar Shahidi
+- Yuda Munarko
+- Xuanzhi
