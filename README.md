@@ -7,6 +7,7 @@
 * [Problem](#problem)
 * [Our solution](#our-solution)
 * [How it works](#how-it-works)
+* [Documentation](#full-documentation)
 * [Developers](#developers)
 
 ## Introduction
@@ -43,6 +44,10 @@ Currently, the search feature of the SPARC Portal is very limited:
   <br/> 
   </img>
 </p>
+
+## Documentation
+
+For a detailed documentation of our application, please visit here.
 
 ## Developers
 
