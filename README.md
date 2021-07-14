@@ -1,5 +1,5 @@
 # AQUA
-An Advanced QUery Architecture for the SPARC Portal
+### An Advanced QUery Architecture for the SPARC Portal
 
 # Introduction
 
@@ -17,7 +17,7 @@ Currently, the search feature of the SPARC Portal is very limited:
 
 1) Apply Artificial Intelligence tools (Natural Language Processing) to the processing of users’ search keywords and to the implementation of predictive typing (suggestion-based typing). 
 
-In details, in addition to lemmatization, other NIH tools (e.g: NIF Ontology) will be used to derive origins of words and make suggestions for users as they type. This will help AQUA standardize various user inputs and return the most datasets possible that match the search keywords.
+- In details, in addition to lemmatization, other NIH tools (e.g: NIF Ontology) will be used to derive origins of words and make suggestions for users as they type. This will help AQUA standardize various user inputs and return the most datasets possible that match the search keywords.
 
 2) Enhance the current result display by:
 
