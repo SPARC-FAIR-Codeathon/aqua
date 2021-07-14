@@ -6,7 +6,7 @@
 * [Introduction](#introduction)
 * [About us](#about-us)
 * [Problem](#problem)
-* [Our solution](#our-solution)
+* [AQUA solution](#aqua-solution)
 * [How it works](#how-it-works)
 * [Documentation](#documentation)
 * [Developers](#developers)
@@ -27,7 +27,7 @@ Currently, the search feature of the SPARC Portal is very limited:
 
 2) The result display is primitive. E.g.: Limited result filtering, or matched text results are not highlighted.
 
-## Our solution
+## AQUA solution
 
 1) Apply Artificial Intelligence tools (Natural Language Processing) to the processing of users’ search keywords and to the implementation of predictive typing (suggestion-based typing). 
 
