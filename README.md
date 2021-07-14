@@ -31,4 +31,11 @@ Currently, the search feature of the SPARC Portal is very limited:
 
 
 
+<p align="left">
+  <img src="https://github.com/SPARC-FAIR-Codeathon/aqua/raw/main/src/assets/images/workflow.JPG" alt="interface" width="600" height="300"> 
+  <br/> 
+  <i> The workflow of AQUA </i>
+  </img>
+</p>
+
 
