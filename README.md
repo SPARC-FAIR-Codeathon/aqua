@@ -58,6 +58,6 @@ For a detailed documentation of our application, please visit here.
 
 - [Tram Ngo](https://github.com/tramngo1603) (Lead)
 - [Laila Rasmy](https://github.com/lrasmy) (Sysadmin)
-- [Niloofar Shahidi]() (Technical writer)
+- [Niloofar Shahidi](https://github.com/Niloofar-Sh) (Technical writer)
 - [Yuda Munarko](https://github.com/napakalas) (Sysadmin)
 - Xuanzhi
