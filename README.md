@@ -56,8 +56,8 @@ For a detailed documentation of our application, please visit here.
 
 ## Developers
 
-- Tram Ngo 
-- Laila Rasmy
-- Niloofar Shahidi
-- Yuda Munarko
+- Tram Ngo (Lead)
+- Laila Rasmy (Sysadmin)
+- Niloofar Shahidi (Technical writer)
+- Yuda Munarko (Sysadmin)
 - Xuanzhi
