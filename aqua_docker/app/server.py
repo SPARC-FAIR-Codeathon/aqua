@@ -6,18 +6,27 @@ app = Sanic(name='Biosimulation_Model_IR')
 
 
 #import helper
-from .utils.helper import *
+from .utils.helper import getSuggestions, getSearch, loadMain, getAutoComplete
 
 @app.route("/")
 async def root(request):
     return loadMain()
 
 @app.route("/search")
-async def root(request):
-   return search(request,tester)
+async def search(request):
+    return getSearch(request)
+
+@app.route("/suggestions")
+async def suggestions(request):
+    return getSuggestions(request)
+
+@app.route("/autocomplete")
+async def autocomplete(request):
+    return getAutoComplete(request)
 
 app.static('/cache', './cache', '/static', './static')  # while in docker files from static will be served by ngnix
 if __name__ == "__main__":
+    import os
     for k, v in os.environ.items():
         if k.startswith(SANIC_PREFIX):
             _, config_key = k.split(SANIC_PREFIX, 1)

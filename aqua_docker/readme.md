@@ -8,8 +8,7 @@ Docker deployment:
   - go to the containing directory:
     `cd aqua_docker`
   - Start a new docker-machine:
-    `docker-machine create -d virtualbox --virtualbox-memory 8192 aqua;`
-    unfortunately, we need a large memory for CoreNLP and Stanza
+    `docker-machine create -d virtualbox --virtualbox-memory 1024 aqua;`
   - Attach to the machine:
     `eval "$(docker-machine env aqua)"`
 

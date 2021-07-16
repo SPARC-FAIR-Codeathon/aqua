@@ -1,11 +1,8 @@
 import os
-import math
+import requests
 from sanic.response import json, text, html
 
-def hello_world():
-    return {"hello": "world","halo":"dunia"}
-
-
+api_key = '6u6izfSzCHTqVvphJ28lUbAtX0nXGhrd'
 def loadMain():
     fileName = os.path.join(os.path.dirname(__file__), 'main.html')
     try:
@@ -16,10 +13,28 @@ def loadMain():
         return html("We are sorry,there was an error ..., %s is not found"%fileName)
     return html(htmlText)
 
+def getSearch(request):
+    """
 
-# def search(request):
-#     """
-#
-#     """
-#     if 'q' in request.args:
-#
+    """
+    return json({})
+
+def getSuggestions(request):
+    if 'query' not in request.args:
+        return json({})
+    query = request.args['query'][0]
+    url = 'https://scicrunch.org/api/1/scigraph/vocabulary/suggestions/'+query
+    limit = request.args['limit'] if 'limit' in request.args else 10
+    params = {'api_key':api_key,'limit':limit}
+    rsp = requests.get(url, params=params)
+    return json(rsp.json())
+
+def getAutoComplete(request):
+    if 'query' not in request.args:
+        return json({})
+    query = request.args['query'][0]
+    url = 'https://scicrunch.org/api/1/scigraph/vocabulary/autocomplete/'+query
+    limit = request.args['limit'] if 'limit' in request.args else 10
+    params = {'api_key':api_key,'limit':limit,'searchSynonyms':'true','searchAbbreviations':'false','searchAcronyms':'false','includeDeprecated':'false'}
+    rsp = requests.get(url, params=params)
+    return json(rsp.json())
