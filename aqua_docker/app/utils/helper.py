@@ -15,11 +15,14 @@ def loadMain():
 
 def getSearch(request):
     """
-
+    Searching function
     """
     return json({})
 
 def getSuggestions(request):
+    """
+    get suggestions function
+    """
     if 'query' not in request.args:
         return json({})
     query = request.args['query'][0]
@@ -30,6 +33,9 @@ def getSuggestions(request):
     return json(rsp.json())
 
 def getAutoComplete(request):
+    """
+    get autocomplete function
+    """
     if 'query' not in request.args:
         return json({})
     query = request.args['query'][0]
@@ -37,4 +43,21 @@ def getAutoComplete(request):
     limit = request.args['limit'] if 'limit' in request.args else 10
     params = {'api_key':api_key,'limit':limit,'searchSynonyms':'true','searchAbbreviations':'false','searchAcronyms':'false','includeDeprecated':'false'}
     rsp = requests.get(url, params=params)
-    return json(rsp.json())
+    if 'verbose' in request.args:
+        if request.args['verbose']:
+            return json(rsp.json())
+    completions = [];
+    for completion in rsp.json():
+        cmp = completion['completion'].lower()
+        if cmp not in completions:
+            completions += [cmp]
+        for cmp in completion['concept']['labels']:
+            if cmp.lower() not in completions:
+                completions += [cmp.lower()]
+        for cmp in completion['concept']['synonyms']:
+            if cmp.lower() not in completions:
+                completions += [cmp.lower()]
+        for cmp in completion['concept']['abbreviations']:
+            if cmp.lower() not in completions:
+                completions += [cmp.lower()]
+    return json(completions)

@@ -1,11 +1,15 @@
+"""
+This is the main file of Sanic Server. All accesses initially will be directed
+to this file.
+"""
+
 from sanic import Sanic
 
 SANIC_PREFIX = "SANIC_"
 
-app = Sanic(name='Biosimulation_Model_IR')
+app = Sanic(name='AQUA')
 
-
-#import helper
+# import helper
 from .utils.helper import getSuggestions, getSearch, loadMain, getAutoComplete
 
 @app.route("/")
