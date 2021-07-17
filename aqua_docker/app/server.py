@@ -22,10 +22,30 @@ async def search(request):
 
 @app.route("/suggestions")
 async def suggestions(request):
+    """
+    Get suggestions from SciGraph
+    Parameters:
+        - query: is a string query
+        - limit: the maximum returned number
+    Examples:
+        - http://130.216.216.55/suggestions?query=rat&limit=10
+    """
     return getSuggestions(request)
 
 @app.route("/autocomplete")
 async def autocomplete(request):
+    """
+    Get autocomplete from SciGraph
+    Parameters:
+        - query: is a string query
+        - limit: the maximum returned number
+        - verbose:
+            - yes -> will return results as returned by SciGraph
+            - no -> will return autocomplete as a list
+    Examples:
+        - http://130.216.216.55/autocomplete?query=rat&limit=10
+        - http://130.216.216.55/autocomplete?query=rat&limit=10&verbose=true
+    """
     return getAutoComplete(request)
 
 app.static('/cache', './cache', '/static', './static')  # while in docker files from static will be served by ngnix
