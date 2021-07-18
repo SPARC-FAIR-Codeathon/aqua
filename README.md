@@ -1,5 +1,10 @@
-# AQUA
-### An Advanced QUery Architecture for the SPARC Portal
+# AQUA -  An Advanced QUery Architecture for the SPARC Portal
+
+<p align="center">
+  <img src="https://github.com/SPARC-FAIR-Codeathon/aqua/raw/main/src/assets/images/logo_aqua-1.jpg" alt="interface" width="500" height="300"> 
+  <br/> 
+  </img>
+</p>
 
 ## Table of Contents
 
@@ -45,7 +50,7 @@ Currently, the search feature of the SPARC Portal is very limited:
 
 
 <p align="left">
-  <img src="https://github.com/SPARC-FAIR-Codeathon/aqua/raw/main/src/assets/images/workflow.JPG" alt="interface" width="600" height="300"> 
+  <img src="https://github.com/SPARC-FAIR-Codeathon/aqua/raw/main/src/assets/images/workflow_new.jpg" alt="interface" width="800" height="500"> 
   <br/> 
   </img>
 </p>
