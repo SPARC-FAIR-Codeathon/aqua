@@ -9,17 +9,12 @@
 
 ## Table of Contents
 
-* [Introduction](#introduction)
 * [About us](#about-us)
 * [Problem](#problem)
 * [AQUA solution](#aqua-solution)
 * [How it works](#how-it-works)
 * [Documentation](#documentation)
 * [Developers](#developers)
-
-## Introduction
-
-In today's world where information retrieval is expected in a matter of miliseconds, a strong search engine is essential. Take Google and Facebook, 2 of the five most popular search engines in the world, for example. Every day, millions or even billions of queries are made, potentially with typos and close-matches. Facebook returns suggestions for a profile name we fuzzily search but do not know for sure. Google returns to us not only what we want, but also tons of related information. In the medical research world, unless published datasets are easy to find, their potential for reuse and collaboration will be limited. A search engine serves as the middleman between scientific discovery and scientific progress in that sense. The stronger and smarter the search engine is, the faster the progress.
 
 ## About us
 
@@ -48,7 +43,6 @@ Currently, the search feature of the SPARC Portal is very limited:
 - Add a “Notify me when related datasets are published” when “No results” are returned. This will allow users to enter their email to be stored by the SPARC Portal for future alerts. 
 
 ## How it works
-
 
 <p align="left">
   <img src="https://github.com/SPARC-FAIR-Codeathon/aqua/raw/main/src/assets/images/workflow_new.jpg" alt="interface" width="800" height="500"> 
