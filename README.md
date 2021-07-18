@@ -24,23 +24,24 @@ AQUA is an application that aims at improving the search capabilities of the [SP
 
 Currently, the search feature of the SPARC Portal is very limited: 
 
-1) It does not account for nearby words. E.g.: when a word is misspelled.
+1) It does not recognize nearby words (typos and close-matches) or synonyms.
 
-2) The result display is primitive. E.g.: Limited result filtering, or matched text results are not highlighted.
+2) The result display is limited. E.g.: Limited result filtering and sorting (only by Published Date or Alphabetical Ordered Titles).
 
 ## AQUA solution
 
 1) Apply Artificial Intelligence tools (Natural Language Processing) to the processing of users’ search keywords and to the implementation of predictive typing (suggestion-based typing). 
 
-- In details, in addition to lemmatization, other NIH tools (e.g: NIF Ontology) will be used to derive origins of words and make suggestions for users as they type. This will help AQUA standardize various user inputs and return the most datasets possible that match the search keywords.
+- In details, in addition to lemmatization, other NIH tools (e.g: NIF Ontology) will be used to derive origins of words and make autocomplete suggestions for users as they type. This will help AQUA standardize various user inputs and return the most datasets possible that match the search keywords.
+- AQUA also fixes typos and close matches and suggests corrected search keywords.
 
 2) Enhance the current result display by:
 
 - Bolding/highlighting matched texts in results for easy lookup
 
-- Add a more sophisticated Dataset results filter functionality (based on Relevance, Date of Publication, and other customized filtering) to the current portal.
+- Add a more sophisticated Dataset results sorting and filtering functionality (based on Relevance, Date of Publication, and other customized filtering) to the current portal.
 
-- Add a “Notify me when related datasets are published” when “No results” are returned. This will allow users to enter their email to be stored by the SPARC Portal for future alerts. 
+- Add a “Notify me when related datasets are published”. This will allow users to enter their email to be stored by the SPARC Portal for future alerts. 
 
 ## How it works
 
