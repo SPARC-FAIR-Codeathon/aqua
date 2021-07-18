@@ -1,6 +1,6 @@
-# AQUA - docker
+# AQUA - Docker
 # About
-Docker module for AQUA SPARK
+Docker module for AQUA SPARC
 
 Docker deployment:
 # Initial setup:
@@ -79,8 +79,6 @@ Docker deployment:
     - `docker-compose --context remote_aqua down`
   - Rebuild, create, and start container
     - `docker-compose --context remote_aqua up --build`
-
-MIT - **Free Software, Enjoy!**
 
 [//]: #URLs
    [sanic]: <https://github.com/channelcat/sanic>
