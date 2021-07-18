@@ -34,23 +34,23 @@ def getSearch(request):
                         "contributors.first"],
         },
     }
-    q = request.args['query'][0]
-
-    force = 'no' if 'force' not in request.args else request.args['force'][0]
     if 'query' in request.args:
-        query['query'] = {"query_string": {"query": q}}
-        summary['query'] = q
-        summary['executed'] = q
-        summary['force'] = force
-        summary['suggestions'] = __getSuggestions(q, 10)
-        if force != 'yes':
-            autocomplete = __getAutoComplete(request.args['query'][0], 1, 'no')
-            if q.lower() not in autocomplete:
-                if len(summary['suggestions']) > 0:
-                    query['query'] = {"query_string": {"query": summary['suggestions'][0]}}
-                    summary['executed'] = summary['suggestions'][0]
-    # if 'query' in request.args:
-    #     query['query'] = {"query_string": {"query": q}}
+        q = request.args['query'][0]
+        force = 'no' if 'force' not in request.args else request.args['force'][0]
+        if 'query' in request.args:
+            query['query'] = {"query_string": {"query": q}}
+            summary['query'] = q
+            summary['executed'] = q
+            summary['force'] = force
+            summary['suggestions'] = __getSuggestions(q, 10)
+            if force != 'yes':
+                autocomplete = __getAutoComplete(request.args['query'][0], 1, 'no')
+                if q.lower() not in autocomplete:
+                    if len(summary['suggestions']) > 0:
+                        query['query'] = {"query_string": {"query": summary['suggestions'][0]}}
+                        summary['executed'] = summary['suggestions'][0]
+        # if 'query' in request.args:
+        #     query['query'] = {"query_string": {"query": q}}
 
     response = requests.post(url, json=query)
     summary['total'] = response.json()['hits']['total']
@@ -59,37 +59,40 @@ def getSearch(request):
     summary['hits'] = {}
     dates, srtDates = [], []
     for hit in response.json()['hits']['hits']:
-        idx = hit['_source']['pennsieve']['identifier']
-        # extract filters
-        ## extract from keywords
-        for key in hit['_source']['item']['keywords']:
-            if key['keyword'] in summary['filters']['keywords']:
-                summary['filters']['keywords'][key['keyword']] += [idx]
-            else:
-                summary['filters']['keywords'][key['keyword']] = [idx]
-        ## extract from contributors
-        for key in hit['_source']['contributors']:
-            name = key['first']['name'] + ' ' + key['last']['name']
-            if name in summary['filters']['authors']:
-                summary['filters']['authors'][name] += [idx]
-            else:
-                summary['filters']['authors'][name] = [idx]
-        # extract sorting based on ranking
-        summary['sorts']['ranking'] += [idx]
-        # extract sorting based on dates
-        dates += [hit['_source']['pennsieve']['versionPublishedAt']['timestamp']]
-        srtDates += [idx]
-        # set hit
-        ht = {'url': 'https://sparc.science/datasets/'+idx,
-              'banner': hit['_source']['pennsieve']['banner']['uri'],
-              '_id': hit['_id'],
-              '_score': hit['_score'],
-              'date': hit['_source']['pennsieve']['versionPublishedAt']['timestamp'],
-              'name': hit['_source']['item']['name'],
-              'description': hit['_source']['item']['description'],
-              'readme': hit['_source']['item']['readme'],
-               }
-        summary['hits'][idx] = ht
+        try:
+            idx = hit['_source']['pennsieve']['identifier']
+            # extract filters
+            ## extract from keywords
+            for key in hit['_source']['item']['keywords']:
+                if key['keyword'] in summary['filters']['keywords']:
+                    summary['filters']['keywords'][key['keyword']] += [idx]
+                else:
+                    summary['filters']['keywords'][key['keyword']] = [idx]
+            ## extract from contributors
+            for key in hit['_source']['contributors']:
+                name = key['first']['name'] + ' ' + key['last']['name']
+                if name in summary['filters']['authors']:
+                    summary['filters']['authors'][name] += [idx]
+                else:
+                    summary['filters']['authors'][name] = [idx]
+            # extract sorting based on ranking
+            summary['sorts']['ranking'] += [idx]
+            # extract sorting based on dates
+            dates += [hit['_source']['pennsieve']['versionPublishedAt']['timestamp']]
+            srtDates += [idx]
+            # set hit
+            ht = {'url': 'https://sparc.science/datasets/'+idx,
+                  'banner': hit['_source']['pennsieve']['banner']['uri'],
+                  '_id': hit['_id'],
+                  '_score': hit['_score'],
+                  'date': hit['_source']['pennsieve']['versionPublishedAt']['timestamp'],
+                  'name': hit['_source']['item']['name'],
+                  'description': hit['_source']['item']['description'],
+                  'readme': hit['_source']['item']['readme'],
+                   }
+            summary['hits'][idx] = ht
+        except:
+            pass
 
     # sort based on dates
     if len(dates) > 0: # when there are results
