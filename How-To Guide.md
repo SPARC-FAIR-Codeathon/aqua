@@ -1,14 +1,12 @@
 
 
-%--------------------------------------------------------------------------------
-#How-To Guide
+# How-To Guide
 
 
 
 
-%--------------------------------------------------------------------------------
 
-#Features
+# Features
 
 ## ...
 
@@ -16,28 +14,28 @@
 ## ...
 
 
-##Querying
+## Querying
 
 
 
-###Languages:
+### Languages:
     
     
-###Query result formats:
+### Query result formats:
     
     
 
 
-#Platform
+# Platform
 
-#Installation
+# Installation
 
-##Dependencies
+## Dependencies
 
-##Docker
+## Docker
 
-##Cloud
+## Cloud
 
-#Examples
+# Examples
 
 
