@@ -28,12 +28,12 @@
 Specific features have beed added to the new SPARC search portal as listed below:
 <br/>
 * Query refinement:
-   1. Auto-completion
-   2. Suggestion
+   * Auto-completion
+   * Suggestion
 * Results display
-   3. Improved filtering
+   * Improved filtering
 * Additional feature
-   5. ''Notify me" 
+   * ''Notify me" 
 <br/>
 
 ## Auto-completion
