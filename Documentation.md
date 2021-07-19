@@ -31,8 +31,8 @@
 4. In case of no results being found for the queries, there is no way for the user to get informed on whether a **new dataset/resource** (related to their query) has been published on the SPARC portal or not.
 <br/>
 
-# Objectives for the new SPARC search portal
-Specific features have beed added to the new SPARC search portal as listed below:
+# AQUA objectives for the new SPARC search portal
+Specific features of AQUA are listed below:
 <br/>
 * __Query refinement__
    * Auto-completion:<br/>
@@ -47,10 +47,10 @@ Specific features have beed added to the new SPARC search portal as listed below
    * ''Notify me":<br/>
       At the end, if no results are returened by the AQUA backend, our tool asks the user if they want to get notified when a related resource is published or not. For a given email address, the tool checks for its validity and then stores it using SQLite. Thereafter, it will check for any updated/uploaded related resource on the SPARC portal everyday at 2AM EDT. In case of the requested resource availability, it sends a notification email to the registered user.
 <br/>
-
+Fig 4 demonstrates the AQUA pipeline.
 | <img src="https://github.com/Niloofar-Sh/aqua/blob/main/src/assets/images/workflow_backend.jpg" alt="interface" width="550" height="1000">| 
    |:--:| 
-   | *Fig 4. Backend workflow of AQUA including three major sections: Query refinement, Results filtering, and Notify me.* |
+   | *Fig 4. AQUA pipeline including three major sections: Query refinement, Results filtering, and Notify me.* |
    <br/>
 
 
