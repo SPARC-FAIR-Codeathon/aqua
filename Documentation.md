@@ -27,10 +27,10 @@
 # Objectives for the new SPARC search portal
 Specific features have beed added to the new SPARC search portal as listed below:
 <br/>
-*Query refinement:
+* Query refinement:
    1. Auto-completion
    2. Suggestion
-*Results display
+* Results display
    3. Improved filtering
 * Additional feature
    5. ''Notify me" 
