@@ -21,7 +21,7 @@
    | *Fig 3. Limited filterings for the results display on the SPARC portal.* |
    <br/>
    
-4. In case of no results being found for the queries, there is no way for the user to get informed on whether a new dataset/resource (related to their query) has been added to the SPARC portal or not.
+4. In case of no results being found for the queries, there is no way for the user to get informed on whether a **new dataset/resource** (related to their query) has been published on the SPARC portal or not.
 <br/>
 
 # Objectives for the new SPARC search portal
@@ -30,7 +30,7 @@ Specific features have beed added to the new SPARC search portal as listed below
 2. Suggestion
 3. Improved filtering
 4. ''Notify me" 
-
+<br/>
 
 ## Auto-completion
 
