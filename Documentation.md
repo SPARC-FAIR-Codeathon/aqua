@@ -50,7 +50,7 @@ Specific features have beed added to the new SPARC search portal as listed below
 
 | <img src="https://github.com/Niloofar-Sh/aqua/blob/main/src/assets/images/workflow_backend.jpg" alt="interface" width="550" height="1000">| 
    |:--:| 
-   | *Fig 4. Backend workflow of AQUA.* |
+   | *Fig 4. Backend workflow of AQUA including three major sections: Query refinement, Results filtering, and Notify me.* |
    <br/>
 
 
