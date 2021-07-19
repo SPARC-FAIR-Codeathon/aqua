@@ -41,14 +41,19 @@ Specific features of AQUA are listed below:
       If no exact matches are found, it finds close-matches and suggests them to the user with popping up the phrase: *"Did you mean ...?"*. Otherwise, it will send the raw and uncorrected query to AQUA backend.
 
 * __Results filtering__
-   * Improved filtering:<br/>
-      When the results for the query are displayed, user will have the option of sorting them based on the *keyword*, *author*, *date published*, and *alphabetical order*.
+   * Sort by:<br/>
+      When the results for the query are displayed, user will have the option of sorting them based on the *Relevance*, *Date published*, and *alphabetical order*.
+    * Filter by:<br/>
+      The results can also be filtered based on *Keyword*, *Author*, and *Category*.
+    * Matched text bolded/highlighted
+    
+    
 * __Additional feature__
    * ''Notify me":<br/>
       At the end, if no results are returened by the AQUA backend, our tool asks the user if they want to get notified when a related resource is published or not. For a given email address, the tool checks for its validity and then stores it using SQLite. Thereafter, it will check for any updated/uploaded related resource on the SPARC portal everyday at 2AM EDT. In case of the requested resource availability, it sends a notification email to the registered user.
 <br/>
 Fig 4 demonstrates the AQUA pipeline.
-| <img src="https://github.com/Niloofar-Sh/aqua/blob/main/src/assets/images/workflow_backend.jpg" alt="interface" width="550" height="1000">| 
+| <img src="https://github.com/Niloofar-Sh/aqua/blob/main/src/assets/images/workflow_aqua.jpg" alt="interface" width="550" height="1000">| 
    |:--:| 
    | *Fig 4. AQUA pipeline including three major sections: Query refinement, Results filtering, and Notify me.* |
    <br/>
