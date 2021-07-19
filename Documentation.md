@@ -1,7 +1,11 @@
 
 # Analysis of the existing SPARC search portal
 
-![Image of Yaktocat](https://octodex.github.com/images/yaktocat.png)
+![rattis](https://github.com/Niloofar-Sh/aqua/tree/main/src/assets/images/rattis.jpg)
+
+![rattis_current_result](https://github.com/Niloofar-Sh/aqua/tree/main/src/assets/images/rattis_current_result.jpg)
+
+![rattus_current_result](https://github.com/Niloofar-Sh/aqua/tree/main/src/assets/images/rattus_current_result.jpg)
 
 
 # How-To Guide
