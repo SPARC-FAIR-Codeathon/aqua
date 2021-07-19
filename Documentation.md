@@ -36,10 +36,21 @@ Specific features have beed added to the new SPARC search portal as listed below
    * ''Notify me" 
 <br/>
 
-##  __Query refinement__:
-   * Auto-completion:
-      xxxxxxx
 
+##  __Query refinement__:
+
+   * Auto-completion:<br/>
+      Based on the term, our tool automatically completes the queries if it partially/completely matches any keywords. 
+      
+   * Suggestion:<br/>
+      If no matches are found, it finds close-matches and suggests them to the user with popping up the phrase: *"Did you mean ...?"*
+      
+The AQUA pipeline for the query refinement on the SPARC portal is shown in Fig 4.
+<br/>
+   | ![query_refinement](https://github.com/Niloofar-Sh/aqua/blob/main/src/assets/images/query_refinement.jpg) | 
+   |:--:| 
+   | *Fig 4. AQUA Query refinement pipeline for the SPARC portal.* |
+   <br/>
 
 ## Suggestion
 
