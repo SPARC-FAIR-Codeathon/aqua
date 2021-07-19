@@ -1,7 +1,7 @@
 
 # Analysis of the existing SPARC search portal
 
-![rattis](https://github.com/Niloofar-Sh/aqua/tree/main/src/assets/images/rattis.jpg)
+![rattis](https://github.com/Niloofar-Sh/aqua/blob/main/src/assets/images/rattis.jpg)
 
 ![rattis_current_result](https://github.com/Niloofar-Sh/aqua/tree/main/src/assets/images/rattis_current_result.jpg)
 
