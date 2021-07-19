@@ -13,7 +13,7 @@
    |:--:| 
    | *Fig 2. Search results for a correct keyword (rattis) on the SPARC portal. Keywords are not highlighted in the results.* |
    
-2. Limited filterings on the results.
+2. Limited filterings on the results display page, i.e., sorting based on the date of publication, author, and alphabetical order. The website currently refines the results by either being "Public" or "Embargoed".
 
 
 
