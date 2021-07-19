@@ -53,6 +53,7 @@ Specific features of AQUA are listed below:
       At the end, if no results are returened by the AQUA backend, our tool asks the user if they want to get notified when a related resource is published or not. For a given email address, the tool checks for its validity and then stores it using SQLite. Thereafter, it will check for any updated/uploaded related resource on the SPARC portal everyday at 2AM EDT. In case of the requested resource availability, it sends a notification email to the registered user.
 <br/>
 Fig 4 demonstrates the AQUA pipeline.
+
 | <img src="https://github.com/Niloofar-Sh/aqua/blob/main/src/assets/images/workflow_aqua.jpg" alt="interface" width="550" height="1000">| 
    |:--:| 
    | *Fig 4. AQUA pipeline including three major sections: Query refinement, Results filtering, and Notify me.* |
