@@ -3,9 +3,9 @@
 
 ![rattis](https://github.com/Niloofar-Sh/aqua/blob/main/src/assets/images/rattis.jpg)
 
-![rattis_current_result](https://github.com/Niloofar-Sh/aqua/tree/main/src/assets/images/rattis_current_result.jpg)
+![rattis_current_result](https://github.com/Niloofar-Sh/aqua/blob/main/src/assets/images/rattis_current_result.jpg)
 
-![rattus_current_result](https://github.com/Niloofar-Sh/aqua/tree/main/src/assets/images/rattus_current_result.jpg)
+![rattus_current_result](https://github.com/Niloofar-Sh/aqua/blob/main/src/assets/images/rattus_current_result.jpg)
 
 
 # How-To Guide
