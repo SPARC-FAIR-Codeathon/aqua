@@ -1,4 +1,8 @@
 
+# Analysis of the existing SPARC search portal
+
+![Image of Yaktocat](https://octodex.github.com/images/yaktocat.png)
+
 
 # How-To Guide
 
