@@ -1,6 +1,6 @@
 # Application name:
 <br/>
-![logo_aqua-1](https://github.com/Niloofar-Sh/aqua/blob/main/src/assets/images/logo_aqua-1.jpg)
+![logo_aqua_1](https://github.com/Niloofar-Sh/aqua/blob/main/src/assets/images/logo_aqua-1.jpg)
 <br/>
 
 # Analysis of the existing SPARC search portal
