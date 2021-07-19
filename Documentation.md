@@ -27,18 +27,18 @@
 # Objectives for the new SPARC search portal
 Specific features have beed added to the new SPARC search portal as listed below:
 <br/>
-* __Query refinement__:
+* __Query refinement__
    * Auto-completion:<br/>
-      Based on the term, our tool automatically completes the queries if it partially/completely matches any keywords.
+      Based on the term, our tool automatically completes the queries if it partially/completely matches any keywords. It then sends the selected keyword to AQUA backend.
    * Suggestion:<br/>
-      If no matches are found, it finds close-matches and suggests them to the user with popping up the phrase: *"Did you mean ...?"*
+      If no exact matches are found, it finds close-matches and suggests them to the user with popping up the phrase: *"Did you mean ...?"*. Otherwise, it will send the raw and uncorrected query to AQUA backend.
 
-* __Results filtering__:
+* __Results filtering__
    * Improved filtering:<br/>
-      blah blah blah
-* __Additional feature__:
+      When the results for the query are displayed, user will have the option of sorting them based on the *keyword*, *author*, *date published*, and *alphabetical order*.
+* __Additional feature__
    * ''Notify me":<br/>
-      blah blah blah
+      At the end, if no results are returened by the AQUA backend, our tool asks the user if they want to get notified when a related resource is published or not. For a given email address, the tool checks for its validity and then stores it using SQLite. Thereafter, it will check for any updated/uploaded related resource on the SPARC portal everyday at 2AM EDT. In case of the requested resource availability, it sends a notification email to the registered user.
 <br/>
 
 | ![backendWorkflow](https://github.com/Niloofar-Sh/aqua/blob/main/src/assets/images/workflow_backend.jpg) | 
