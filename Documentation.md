@@ -18,31 +18,25 @@
    | ![rattus_filters](https://github.com/Niloofar-Sh/aqua/blob/main/src/assets/images/rattus_filters.jpg) | 
    |:--:| 
    | *Fig 3. Limited filterings for the results display on the SPARC portal.* |
+   
+4. In case of no results being found for the queries, there is no way for the user to get informed on whether a new dataset/resource (related to their query) has been added to the SPARC portal or not.
 
 
+# Objectives for the new SPARC search portal
+Specific features have beed added to the new SPARC search portal as listed below:
+1. Auto-completion
+2. Suggestion
+3. Improved filtering
+4. ''Notify me" 
 
 
+## Auto-completion
 
-# How-To Guide
+## Suggestion
 
+## Improved filtering
 
-
-
-
-# Features
-
-## Querying
-
-
-
-### Auto-completion
-
-
-### Suggestion
-
-### Filtering
-
-#### Keywords
+### Keywords
 biologocal ....
 
 #### Authors
