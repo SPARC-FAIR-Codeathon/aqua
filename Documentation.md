@@ -6,21 +6,23 @@
    | ![rattis_current_result.jpg](https://github.com/Niloofar-Sh/aqua/blob/main/src/assets/images/rattis_current_result.jpg) | 
    |:--:| 
    | *Fig 1. Search results for a typo (rattis) on the SPARC portal.* |
-   
+   <br/>
 2. You need to enter the exact correct keywords in the search bar (Fig 2) and yet, it does not **highlight the keywords** of your query among the search results.
    
    | ![rattus_current_result](https://github.com/Niloofar-Sh/aqua/blob/main/src/assets/images/rattus_current_result.jpg) | 
    |:--:| 
    | *Fig 2. Search results for a correct keyword (rattis) on the SPARC portal. Keywords are not highlighted in the results.* |
+   <br/>
    
 3. Limited **filterings** on the results display page, i.e., sorting based on the date of publication, author, and alphabetical order. The website currently refines the results by either being "Public" or "Embargoed" (Fig 3).
 
    | ![rattus_filters](https://github.com/Niloofar-Sh/aqua/blob/main/src/assets/images/rattus_filters.jpg) | 
    |:--:| 
    | *Fig 3. Limited filterings for the results display on the SPARC portal.* |
+   <br/>
    
 4. In case of no results being found for the queries, there is no way for the user to get informed on whether a new dataset/resource (related to their query) has been added to the SPARC portal or not.
-
+<br/>
 
 # Objectives for the new SPARC search portal
 Specific features have beed added to the new SPARC search portal as listed below:
