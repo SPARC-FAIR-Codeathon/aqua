@@ -13,7 +13,11 @@
    |:--:| 
    | *Fig 2. Search results for a correct keyword (rattis) on the SPARC portal. Keywords are not highlighted in the results.* |
    
-2. Limited filterings on the results display page, i.e., sorting based on the date of publication, author, and alphabetical order. The website currently refines the results by either being "Public" or "Embargoed".
+2. Limited filterings on the results display page, i.e., sorting based on the date of publication, author, and alphabetical order. The website currently refines the results by either being "Public" or "Embargoed" (Fig 3).
+
+   | ![rattus_filters](https://github.com/Niloofar-Sh/aqua/blob/main/src/assets/images/rattus_filters.jpg) | 
+   |:--:| 
+   | *Fig 3. Limited filterings for the results display on the SPARC portal.* |
 
 
 
