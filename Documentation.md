@@ -28,49 +28,27 @@
 Specific features have beed added to the new SPARC search portal as listed below:
 <br/>
 * __Query refinement__:
-   * Auto-completion
-   * Suggestion
-* __Results display__:
-   * Improved filtering
-* __Additional feature__:
-   * ''Notify me" 
-<br/>
-
-
-##  __Query refinement__:
-
    * Auto-completion:<br/>
-      Based on the term, our tool automatically completes the queries if it partially/completely matches any keywords. 
-      
+      Based on the term, our tool automatically completes the queries if it partially/completely matches any keywords.
    * Suggestion:<br/>
       If no matches are found, it finds close-matches and suggests them to the user with popping up the phrase: *"Did you mean ...?"*
-      
-The AQUA pipeline for the query refinement on the SPARC portal is shown in Fig 4.
+
+* __Results filtering__:
+   * Improved filtering:<br/>
+      blah blah blah
+* __Additional feature__:
+   * ''Notify me":<br/>
+      blah blah blah
 <br/>
-   | ![query_refinement](https://github.com/Niloofar-Sh/aqua/blob/main/src/assets/images/query_refinement.jpg) | 
+
+| ![backendWorkflow](https://github.com/Niloofar-Sh/aqua/blob/main/src/assets/images/workflow_backend.jpg) | 
    |:--:| 
-   | *Fig 4. AQUA Query refinement pipeline for the SPARC portal.* |
+   | *Fig 4. Backend workflow of AQUA.* |
    <br/>
-
-## Suggestion
-
-## Improved filtering
-
-### Keywords
-biologocal ....
-
-#### Authors
-
-#### Date
-
-
-## Notify me
-
-SQLite, Python
-
 
 
 ### Languages:
+Python
 
     
     
