@@ -6,11 +6,17 @@
    | ![rattis_current_result.jpg](https://github.com/Niloofar-Sh/aqua/blob/main/src/assets/images/rattis_current_result.jpg) | 
    |:--:| 
    | *Fig 1. Search results for a typo (rattis) on the SPARC portal.* |
+   
+   You need to enter the exact correct keywords in the search bar (Fig 2) and yet, it does not highlight the keywords of your query among the search results.
+   
+   | ![rattus_current_result](https://github.com/Niloofar-Sh/aqua/blob/main/src/assets/images/rattus_current_result.jpg) | 
+   |:--:| 
+   | *Fig 2. Search results for a correct keyword (rattis) on the SPARC portal. Keywords are not highlighted in the results.* |
+   
+2. Limited filterings on the results.
 
-2. 
 
 
-![rattus_current_result](https://github.com/Niloofar-Sh/aqua/blob/main/src/assets/images/rattus_current_result.jpg)
 
 
 # How-To Guide
