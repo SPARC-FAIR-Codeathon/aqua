@@ -3,7 +3,8 @@
 
 1. Limited search feature of the SPARC Portal:
    It does not recognize nearby words (in case of typos). As an example, if we type "rattis" (typo) instead of "rattus", it does not recognize it or give any suggestion ().
-   ![rattis_current_result](https://github.com/Niloofar-Sh/aqua/blob/main/src/assets/images/rattis_current_result.jpg&s=200)
+   <img src="https://github.com/Niloofar-Sh/aqua/blob/main/src/assets/images/rattis_current_result.jpg" width="100" height="100">
+   ![rattis_current_result](https://github.com/Niloofar-Sh/aqua/blob/main/src/assets/images/rattis_current_result.jpg)
 
 2. 
 
