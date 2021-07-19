@@ -42,7 +42,7 @@ Specific features of AQUA are listed below:
 
 * __Results filtering__
    * Sort by:<br/>
-      When the results for the query are displayed, user will have the option of sorting them based on the *Relevance*, *Date published*, and *alphabetical order*.
+      When the results for the query are displayed, user will have the option of sorting them based on the *Relevance*, *Date published*, and *Alphabetical order*.
     * Filter by:<br/>
       The results can also be filtered based on *Keyword*, *Author*, and *Category*.
     * Matched text bolded/highlighted
