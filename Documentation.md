@@ -73,7 +73,7 @@ The AQUA backend includes querying the K-Core database for information, deliveri
 AQUA UI receives the user's queries, formulates them, and transfers to the AQUA Backend module. When the response from the AQUA backend is received, the AQUA UI interprets it and displays the content on the screen. The AQUA UI is constructed using VueJS and implemented by the HTML-CSS-JS trio. 
 
 # How to use AQUA?
-We have forked
+blah blah blah
 
 ## Installation
 Docker application on your machine
