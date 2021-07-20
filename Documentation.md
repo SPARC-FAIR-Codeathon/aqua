@@ -70,9 +70,9 @@ The AQUA backend includes querying the K-Core database for information, deliveri
 <br/>
 The AQUA backend focuses on two main features:
 <br/>
-*Query refinement by Auto-completion/Suggestions (To read more visit: Yuda Readme)  
+*__Query refinement by Auto-completion/Suggestions__ (To read more visit: Yuda Readme)  
 <br/>
-*Email notification by the "Notify me" module (To read more visit: Laila Readme)
+*__Email notification by the "Notify me" module__ (To read more visit: Laila Readme)
 
 ## AQUA UI
 <br/>
