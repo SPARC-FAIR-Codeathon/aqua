@@ -86,9 +86,9 @@ AQUA UI receives the user's queries, formulates them, and transfers to the AQUA 
 # :information_desk_person: How to use AQUA? 
 blah blah blah
 
-## Installation
+## :hammer_and_wrench: Installation
 You can setup and deploy the Docker module for AQUA by following the steps in: [AQUA Docker](https://github.com/Niloofar-Sh/aqua/tree/main/aqua_docker#readme)
-## Dependencies
+## :electric_plug: Dependencies
 
 [Docker](https://www.docker.com/) is a platform that bundles and delivers software in packages called containers.
 
