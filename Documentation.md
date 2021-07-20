@@ -61,7 +61,7 @@ Fig 4 demonstrates the AQUA pipeline.
    <br/>
 
 
-# Platform
+# :iphone: Platform
 The AQUA platform integrates Python libraries, data mining tools, a SQL database engine, and Document Object Model (DOM) API to mimic an environment similar to the SPARC search portal with an improved functionality in multiple ways. In general, the AQUA platform consists of a presentation layer as the User Interface (UI) (referred to as frontend) and a server-side data-access layer (referred to as backend). The **AQUA UI** and the **AQUA Backend** bridge between the user and the Knowledge Management Core (K-Core) database. K-Core is the SPARC knowledge graph database.
 
 
@@ -93,9 +93,9 @@ You can setup and deploy the Docker module for AQUA by following the steps in: [
 [Docker](https://www.docker.com/) is a platform that bundles and delivers software in packages called containers.
 
 
-# Testing
+# :mag_right: Testing
 
-# Examples
+# :round_pushpin: Examples
 Here, we have provided examples of how AQUA improves the search experience in two scenarios, i.e.:  <br/>
 1) AQUA auto-completion feature helps the user find a correct keyword while typing (Fig 5), and
 2) AQUA suggests close-matches for a query with typo (Fig 6).  
