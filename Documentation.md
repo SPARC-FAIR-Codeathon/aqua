@@ -14,6 +14,7 @@
    |:--:| 
    | *Fig 1. Search results for a typo (rattis) on the SPARC portal.* |
    <br/>
+   
 **2.** You need to enter the exact correct keywords in the search bar (Fig 2) and yet, it does not **highlight the keywords** of your query among the search results.
    
    | ![rattus_current_result](https://github.com/Niloofar-Sh/aqua/blob/main/src/assets/images/rattus_current_result.jpg) | 
