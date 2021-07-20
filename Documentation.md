@@ -61,19 +61,6 @@ Fig 4 demonstrates the AQUA pipeline.
 
 
 
-### Languages:
-Python
-
-    
-    
-### Query result formats:
-Json
-    
-    
-
-
-# Platform
-
 # Installation
 Docker application on your machine
 ## Dependencies
