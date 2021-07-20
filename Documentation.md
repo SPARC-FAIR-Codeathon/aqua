@@ -32,7 +32,7 @@
 **4.** In case of no results being found for the queries, there is no way for the user to get informed on whether a **new dataset/resource** (related to their query) has been published on the SPARC portal or not.
 <br/>
 
-# AQUA objectives for the new SPARC search portal
+# :bulb: AQUA objectives for the new SPARC search portal
 Specific features of AQUA are listed below:
 <br/>
 * :point_right: __Query refinement__
