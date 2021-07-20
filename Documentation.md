@@ -45,7 +45,7 @@ Specific features of AQUA are listed below:
    * Sort by:<br/>
       When the results for the query are displayed, user will have the option of sorting them based on the *Relevance*, *Date published*, and *Alphabetical order*.
     * Filter by:<br/>
-      The results can also be filtered based on *Keyword*, *Author*, and *Category*.
+      The results can also be filtered based on *Keyword*, *Author*, *Category*, and *Publication date*.
     * Matched text bolded/highlighted
     
     
