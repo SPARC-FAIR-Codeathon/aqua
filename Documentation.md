@@ -66,13 +66,14 @@ The AQUA platform integrates Python libraries, data mining tools, a SQL database
 
 ## AQUA Backend
 <br/>
-The AQUA backend includes querying the K-Core database for information, delivering data to the frontend, and processing any logic that the AQUA UI requires.
+The AQUA backend includes querying the K-Core database for information, delivering data to the frontend, and processing any logic that the AQUA UI requires. The main tools utilised for the AQUA Backend are Python, Docker, SQLite, and SciGraph.
 
 ## AQUA UI
 <br/>
-When the response from the AQUA backend is received, the AQUA UI interprets it and displays the content on the screen.
+AQUA UI receives the user's queries, formulates them, and transfers to the AQUA Backend module. When the response from the AQUA backend is received, the AQUA UI interprets it and displays the content on the screen. The AQUA UI is constructed using VueJS and implemented by the HTML-CSS-JS trio. 
 
 # How to use AQUA?
+We have forked
 
 ## Installation
 Docker application on your machine
