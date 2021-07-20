@@ -55,7 +55,7 @@ Specific features of AQUA are listed below:
 Fig 4 demonstrates the AQUA pipeline.
 <br/>
 
-| <img src="https://github.com/Niloofar-Sh/aqua/blob/main/src/assets/images/workflow_aqua.jpg" alt="interface" width="550" height="1000">| 
+| <img src="https://github.com/Niloofar-Sh/aqua/blob/main/src/assets/images/aqua_pipeline.jpg" alt="interface" width="550" height="1000">| 
    |:--:| 
    | *Fig 4. AQUA pipeline including three major sections: Query refinement, Results filtering, and Notify me.* |
    <br/>
