@@ -102,3 +102,5 @@ Here, we have provided examples of how AQUA improves the search experience in tw
 The user's decision to either select one of the close-matches or go with thier raw, uncorrected query leads to "Result(s) display" or "No results" notification (Fig 7). When at least one result is returned, AQUA displays options to sort or filter the results. This is shown with an example in Fig 8.
 
  
+# :speech_balloon: Ideas?
+To share your ideas, feedback, and comments contact any of our team members.
