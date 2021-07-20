@@ -72,10 +72,10 @@ The AQUA backend focuses on two main features:
 <br/>
 <br/>
 
-__Query refinement by Auto-completion/Suggestions__ 
+:sparkles: __Query refinement by Auto-completion/Suggestions__ 
 (To read more visit: Yuda Readme)  
 
-__Email notification by the "Notify me" module__ 
+:sparkles: __Email notification by the "Notify me" module__ 
 (To read more visit: Laila Readme)
 
 ## AQUA UI
