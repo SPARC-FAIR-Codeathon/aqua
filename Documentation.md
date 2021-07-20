@@ -66,7 +66,11 @@ The AQUA platform integrates Python libraries, data mining tools, a SQL database
 
 ## AQUA Backend
 <br/>
-The AQUA backend includes querying the K-Core database for information, delivering data to the frontend, and processing any logic that the AQUA UI requires. The main tools utilised for the AQUA Backend are Python, Docker, SQLite, and SciGraph.
+The AQUA backend includes querying the K-Core database for information, delivering data to the frontend, and processing any logic that the AQUA UI requires. The main tools utilised for the AQUA Backend are Python (Jupyter Lab), Docker, SQLite, and SciGraph.
+<br/>
+The AQUA backend focuses on two main features:
+* Query refinement by Auto-completion/Suggestions (To read more visit: Yuda Readme)  
+* Email notification by the "Notify me" module (To read more visit: Laila Readme)
 
 ## AQUA UI
 <br/>
