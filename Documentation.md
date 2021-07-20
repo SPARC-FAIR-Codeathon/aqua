@@ -67,11 +67,11 @@ The AQUA platform integrates Python libraries, data mining tools, a SQL database
 ## AQUA Backend
 <br/>
 The AQUA backend includes querying the K-Core database for information, delivering data to the frontend, and processing any logic that the AQUA UI requires.
-<br/>
+
 ## AQUA UI
 <br/>
 When the response from the AQUA backend is received, the AQUA UI interprets it and displays the content on the screen.
-<br/>
+
 # How to use AQUA?
 
 ## Installation
