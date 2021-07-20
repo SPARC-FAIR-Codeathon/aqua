@@ -64,13 +64,14 @@ Fig 4 demonstrates the AQUA pipeline.
 The AQUA platform integrates Python libraries, data mining tools, a SQL database engine, and Document Object Model (DOM) API to mimic an environment similar to the SPARC search portal with an improved functionality in multiple ways. In general, the AQUA platform consists of a presentation layer as the User Interface (UI) (referred to as frontend) and a server-side data-access layer (referred to as backend). The AQUA UI and the AQUA backend bridge between the user and the Knowledge Management Core (K-Core) database. K-Core is the SPARC knowledge graph database.
 
 
-
-While the remote server is busy at work, your web browser is idle, waiting for the server to finish processing the request and sending a response. When the response is received, web browsers interpret it and display the content on the screen.
-## AQUA UI
-
 ## AQUA Backend
+<br/>
 The AQUA backend includes querying the K-Core database for information, delivering data to the frontend, and processing any logic that the AQUA UI requires.
-
+<br/>
+## AQUA UI
+<br/>
+When the response from the AQUA backend is received, the AQUA UI interprets it and displays the content on the screen.
+<br/>
 # How to use AQUA?
 
 ## Installation
