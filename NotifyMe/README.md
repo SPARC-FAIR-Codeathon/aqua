@@ -26,7 +26,7 @@ The current setting is scheduling emails to be sent daily at 2 am
 ## How it works
 
 <p align="left">
-  <img src="./NotifyMe.jpeg" alt="interface" width="600" height="300"> 
+  <img src="./NotifyMe.jpeg" alt="interface" width="700" height="400"> 
   <br/> 
   </img>
 </p>
