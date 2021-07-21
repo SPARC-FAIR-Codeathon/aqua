@@ -53,7 +53,7 @@ Currently, the search feature of the SPARC Portal is very limited:
 
 ## Documentation
 
-For a detailed documentation of our application, please visit here.
+For a detailed documentation of our application, please visit [documentation](https://github.com/SPARC-FAIR-Codeathon/aqua/raw/main/Documentation/Documentation.md).
 
 ## Developers
 
