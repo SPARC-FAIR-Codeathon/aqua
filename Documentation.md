@@ -76,7 +76,7 @@ The AQUA backend focuses on two main features:
 :sparkles: __Query refinement by Auto-completion/Suggestions__ 
 | <img src="https://github.com/Niloofar-Sh/aqua/blob/main/src/assets/images/Suggestion%26AutoComplete.jpg" alt="interface" width="700" height="500">| 
    |:--:| 
-   | *Fig 5. _Query refinement by Auto-completion/Suggestions.* |
+   | *Fig 5. Query refinement by Auto-completion/Suggestions.* |
    <br/>
 (To read more visit: Yuda Readme)  
 
