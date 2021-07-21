@@ -113,7 +113,7 @@ You can setup and deploy the Docker module for AQUA by following the steps in: [
 ## :electric_plug: Dependencies
 
 [Docker](https://www.docker.com/) is a platform that bundles and delivers software in packages called containers.
-
+[VueJS](https://vuejs.org/) and [NuxtJS](https://nuxtjs.org/)
 
 # :mag_right: Testing
 
