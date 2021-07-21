@@ -23,7 +23,7 @@ Additionally, as requests are saved in a database, this information can be furth
 The current setting is scheduling emails to be sent daily at 2 am
 
 
- 3. A sample analytics visualization can run through [NotifyMe_analytics_visual.ipynb](./NotifyMe_analytics_visual.ipynb)
+ 3. A sample analytics visualization can run through [NotifyMe_analytics_visual.ipynb](https://nbviewer.jupyter.org/github/lrasmy/aqua/blob/main/NotifyMe/NotifyMe_analytics_visual.ipynb)
  
 
 ## How it works
