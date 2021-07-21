@@ -74,7 +74,7 @@ The AQUA backend focuses on two main features:
 <br/>
 
 :sparkles: __Query refinement by Auto-completion/Suggestions__ 
-| <img src="https://github.com/Niloofar-Sh/aqua/blob/main/src/assets/images/S.jpg" alt="interface" width="550" height="1000">| 
+| <img src="https://github.com/Niloofar-Sh/aqua/blob/main/src/assets/images/Suggestion%26AutoComplete.jpg" alt="interface" width="700" height="500">| 
    |:--:| 
    | *Fig 5. _Query refinement by Auto-completion/Suggestions.* |
    <br/>
