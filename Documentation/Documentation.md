@@ -6,7 +6,7 @@
   </img>
 </p>
 
-# Analysis of the existing SPARC search portal
+# :chart_with_upwards_trend: Analysis of the existing SPARC search portal
 
 **1.** Limited search feature of the SPARC Portal:
    It does not recognize nearby words (in case of **typos**). As an example, if we type "rattis" (typo) instead of "rattus", it does not recognize it or give any suggestion (Fig 1).
