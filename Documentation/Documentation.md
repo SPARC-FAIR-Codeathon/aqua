@@ -6,6 +6,16 @@
   </img>
 </p>
 
+## Table of Contents
+
+* [Analysis of the existing SPARC search portal](#existing-portal)
+* [](#)
+* [](#)
+* [](#)
+* [](#)
+* [](#)
+
+
 # :chart_with_upwards_trend: Analysis of the existing SPARC search portal
 
 **1.** Limited search feature of the SPARC Portal:
