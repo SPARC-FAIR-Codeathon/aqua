@@ -6,7 +6,17 @@
   </img>
 </p>
 
-{:toc max_level=3 }
+# Contents:
+[Analysis of the existing SPARC search portal]()
+[AQUA objectives for the new SPARC search portal]()
+[Platform]()
+[How to use AQUA?]()
+[Installation]()
+[Dependencies]()
+[Testing]()
+[Examples]()
+[Ideas?]()
+
 
 # :chart_with_upwards_trend: Analysis of the existing SPARC search portal
 
