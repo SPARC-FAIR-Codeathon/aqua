@@ -95,7 +95,7 @@ The AQUA backend focuses on two main features:
 (To read more visit: Yuda Readme)  
 
 :sparkles: __Email notification by the "Notify me" module__ 
-| <img src="https://github.com/Niloofar-Sh/aqua/blob/main/src/assets/images/NotifyMe.jpeg" alt="interface" width="700" height="500">| 
+| <img src="https://github.com/Niloofar-Sh/aqua/blob/main/src/assets/images/NotifyMe.jpeg" alt="interface" width="700" height="460">| 
    |:--:| 
    | *Fig 6. "Notify me" module.* |
    <br/>
