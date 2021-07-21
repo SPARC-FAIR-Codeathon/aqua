@@ -13,31 +13,35 @@ Additionally, as requests are saved in a database, this information can be furth
 ## How to run
 
 1. Run notifyme_api.py, in order fetch the user email and search keywords.
+ 
  an example call:
- 	http://localhost:5432/aqua/notifyme?email=<email>&keywords=<keywords>
+ 	
+  http://localhost:5432/aqua/notifyme?email=<email>&keywords=<keywords>
  
 2. In order to schedule the keywords search and sending emails, you need to run notifyme_sched.py
 
 The current setting is scheduling emails to be sent daily at 2 am
 
-3. A sample analytics visualization is available 
 
+ 3. A sample analytics visualization can run through [NotifyMe_analytics_visual.ipynb](./NotifyMe_analytics_visual.ipynb)
+ 
 
 ## How it works
 
 <p align="left">
-  <img src="./NotifyMe.jpeg" alt="interface" width="700" height="400"> 
+  <img src="./NotifyMe.jpeg" alt="interface" width="900" height="550"> 
   <br/> 
   </img>
 </p>
 
 
 ## Required Packages
-configparser
-flask_restplus
-numpy
-pandas
-schedule
-smtplib
-sqlite3
+- configparser
+- flask_restplus
+- numpy
+- pandas
+- schedule
+- smtplib
+- sqlite3
+
 and plotly express for visualization examples
