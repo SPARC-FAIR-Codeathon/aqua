@@ -93,6 +93,7 @@ The AQUA backend focuses on two main features:
    | *Fig 5. Query refinement by Auto-completion/Suggestions.* |
    <br/>
 (To read more visit: Yuda Readme)  
+<br/>
 
 :sparkles: __Email notification by the "Notify me" module__ 
 | <img src="https://github.com/Niloofar-Sh/aqua/blob/main/src/assets/images/NotifyMe.jpeg" alt="interface" width="700" height="460">| 
@@ -100,6 +101,7 @@ The AQUA backend focuses on two main features:
    | *Fig 6. "Notify me" module.* |
    <br/>
 (To read more visit: Laila Readme)
+<br/>
 
 ## AQUA UI
 <br/>
