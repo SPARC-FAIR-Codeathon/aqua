@@ -6,7 +6,7 @@
   </img>
 </p>
 
-
+{:toc max_level=3 }
 
 # :chart_with_upwards_trend: Analysis of the existing SPARC search portal
 
