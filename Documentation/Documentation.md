@@ -6,14 +6,6 @@
   </img>
 </p>
 
-## Table of Contents
-
-* [Analysis of the existing SPARC search portal](#existing-portal)
-* [AQUA objectives for the new SPARC search portal](#aqua-objectives)
-* [](#)
-* [](#)
-* [](#)
-* [](#)
 
 
 # :chart_with_upwards_trend: Analysis of the existing SPARC search portal
