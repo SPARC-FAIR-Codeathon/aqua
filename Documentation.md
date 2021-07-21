@@ -74,6 +74,10 @@ The AQUA backend focuses on two main features:
 <br/>
 
 :sparkles: __Query refinement by Auto-completion/Suggestions__ 
+| <img src="https://github.com/Niloofar-Sh/aqua/blob/main/src/assets/images/S.jpg" alt="interface" width="550" height="1000">| 
+   |:--:| 
+   | *Fig 5. _Query refinement by Auto-completion/Suggestions.* |
+   <br/>
 (To read more visit: Yuda Readme)  
 
 :sparkles: __Email notification by the "Notify me" module__ 
@@ -97,9 +101,9 @@ You can setup and deploy the Docker module for AQUA by following the steps in: [
 
 # :round_pushpin: Examples
 Here, we have provided examples of how AQUA improves the search experience in two scenarios, i.e.:  <br/>
-1) AQUA auto-completion feature helps the user find a correct keyword while typing (Fig 5), and
-2) AQUA suggests close-matches for a query with typo (Fig 6).  
-The user's decision to either select one of the close-matches or go with thier raw, uncorrected query leads to "Result(s) display" or "No results" notification (Fig 7). When at least one result is returned, AQUA displays options to sort or filter the results. This is shown with an example in Fig 8.
+1) AQUA auto-completion feature helps the user find a correct keyword while typing (Fig x), and
+2) AQUA suggests close-matches for a query with typo (Fig xx).  
+The user's decision to either select one of the close-matches or go with thier raw, uncorrected query leads to "Result(s) display" or "No results" notification (Fig xxx). When at least one result is returned, AQUA displays options to sort or filter the results. This is shown with an example in Fig xxxx.
 
  
 # :speech_balloon: Ideas?
