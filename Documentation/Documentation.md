@@ -92,7 +92,7 @@ The AQUA backend focuses on two main features:
    |:--:| 
    | *Fig 5. Query refinement by Auto-completion/Suggestions.* |
    <br/>
- In AQUA, we utilise SciGraph for auto-completion and suggestion. However, we found that SciGraph’s suggestions do not deal with query problems such as error spelling and continuous script (*scriptio continua*). Therefore, we have added a new auto-correction feature to segment queries with missing spaces and fix error spelling by creating a pipeline to (https://pypi.org/project/symspellpy/)[SymSpellPy]. The auto-correction result is combined with the suggestion results and then executed as the final query search terms.
+ In AQUA, we utilise SciGraph for auto-completion and suggestion. However, we found that SciGraph’s suggestions do not deal with query problems such as error spelling and continuous script (*scriptio continua*). Therefore, we have added a new auto-correction feature to segment queries with missing spaces and fix error spelling by creating a pipeline to [SymSpellPy](https://pypi.org/project/symspellpy/). The auto-correction result is combined with the suggestion results and then executed as the final query search terms.
 (To read more visit: Yuda Readme)  
 <br/>
 
