@@ -9,13 +9,13 @@
 # Contents:
 * [Analysis of the existing SPARC search portal](#chart_with_upwards_trend-analysis-of-the-existing-sparc-search-portal)
 * [AQUA objectives for the new SPARC search portal](#bulb-aqua-objectives-for-the-new-sparc-search-portal)
-* [Platform]()
-* [How to use AQUA?]()
-* [Installation]()
-* [Dependencies]()
-* [Testing]()
-* [Examples]()
-* [Ideas?]()
+* [Platform](#iphone-platform)
+* [How to use AQUA?](#information_desk_person-how-to-use-aqua? )
+* [Installation](#)
+* [Dependencies](#)
+* [Testing](#)
+* [Examples](#)
+* [Ideas?](#)
 
 
 # :chart_with_upwards_trend: Analysis of the existing SPARC search portal
