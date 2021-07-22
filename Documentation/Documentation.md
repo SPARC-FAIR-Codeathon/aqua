@@ -38,9 +38,9 @@
   <i>Fig 2. Search results for a correct keyword (rattis) on the SPARC portal. Keywords are not highlighted in the results.</i>
 </p>
    
-**3. Limited filterings on the results display page:** The website currently refines the results by either being "Public" or "Embargoed" (Fig 3).
+**3. Limited result filterings:** The website currently refines the results by either being "Public" or "Embargoed" (Fig 3).
 
-**4. Limited sorting on the results display page:** The website currently sorts the results by either "Title" (listed alphabetically) or "Published date" (Fig 3).
+**4. Limited result sorting:** The website currently sorts the results by either "Title" (listed alphabetically) or "Published date" (Fig 3).
 
 <p align="center">
    <img src="https://github.com/Niloofar-Sh/aqua/blob/main/src/assets/images/rattus_filters.jpg" width="800" height="450"></br>
@@ -48,7 +48,7 @@
 </p>
    <br/>
    
-**4. No option for Email alerts if users want to be updated about datasets related to their search query:** In the event of No results being found for the queries, there is no way for the user to get informed on whether a **new dataset/resource** (related to their query) has been published on the SPARC portal or not.
+**4. No option for Email alerts :** In the event of No results being found for the queries, there is no way for the user to get informed on whether a **new dataset/resource** (related to their query) has been published on the SPARC portal or not.
 <br/>
 
 # :bulb: AQUA objectives for the new SPARC search portal
