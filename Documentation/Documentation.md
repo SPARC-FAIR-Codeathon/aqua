@@ -48,7 +48,7 @@
 </p>
    <br/>
    
-**4. No option for Email alerts :** In the event of No results being found for the queries, there is no way for the user to get informed on whether a **new dataset/resource** (related to their query) has been published on the SPARC portal or not.
+**5. No option for Email alerts :** In the event of No results being found for the queries, there is no way for the user to get informed on whether a **new dataset/resource** (related to their query) has been published on the SPARC portal or not.
 <br/>
 
 # :bulb: AQUA objectives for the new SPARC search portal
