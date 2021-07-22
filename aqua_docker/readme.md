@@ -37,7 +37,7 @@ Docker deployment:
 
 ## Cloud deployment
   - Create a virtual machine instance in the cloud
-    (* for our purpose we create a Ubuntu 18.04 LTS (Bionic) amd64 VM in Nectar cloud services)
+    (* for our purpose we create a Ubuntu 18.04 LTS (Bionic) amd64 VM in [Nectar](https://ardc.edu.au/services/nectar-research-cloud/) cloud services)
     - before creating the VM, make sure you have created RSA key pair,
       - setup the public key in the cloud and the VM
       - here are links how to create RSA key pair in different OS:
