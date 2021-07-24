@@ -30,7 +30,7 @@ The current setting is scheduling emails to be sent daily at 2 am
 ## How it works
 
 <p align="left">
-  <img src="./NotifyMe.jpeg" alt="interface" width="900" height="550"> 
+  <img src="https://github.com/Niloofar-Sh/aqua/blob/main/src/assets/images/NotifyMe.jpeg" alt="interface" width="900" height="550"> 
   <br/> 
   </img>
 </p>
