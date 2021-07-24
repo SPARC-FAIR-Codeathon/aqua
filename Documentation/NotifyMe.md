@@ -1,4 +1,4 @@
-# NotifyMe
+# "Notify Me" module
 ### Email notification functionality
 
 ## Main Purpose
@@ -34,6 +34,17 @@ The current setting is scheduling emails to be sent daily at 2 am
   <br/> 
   </img>
 </p>
+
+<br/>
+
+We can summarize the "Notify Me" actions as follow:
+1.	Add email requests with keywords.
+2.	Scan for existing search hits and send email
+3.	Moving pending requests to a waiting list that’s scanned daily
+4.	Moving fulfilled requests to an archived list
+5.	Any failed requests (that already have matching hits) will remain on the waiting list for one month, during which the "Notify Me" module will try to send the email daily. Afterwards, if the email still failing, it will move to the archived list with a final failed status for efficiency.
+
+NotifyMe.db is the "Notify Me" SQLite database file. The database will be automatically created during the first call of the "Notify Me" module.  If one needs to drop and recreate the database for any reason, they can call the create_notifyme_db function from Notifyme_utils and set the clean option to True.
 
 
 ## Required Packages
