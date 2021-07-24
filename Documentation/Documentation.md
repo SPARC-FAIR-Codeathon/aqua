@@ -121,7 +121,7 @@ The "Notify Me" option is to send emails that summarize search results against e
 2.	Emailing the current search results in a tabular format, which can be found helpful for users.
 Additionally, the "Notify Me" module stores all requests in an SQLite database, which the SPARC team can further analyze to understand the search pattern and get more insights on demand. For example, the SPARC team can find the most common keywords searched with no existing matches and decide to fulfil such needs. 
 
-(To read more visit: Laila Readme)
+(To read more visit: ["Notify me" Readme](https://github.com/Niloofar-Sh/aqua/blob/main/Documentation/NotifyMe.md))
 <br/>
 
 ## 2. AQUA UI
