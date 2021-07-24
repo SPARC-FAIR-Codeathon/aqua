@@ -118,7 +118,7 @@ The "Notify Me" option is to send emails that summarize search results against e
 
 1.	Notify users when a dataset gets published against keywords that do not retrieve any results yet.
 2.	Emailing the current search results in a tabular format, which can be found helpful for users.
-Additionally, the "Notify Me" module stores all requests in an SQLite database, which can be further analyzed by the SPARC team to understand the search pattern and get more insights on the demand. For example, the SPARC team can find out the most common keywords searched with no existing matches and decide on actions to fulfill such needs. 
+Additionally, the "Notify Me" module stores all requests in an SQLite database, which the SPARC team can further analyze to understand the search pattern and get more insights on demand. For example, the SPARC team can find the most common keywords searched with no existing matches and decide to fulfil such needs. 
 
 (To read more visit: Laila Readme)
 <br/>
