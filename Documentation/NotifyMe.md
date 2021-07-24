@@ -48,10 +48,21 @@ NotifyMe.db is the "Notify Me" SQLite database file. The database will be automa
 
 The database consists of 4 main tables:
 
-1. __1.	NEW_REGISTER__
-2. __WAITING_LIST__
-3. __ARCHIEVED_LIST__
-4. __FAILED_EMAILS__
+1. __NEW_REGISTER__
+
+| Column Name        | Description           | 
+| ------------- |:-------------:| 
+| entry_id     | A unique identifier for email requests (autoincrement integer) | 
+| email      |   The user entered email (validated at the front end)    |   
+| register_date |   The system date and time corresponding to the record creation, which is the time of the request initialization     |    
+| keywords     | The user-entered search keywords | 
+| status      |  All records in this table should show a ‘New’ status  |   
+| last_modified |  In case the record get modified for any reason, this record is representing the last modification date and time for the corresponding record |  
+
+
+3. __WAITING_LIST__
+4. __ARCHIEVED_LIST__
+5. __FAILED_EMAILS__
 
 ## Required Packages
 - configparser
