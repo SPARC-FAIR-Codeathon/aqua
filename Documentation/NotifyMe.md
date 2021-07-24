@@ -1,5 +1,5 @@
 # "Notify Me" module
-### Email notification functionality
+__(Email notification functionality)__
 
 ## Main Purpose
 
@@ -46,6 +46,12 @@ We can summarize the "Notify Me" actions as follow:
 
 NotifyMe.db is the "Notify Me" SQLite database file. The database will be automatically created during the first call of the "Notify Me" module.  If one needs to drop and recreate the database for any reason, they can call the create_notifyme_db function from Notifyme_utils and set the clean option to True.
 
+The database consists of 4 main tables:
+
+1. __1.	NEW_REGISTER__
+2. __WAITING_LIST__
+3. __ARCHIEVED_LIST__
+4. __FAILED_EMAILS__
 
 ## Required Packages
 - configparser
