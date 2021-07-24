@@ -1,13 +1,13 @@
 # NotifyMe
-### An email notification functionality
+### Email notification functionality
 
 ## Main Purpose
 
-The main purpose of this functionality is to notify users whenever a new dataset is published against their search terms if nothing is available at the moment.
+The primary purpose of this functionality is to notify users whenever a new dataset is published against their search terms if nothing is available at the moment.
 
-However, users can still use the same function, to receive an summary table including basic information and links to all datasets currently matching their keywords.
+However, users can still use the same function to receive a summary table including basic information and links to all datasets currently matching their keywords.
 
-Additionally, as requests are saved in a database, this information can be further access and analysed to get insights for further content improvement.
+Additionally, as requests are saved in a database, this information can be further accessed and analysed to get further content improvement.
 
 
 ## How to run
