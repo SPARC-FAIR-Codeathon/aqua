@@ -31,11 +31,11 @@
   
    <br/>
    
-**2. Vague result display:** You need to enter the exact correct keywords in the search bar (Fig 2) and yet, it does not **highlight the search keywords** among the search results.
+**2. Vague result display:** You need to enter the exact correct keywords in the search bar (Fig 2) and yet, it does not **bold/highlight the search keywords** among the search results.
 
 <p align="center">
    <img src="https://github.com/Niloofar-Sh/aqua/blob/main/src/assets/images/rattus_current_result.jpg" width="800" height="450"></br>
-  <i>Fig 2. Search results for a correct keyword (rattis) on the SPARC portal. Keywords are not highlighted in the results.</i>
+  <i>Fig 2. Search results for a correct keyword (rattis) on the SPARC portal. Keywords are not bolded/highlighted in the results.</i>
 </p>
    
 **3. Limited result filterings:** The website currently refines the results by either being "Public" or "Embargoed" (Fig 3).
