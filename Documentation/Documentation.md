@@ -187,10 +187,22 @@ AQUA adds view type to the existing SPARC Portal to enhance user experience with
 </p>
 
 ## :hammer_and_wrench: Installation
-You can setup and deploy the Docker module for AQUA by following the steps in: [AQUA Docker](https://github.com/Niloofar-Sh/aqua/tree/main/aqua_docker#readme)
-## :electric_plug: Dependencies
 
-[Docker](https://www.docker.com/) is a platform that bundles and delivers software in packages called containers.
+**Step 1**: Git clone the AQUA project by running the following command:
+`git clone https://github.com/SPARC-FAIR-Codeathon/aqua.git`
+
+**Step 2**: Go into the `aqua` directory and run the following commands:
+```
+# install dependencies
+$ yarn install
+
+# serve with hot reload at localhost:3000
+$ yarn dev
+
+# build for production and launch server
+$ yarn build
+$ yarn start
+```
 
 # :mag_right: Testing
 
