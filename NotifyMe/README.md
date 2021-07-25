@@ -12,19 +12,19 @@ Additionally, as requests are saved in a database, this information can be furth
 
 ## How to run
 
-1. Run notifyme_api.py, in order fetch the user email and search keywords.
- 
- an example call:
- 	
-  http://localhost:5432/aqua/notifyme?email=<email>&keywords=<keywords>
- 
- 
-2. In order to schedule the keywords search and sending emails, you need to run notifyme_sched.py
+1. First, update the [properties.ini](./properties.ini) with the required information like sending email password and the scicrunch api-key
 
-The current setting is scheduling emails to be sent daily at 2 am
+2. Run [notifyme_api.py](./notifyme_api.py), in order fetch the user email and search keywords.
+ 
+ an example call:  http://localhost:5432/aqua/notifyme?email="<email>"&keywords="<keywords>"
 
+3. In order to schedule the keywords search and sending emails, you need to run [notifyme_sched.py](./notifyme_sched.py)
 
- 3. A sample analytics visualization can run through [NotifyMe_analytics_visual.ipynb](https://nbviewer.jupyter.org/github/lrasmy/aqua/blob/main/NotifyMe/NotifyMe_analytics_visual.ipynb)
+   The current setting is scheduling emails to be sent daily at 2 am
+
+4. The request are saved in a SQLite database. the description of the database tables is available in [NotifyMe Database.pdf](./NotifyMe Database.pdf)
+ 
+5. A sample analytics visualization can run through [NotifyMe_analytics_visual.ipynb](https://nbviewer.jupyter.org/github/lrasmy/aqua/blob/main/NotifyMe/NotifyMe_analytics_visual.ipynb)
  
 
 ## How it works
