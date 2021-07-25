@@ -18,7 +18,7 @@ NIF Standard ontology (**NIFS ontology**) is a neuroscience ontology that mainta
 # Sections of the "AQUA Query refinement" module
 
 ## Suggestions path:
-To give suggestions to the users, we have utilised SciGraph, which provides basic "vocabulary" support. To improve the suggestions component of our "Query refinement" module, we have also implemented another parallel path, including an *Auto-correction n-grams model* and a Python library *symspellpy*.
+To give suggestions to the users, we have utilised SciGraph, which provides basic "vocabulary" support. To improve the suggestions component of our "Query refinement" module, we have also implemented another parallel path, including an *Auto-correction n-gram model* and a Python library *symspellpy*. 
 <br\>
 ### What is SciGraph?
 Represents ontologies and ontology-encoded knowledge in a Neo4j graph. SciGraph reads ontologies with owlapi and ingests ontology formats available to owlapi (OWL, RDF, OBO, TTL, etc) ([SciGraph](https://github.com/SciGraph/SciGraph)).
@@ -26,14 +26,21 @@ Represents ontologies and ontology-encoded knowledge in a Neo4j graph. SciGraph 
 ### What is auto-correction n-gram model?
 In spelling correction task, an n-gram is a contiguous sequence of n letters from a given sample of text. An n-gram model is utilised to compare strings and compute the similarity between two words, by counting the number of similar n-grams they share. This technique is language independent. The more similar n-grams between two words exist the more similar they are ([Ahmed et al.](http://www.scielo.org.mx/pdf/poli/n40/n40a7.pdf)). 
 
-### SymSpellPy
-xxxxx
+### symspellpy
+symspellpy is a Python port of SymSpell for spelling correction, fuzzy search and approximate string matching [symspellpy](https://pypi.org/project/symspellpy/),[SymSpell](https://github.com/wolfgarbe/SymSpell).
 
 *__Word segmentstion__
-xxxx
+
+word_segmentation divides a string into words by inserting missing spaces at the appropriate positions misspelled words are corrected and do not affect segmentation existing spaces are allowed and considered for optimum segmentation.
 
 *__Spelling correction__
-xxx
+
+Supports compound aware automatic spelling correction of multi-word input strings with three cases:
+
+1. mistakenly inserted space into a correct word led to two incorrect terms
+2. mistakenly omitted space between two correct words led to one incorrect combined term
+3. multiple independent input terms with/without spelling errors
+Find suggested spellings for a multi-word input string (supports word splitting/merging).
 
 ## Auto-completion path:
 
