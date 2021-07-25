@@ -27,7 +27,7 @@ Represents ontologies and ontology-encoded knowledge in a Neo4j graph. SciGraph 
 In spelling correction task, an n-gram is a contiguous sequence of n letters from a given sample of text. An n-gram model is utilised to compare strings and compute the similarity between two words, by counting the number of similar n-grams they share. This technique is language independent. The more similar n-grams between two words exist the more similar they are ([Ahmed et al.](http://www.scielo.org.mx/pdf/poli/n40/n40a7.pdf)). 
 
 ### symspellpy
-symspellpy is a Python port of SymSpell for spelling correction, fuzzy search and approximate string matching [symspellpy](https://pypi.org/project/symspellpy/),[SymSpell](https://github.com/wolfgarbe/SymSpell).
+symspellpy is a Python port of SymSpell for spelling correction, fuzzy search and approximate string matching ([symspellpy](https://pypi.org/project/symspellpy/),[SymSpell](https://github.com/wolfgarbe/SymSpell)).
 
 * __Word segmentstion__
 
