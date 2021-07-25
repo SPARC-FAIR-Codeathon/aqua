@@ -43,7 +43,7 @@
 **4. Limited result sorting:** The website currently sorts the results by either "Title" (listed alphabetically) or "Published date" (Fig 3).
 
 <p align="center">
-   <img src="https://github.com/Niloofar-Sh/aqua/blob/main/src/assets/images/rattus_filters.jpg" width="800" height="450"></br>
+   <img src="https://github.com/Niloofar-Sh/aqua/blob/main/src/assets/images/rattus_filters_1.JPG" width="800" height="450"></br>
   <i>Fig 3. Limited filterings for the results display on the SPARC portal.</i>
 </p>
    <br/>
@@ -102,8 +102,9 @@ The AQUA backend focuses on two main features:
   <i>Fig 5. Query refinement by Auto-completion/Suggestions.</i>
 </p>
 <br/>
-   AQUA utilises SciGraph for auto-completion and suggestion. However, we found that SciGraph’s suggestions do not deal with query problems such as error spelling and continuous script (*scriptio continua*). Therefore, we have added a new auto-correction feature to segment queries with missing spaces and fix error spelling by creating a pipeline to [SymSpellPy](https://pypi.org/project/symspellpy/). The auto-correction result is combined with the suggestion results and then executed as the final query search terms.
-(To read more visit: ["Query refinement" Readme](../blob/main/Documentation/QueryRefinement.md))  
+
+AQUA utilises SciGraph for auto-completion and suggestion. However, we found that SciGraph’s suggestions do not deal with query problems such as error spelling and continuous script (*scriptio continua*). Therefore, we have added a new auto-correction feature to segment queries with missing spaces and fix error spelling by creating a pipeline to [SymSpellPy](https://pypi.org/project/symspellpy/). The auto-correction result is combined with the suggestion results and then executed as the final query search terms.
+(To read more visit: ["Query refinement" Readme](https://github.com/Niloofar-Sh/aqua/blob/main/Documentation/QueryRefinement.md))  
 
 <br/>
 <br/>
@@ -127,10 +128,63 @@ Additionally, the "Notify Me" module stores all requests in an SQLite database, 
 
 ## 2. AQUA UI
 <br/>
+
 AQUA UI receives the user's queries, formulates them, and transfers to the AQUA Backend module. When the response from the AQUA backend is received, the AQUA UI interprets it and displays the content on the screen. Like the SPARC portal web application, the AQUA UI is implemented by the HTML-CSS-JS trio using: [VueJS](https://vuejs.org/) and [NuxtJS](https://nuxtjs.org/).
 
 # :information_desk_person: How to use AQUA? 
-blah blah blah
+
+How to use the 7 features added to the existing SPARC Portal Search engine by AQUA:
+
+#### 1. Predictive search typing
+AQUA provides autocompletion for user's query as they type. This feature is powered by training data from the NIF Ontologies and Scigraph. To avoid too many results being returned that can slow down the application, we only show autocompletion after users type 3 letters and more. (Figure 7)
+
+<p align="center">
+   <img src="https://github.com/SPARC-FAIR-Codeathon/aqua/raw/main/src/assets/images/UI-autocompletion.png" alt="interface" width="780" height="500"></br>
+  <i>Fig 7. Predictive typing interface.</i>
+</p>
+
+#### 2. Advanced search options
+There are currently 2 options for user's search query: "Exact match" or "Any of the words match". The default is "Any of the words match". If users want to return datasets for their exact search phrase, they can do that by clicking on "Advanced search" under the search box.
+
+#### 3. Advanced Sorting
+The existing SPARC Portal allows sorting based on dataset titles (alphabetically) and by published date. AQUA adds a "Relevance" sorting criterion that returns results based on how relevant the results are to their search query. This is set as the default sorting option (Figure 8).
+
+<p align="center">
+   <img src="https://github.com/SPARC-FAIR-Codeathon/aqua/raw/main/src/assets/images/UI-sorting.png" alt="interface" width="700" height="500"></br>
+  <i>Fig 8. Advanced sorting interface.</i>
+</p>
+
+#### 4. Advanced Filtering
+The existing SPARC Portal only allows for filtering based on "Dataset status", which is either Published or Embargoed. Aqua adds more sophisticated filtering options: by "Published Date", "Keyword", "Author", and "Category". Users can filter datasets by one or several keywords, authors, and categories. Hit "Enter" after each "keyword", "author", or "category" in their respective box to register it. After the entries are registered, click "Apply" to filter dataset results (Filter 9).
+
+<p align="center">
+   <img src="https://github.com/SPARC-FAIR-Codeathon/aqua/raw/main/src/assets/images/UI-filtering-feature.png" alt="interface" width="780" height="500"></br>
+  <i>Fig 9. Advanced filtering interface.</i>
+</p>
+
+#### 5. Email notifications for new matched datasets
+Users can opt in to receive emails about new datasets that match their search query. AQUA believes this is a much needed option for users to stay updated about their search and SPARC datasets. Simply click on "Create alerts" under the search box and enter an email. AQUA will trigger an email send when newly added dataset(s) that match the search query are published by SPARC. This is a one-time only email subscription. Options to be alerted more than once can be added in the future. (Figure 10)
+
+<p align="center">
+   <img src="https://github.com/SPARC-FAIR-Codeathon/aqua/raw/main/src/assets/images/UI-email.png" alt="interface" width="780" height="500"></br>
+  <i>Fig 10. Email Notification interface.</i>
+</p>
+
+#### 6. Bold matched texts in result display
+When a dataset is returned, any matched text in the dataset title and description will be bolded for easy and convenient lookup (Figure 11). 
+
+<p align="center">
+   <img src="https://github.com/SPARC-FAIR-Codeathon/aqua/raw/main/src/assets/images/highlighted.png" alt="interface" width="780" height="500"></br>
+  <i>Fig 11. Bolded matched text in result display.</i>
+</p>
+
+#### 7. View type
+AQUA adds view type to the existing SPARC Portal to enhance user experience with the website. The default option is List view, which is the SPARC Portal's existing view type. AQUA proposes to add a gallery view option in the future.
+
+<p align="center">
+   <img src="https://github.com/SPARC-FAIR-Codeathon/aqua/raw/main/src/assets/images/UI-view-type.png" alt="interface" width="700" height="500"></br>
+  <i>Fig 12. View type interface.</i>
+</p>
 
 ## :hammer_and_wrench: Installation
 You can setup and deploy the Docker module for AQUA by following the steps in: [AQUA Docker](https://github.com/Niloofar-Sh/aqua/tree/main/aqua_docker#readme)
