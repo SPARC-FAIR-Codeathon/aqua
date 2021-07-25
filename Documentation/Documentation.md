@@ -130,7 +130,34 @@ Additionally, the "Notify Me" module stores all requests in an SQLite database, 
 AQUA UI receives the user's queries, formulates them, and transfers to the AQUA Backend module. When the response from the AQUA backend is received, the AQUA UI interprets it and displays the content on the screen. Like the SPARC portal web application, the AQUA UI is implemented by the HTML-CSS-JS trio using: [VueJS](https://vuejs.org/) and [NuxtJS](https://nuxtjs.org/).
 
 # :information_desk_person: How to use AQUA? 
-blah blah blah
+
+How to use the 7 features added to the existing SPARC Portal Search engine by AQUA:
+
+#### 1. Predictive search typing
+AQUA provides autocompletion for user's query as they type. This feature is powered by training data from the NIF Ontologies and Scigraph. To avoid too many results being returned that can slow down the application, we only show autocompletion after users type 3 letters and more. 
+
+<p align="center">
+   <img src="https://github.com/Niloofar-Sh/aqua/raw/main/src/assets/images/NotifyMe.jpeg" alt="interface" width="780" height="500"></br>
+  <i>Fig 7. Predictive typing interface.</i>
+</p>
+
+#### 2. Advanced search options
+There are currently 2 options for user's search query: "Exact match" or "Any of the words match". The default is "Any of the words match". If users want to return datasets for their exact search phrase, they can do that by clicking on "Advanced search" under the search box.
+#### 3. Advanced Sorting
+The existing SPARC Portal allows sorting based on dataset titles (alphabetically) and by published date. AQUA adds a "Relevance" sorting criterion that returns results based on how relevant the results are to their search query. This is set as the default sorting option.
+#### 4. Advanced Filtering
+The existing SPARC Portal only allows for filtering based on "Dataset status", which is either Published or Embargoed. Aqua adds more sophisticated filtering options: by "Published Date", "Keyword", "Author", and "Category". Users can filter datasets by one or several keywords, authors, and categories. Hit "Enter" after each "keyword", "author", or "category" in their respective box to register it. After the entries are registered, click "Apply" to filter dataset results.
+#### 5. Email notifications for new matched datasets
+Users can opt in to receive emails about new datasets that match their search query. AQUA believes this is a much needed option for users to stay updated about their search and SPARC datasets. Simply click on "Create alerts" under the search box and enter an email. AQUA will trigger an email send when newly added dataset(s) that match the search query are published by SPARC. This is a one-time only email subscription. Options to be alerted more than once can be added in the future.
+#### 6. Bold matched texts in result display
+When a dataset is returned, any matched text in the dataset title and description will be bolded for easy and convenient lookup.
+#### 7. View type
+AQUA adds view type to the existing SPARC Portal to enhance user experience with the website. The default option is List view, which is the SPARC Portal's existing view type. AQUA proposes to add a gallery view option in the future.
+
+<p align="center">
+   <img src="https://github.com/Niloofar-Sh/aqua/raw/main/src/assets/images/NotifyMe.jpeg" alt="interface" width="780" height="500"></br>
+  <i>Fig 8. AQUA's general user interface by features.</i>
+</p>
 
 ## :hammer_and_wrench: Installation
 You can setup and deploy the Docker module for AQUA by following the steps in: [AQUA Docker](https://github.com/Niloofar-Sh/aqua/tree/main/aqua_docker#readme)
