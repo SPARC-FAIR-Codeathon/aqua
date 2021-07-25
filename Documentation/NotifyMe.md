@@ -81,12 +81,22 @@ The database consists of 4 main tables:
 | email      |   The user entered email (validated at the front end)    |   
 | register_date |   The date and time of the request     |    
 | keywords     | The user-entered search keywords | 
-| status      | Request current status. Can be either: -	‘Sent’: for successfully sent emails -	‘Duplicate’: case the request identified earlier to be a duplicate request/entry -	‘Failed’: case the email request raises an error consistently for more than one month. |   
+| status      | Request current status. Can be either ‘Sent’ for successfully sent emails,	‘Duplicate’ for the case in which the request identified earlier to be a duplicate request/entry,	‘Failed’ in case the email request raises an error consistently for more than one month. |   
 | last_modified | The date and time for the last modification of this record. Should be corresponding to the time the email is sent if the status is ‘Sent’. |  
 | hits| The number of matching hits sent against the search keywords. In case of failed requests, it will be the number of hits that exists at the time the record moved from the waiting_list table to here|
 |failed_reqid|This is the reference for the latest corresponding Failed_emails record, showing the exact error that explains why this request failed|
 
 4. __FAILED_EMAILS__
+
+| Column Name        | Description           | 
+| ------------- |:-------------:| 
+|failed_reqid | A unique identifier for an error recorded against an email request (autoincrement integer)| 
+|corresponding_entry_id | The corresponding entry_id of the email request will normally find either in the waiting_list table or the archieved_list table if we fail to send an email for more than a month|   
+| register_date | The date and time of the request |    
+|error_message | The detailed error message leading for email posting failure | 
+|error_date | The system date and time when the error was triggered  |   
+
+
 
 ## Required Packages
 - configparser
