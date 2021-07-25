@@ -43,8 +43,8 @@ Supports compound aware automatic spelling correction of multi-word input string
 
 1. mistakenly inserted space into a correct word led to two incorrect terms
 2. mistakenly omitted space between two correct words led to one incorrect combined term
-3. multiple independent input terms with/without spelling errors
-<br\>
+3. multiple independent input terms with/without spelling errors <br\>
+
 Find suggested spellings for a multi-word input string (supports word splitting/merging).
 
 ## Auto-completion path (yellow path):
