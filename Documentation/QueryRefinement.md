@@ -35,7 +35,11 @@ symspellpy is a Python port of SymSpell for spelling correction, fuzzy search an
 
 * __Word segmentstion__
 
-   word_segmentation divides a string into words by inserting missing spaces at the appropriate positions misspelled words are corrected and do not affect segmentation existing spaces are allowed and considered for optimum segmentation.
+```javascript 
+lookup_compound(phrase, max_edit_distance, ignore_non_words=False, transfer_casing=False, split_phrase_by_space=False, ignore_term_with_digits=False)
+```
+
+word_segmentation divides a string into words by inserting missing spaces at the appropriate positions misspelled words are corrected and do not affect segmentation existing spaces are allowed and considered for optimum segmentation.
 
 * __Spelling correction__
 
