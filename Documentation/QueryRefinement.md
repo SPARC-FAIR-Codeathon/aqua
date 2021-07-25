@@ -5,4 +5,4 @@
 </p>
 <br/>
 
-Metadata is the “Data about data”, i.e., additional information provided about datasets such as title, description, techniques, etc. about the dataset. It also includes the number of the files, formats, licenses, ... [metadata](https://staging.sparc.science/help/3vcLloyvrvmnK3Nopddrka#metadata).
+Metadata is the “Data about data”, i.e., additional information provided about datasets. The SPARC dataset metadata includes information such as title, description, techniques, etc. about the dataset. It also includes the number of the files, formats, licenses, ... [SPARC dataset metadata](https://staging.sparc.science/help/3vcLloyvrvmnK3Nopddrka#metadata).
