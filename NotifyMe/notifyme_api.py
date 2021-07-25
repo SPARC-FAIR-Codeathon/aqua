@@ -1,6 +1,6 @@
 from flask import Flask,json
 from flask_restplus import Api, Resource, reqparse
-from Notifyme_utils import add_new_single_entry
+import Notifyme_utils as ut
 import requests
 import logging
 
@@ -17,7 +17,10 @@ class Retrieve_search(Resource):
         args = parser.parse_args()
         email = args['email']
         keywords = args['keywords']
-        add_new_single_entry(email,keywords)
+        ut.add_new_single_entry(email,keywords)
+        ut.scan_new_register()
+        ut.scan_waiting_list()
+
         return 'registrant successfully added'
            
 if __name__ == '__main__':
