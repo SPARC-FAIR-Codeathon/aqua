@@ -21,7 +21,7 @@ NIF Standard ontology (**NIFS ontology**) is a neuroscience ontology that mainta
 xxx
 
 ## Auto-correction n-grams model
-In a spelling correction task, an n-gram is a sequence of n letters in a word or a string. The n-gram model can be used to compute the similarity between two strings, by counting the number of similar n-grams they share. The more similar ngrams between two strings exist the more similar they are [Ahmed et al.](http://www.scielo.org.mx/pdf/poli/n40/n40a7.pdf). 
+In a spelling correction task, an n-gram is a sequence of n letters in a word or a string. The n-gram model can be used to compute the similarity between two strings, by counting the number of similar n-grams they share. The more similar ngrams between two strings exist the more similar they are ([Ahmed et al.](http://www.scielo.org.mx/pdf/poli/n40/n40a7.pdf)). 
 
 ## SymSpellPy
 xxxxx
