@@ -19,7 +19,7 @@ NIF Standard ontology (**NIFS ontology**) is a neuroscience ontology that mainta
 
 ## Suggestions path (purple box):
 To give suggestions to the users, we have utilised SciGraph, which provides basic "vocabulary" support. To improve the suggestions component of our "Query refinement" module, we have also implemented another parallel path, including an *Auto-correction n-gram model* and a Python library *symspellpy*. 
-<br\>
+<br/>
 
 ### SciGraph
 
@@ -43,7 +43,7 @@ Supports compound aware automatic spelling correction of multi-word input string
 
 1. mistakenly inserted space into a correct word led to two incorrect terms
 2. mistakenly omitted space between two correct words led to one incorrect combined term
-3. multiple independent input terms with/without spelling errors <br\>
+3. multiple independent input terms with/without spelling errors <br/>
 
 Find suggested spellings for a multi-word input string (supports word splitting/merging).
 
