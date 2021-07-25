@@ -29,11 +29,11 @@ In spelling correction task, an n-gram is a contiguous sequence of n letters fro
 ### symspellpy
 symspellpy is a Python port of SymSpell for spelling correction, fuzzy search and approximate string matching [symspellpy](https://pypi.org/project/symspellpy/),[SymSpell](https://github.com/wolfgarbe/SymSpell).
 
-*__Word segmentstion__
+* __Word segmentstion__
 
 word_segmentation divides a string into words by inserting missing spaces at the appropriate positions misspelled words are corrected and do not affect segmentation existing spaces are allowed and considered for optimum segmentation.
 
-*__Spelling correction__
+* __Spelling correction__
 
 Supports compound aware automatic spelling correction of multi-word input strings with three cases:
 
