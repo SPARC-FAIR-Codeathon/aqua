@@ -10,6 +10,7 @@
 * [The Problem](#the-problem)
 * [AQUA solution](#aqua-solution)
 * [How it works](#how-it-works)
+* [How to install](#how-to-install)
 * [Documentation](#documentation)
 * [Developers](#developers)
 
