@@ -43,7 +43,7 @@
 **4. Limited result sorting:** The website currently sorts the results by either "Title" (listed alphabetically) or "Published date" (Fig 3).
 
 <p align="center">
-   <img src="https://github.com/Niloofar-Sh/aqua/blob/main/src/assets/images/rattus_filters_1.jpg" width="800" height="450"></br>
+   <img src="https://github.com/Niloofar-Sh/aqua/blob/main/src/assets/images/rattus_filters_1.JPG" width="800" height="450"></br>
   <i>Fig 3. Limited filterings for the results display on the SPARC portal.</i>
 </p>
    <br/>
