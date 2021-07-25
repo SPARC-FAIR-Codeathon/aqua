@@ -17,8 +17,11 @@ NIF Standard ontology (**NIFS ontology**) is a neuroscience ontology that mainta
 
 # Sections of the "AQUA Query refinement" module
 
+
+
 ## Suggestions path (purple box):
-To give suggestions to the users, we have utilised SciGraph, which provides basic "vocabulary" support. To improve the suggestions component of our "Query refinement" module, we have also implemented another parallel path, including an *Auto-correction n-gram model* and a Python library *symspellpy*. 
+If there is a typo or removed space between the words of a query, the ElasticSeach might return either no results or irrelevant results. In this case, we need a suggestion and auto-correction feature to improve the quality of the query. 
+Merely using SciGraph is not sufficient because SciGraph returns alternative queries/suggestions without correcting the initial query. To improve this process, we have implemented an auto-correction pipeline along with SciGraph to correct the queries before giving suggestions. This includes an *Auto-correction n-gram model* and a Python library *symspellpy*. 
 <br/>
 
 ### SciGraph
