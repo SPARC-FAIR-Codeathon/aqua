@@ -1,26 +1,23 @@
-# AQUA 
-### An Advanced QUery Architecture for the SPARC Portal
-
 <p align="center">
-  <img src="https://github.com/SPARC-FAIR-Codeathon/aqua/raw/main/src/assets/images/logo_aqua-1.jpg" alt="interface" width="500" height="300"> 
+  <img src="https://github.com/SPARC-FAIR-Codeathon/aqua/raw/main/src/assets/images/logo_aqua-1.jpg" alt="interface" width="420" height="250"> 
   <br/> 
   </img>
 </p>
 
 ## Table of Contents
 
-* [About us](#about-us)
-* [Problem](#problem)
+* [About AQUA](#about-aqua)
+* [The Problem](#the-problem)
 * [AQUA solution](#aqua-solution)
 * [How it works](#how-it-works)
 * [Documentation](#documentation)
 * [Developers](#developers)
 
-## About us
+## About AQUA
 
-AQUA is an application that aims at improving the search capabilities of the [SPARC Portal](https://sparc.science/). In particular, we are looking to make the search engine smarter at reading and understanding user input as search keywords. We also enhance the result display feature of the SPARC Portal by making it more user-friendly and providing users with more sophisticated result filtering and sorting options. Our end goal is to improve exponentially the visibility of the SPARC datasets. This in turn will benefit the SPARC community as a whole since their datasets will be more discoverable for reuse and subsequent collaboration. This project was created during the 2021 SPARC FAIR Codeathon.
+AQUA (Advanced QUery Architecture for the SPARC Portal) is an application that aims at improving the search capabilities of the [SPARC Portal](https://sparc.science/). In particular, we are looking to make the search engine smarter at reading and understanding user input as search keywords. We also enhance the result display feature of the SPARC Portal by making it more user-friendly and providing users with more sophisticated result filtering and sorting options. Our end goal is to improve exponentially the visibility of the SPARC datasets. This in turn will benefit the SPARC community as a whole since their datasets will be more discoverable for reuse and subsequent collaboration. This project was created during the 2021 SPARC FAIR Codeathon.
 
-## Problem
+## The Problem
 
 Currently, the search feature of the SPARC Portal is very limited: 
 
@@ -46,10 +43,11 @@ Currently, the search feature of the SPARC Portal is very limited:
 ## How it works
 
 <p align="left">
-  <img src="https://github.com/SPARC-FAIR-Codeathon/aqua/raw/main/src/assets/images/workflow_new.jpg" alt="interface" width="900" height="500"> 
+  <img src="https://github.com/SPARC-FAIR-Codeathon/aqua/raw/main/src/assets/images/workflow_new.jpg" alt="interface" width="850" height="500"> 
   <br/> 
   </img>
 </p>
+ 
 
 ## Documentation
 
