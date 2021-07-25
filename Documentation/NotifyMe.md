@@ -81,10 +81,7 @@ The database consists of 4 main tables:
 | email      |   The user entered email (validated at the front end)    |   
 | register_date |   The date and time of the request     |    
 | keywords     | The user-entered search keywords | 
-| status      | Request current status. Can be either:
--	‘Sent’: for successfully sent emails
--	‘Duplicate’: case the request identified earlier to be a duplicate request/entry
--	‘Failed’: case the email request raises an error consistently for more than one month. |   
+| status      | Request current status. Can be either: -	‘Sent’: for successfully sent emails -	‘Duplicate’: case the request identified earlier to be a duplicate request/entry -	‘Failed’: case the email request raises an error consistently for more than one month. |   
 | last_modified | The date and time for the last modification of this record. Should be corresponding to the time the email is sent if the status is ‘Sent’. |  
 | hits| The number of matching hits sent against the search keywords. In case of failed requests, it will be the number of hits that exists at the time the record moved from the waiting_list table to here|
 |failed_reqid|This is the reference for the latest corresponding Failed_emails record, showing the exact error that explains why this request failed|
