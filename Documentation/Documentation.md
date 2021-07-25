@@ -182,7 +182,7 @@ When a dataset is returned, any matched text in the dataset title and descriptio
 AQUA adds view type to the existing SPARC Portal to enhance user experience with the website. The default option is List view, which is the SPARC Portal's existing view type. AQUA proposes to add a gallery view option in the future.
 
 <p align="center">
-   <img src="https://github.com/SPARC-FAIR-Codeathon/aqua/raw/main/src/assets/images/UI-view-type.png" alt="interface" width="700" height="500"></br>
+   <img src="https://github.com/SPARC-FAIR-Codeathon/aqua/raw/main/src/assets/images/UI-viewtype.png" alt="interface" width="700" height="500"></br>
   <i>Fig 12. View type interface.</i>
 </p>
 
