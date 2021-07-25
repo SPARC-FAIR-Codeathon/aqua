@@ -17,11 +17,11 @@ NIF Standard ontology (**NIFS ontology**) is a neuroscience ontology that mainta
 
 # Sections of the "AQUA Query refinement" module
 
-## Auto-correction n-grams model
-blah blah blah
-
 ## Scigraph
 xxx
+
+## Auto-correction n-grams model
+blah blah blah
 
 ## SymSpellPy
 xxxxx
@@ -32,3 +32,4 @@ xxxx
 ### Spelling correction
 xxx
 
+# Packages
