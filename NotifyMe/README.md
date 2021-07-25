@@ -3,12 +3,36 @@
 
 ## Main Purpose
 
-The main purpose of this functionality is to notify users whenever a new dataset is published against their search terms if nothing is available at the moment.
+The NotifyMe option is to send emails that summarize search results against exact keywords. NotifyMe sends the email just once at least one exact hitting match exists. Therefore, NotifyMe can be used for:
 
-However, users can still use the same function, to receive an summary table including basic information and links to all datasets currently matching their keywords.
+     1.	Notify users when a dataset gets published against keywords that don’t retrieve any results yet.
+     2.	Emailing the current search results in a tabular format, which can be found helpful for users.
 
-Additionally, as requests are saved in a database, this information can be further access and analysed to get insights for further content improvement.
+Additionally, NotifyMe stores all requests in an SQLite database, which can be further analyzed by the SPARC team to understand the search pattern and get more insights on the demand. For example, the SPARC team can find out the most common keywords searched with no existing matches and decide on actions to fulfill such needs. 
 
+## How it works
+
+ We can summarize NotifyMe actions as follow:
+ 
+       1.	Add email requests with keywords 
+ 
+       2.	Scan for existing search hits and send email
+ 
+       3.	Moving pending requests to a waiting list, that’s scanned daily
+ 
+       4.	Moving fulfilled requests to an archived list
+ 
+       5.	Any failed requests (that already have matching hits) will remain in the waiting list for one month,
+          during which NotifyMe will try to send the email on daily basis. Afterward, if the email still failing,
+          it will move to the archived list with a final failed status for efficiency.
+ 
+
+
+<p align="left">
+  <img src="./NotifyMe.jpeg" alt="interface" width="900" height="550"> 
+  <br/> 
+  </img>
+</p>
 
 ## How to run
 
@@ -26,15 +50,6 @@ Additionally, as requests are saved in a database, this information can be furth
  
 5. A sample analytics visualization can run through [NotifyMe_analytics_visual.ipynb](https://nbviewer.jupyter.org/github/lrasmy/aqua/blob/main/NotifyMe/NotifyMe_analytics_visual.ipynb)
  
-
-## How it works
-
-<p align="left">
-  <img src="./NotifyMe.jpeg" alt="interface" width="900" height="550"> 
-  <br/> 
-  </img>
-</p>
-
 
 ## Required Packages
 - configparser
