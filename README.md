@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://github.com/SPARC-FAIR-Codeathon/aqua/raw/main/src/assets/images/logo_aqua-1.jpg" alt="interface" width="600" height="350"> 
+  <img src="https://github.com/SPARC-FAIR-Codeathon/aqua/raw/main/src/assets/images/logo_aqua-1.jpg" alt="interface" width="420" height="250"> 
   <br/> 
   </img>
 </p>
@@ -51,7 +51,7 @@ Currently, the search feature of the SPARC Portal is very limited:
 
 ## Documentation
 
-For a detailed documentation of our application, please visit here.
+For a detailed documentation of our application, please visit [documentation](https://github.com/Niloofar-Sh/aqua/blob/main/Documentation/Documentation.md).
 
 ## Developers
 

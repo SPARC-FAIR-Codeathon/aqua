@@ -18,6 +18,7 @@ Additionally, as requests are saved in a database, this information can be furth
  	
   http://localhost:5432/aqua/notifyme?email=<email>&keywords=<keywords>
  
+ 
 2. In order to schedule the keywords search and sending emails, you need to run notifyme_sched.py
 
 The current setting is scheduling emails to be sent daily at 2 am
