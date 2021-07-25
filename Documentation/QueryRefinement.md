@@ -14,3 +14,21 @@ Metadata is the “Data about data”, i.e., additional information provided abo
 NIF Standard ontology (**NIFS ontology**) is a neuroscience ontology that maintains an extensive set of terms and concepts important for the domains of neuroscience and biology ([NIFS Ontology](https://github.com/SciCrunch/NIF-Ontology)). This a set of community ontologies used by SPARC to annotate data and models.
 <br/>
 <br/>
+
+# Sections of the "AQUA Query refinement" module
+
+## Auto-correction n-grams model
+blah blah blah
+
+## Scigraph
+xxx
+
+## SymSpellPy
+xxxxx
+
+### Word segmentstion
+xxxx
+
+### Spelling correction
+xxx
+
