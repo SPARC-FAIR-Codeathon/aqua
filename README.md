@@ -51,7 +51,7 @@ Currently, the search feature of the SPARC Portal is very limited:
 
 ## Documentation
 
-For a detailed documentation of our application, please visit [documentation](https://github.com/Niloofar-Sh/aqua/blob/main/Documentation/Documentation.md).
+For a detailed documentation of our application, please visit [documentation](https://github.com/SPARC-FAIR-Codeathon/aqua/blob/main/Documentation/Documentation.md).
 
 ## Developers
 
