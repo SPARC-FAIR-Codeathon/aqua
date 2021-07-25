@@ -61,8 +61,21 @@ The database consists of 4 main tables:
 
 
 3. __WAITING_LIST__
-4. __ARCHIEVED_LIST__
-5. __FAILED_EMAILS__
+
+| Column Name        | Description           | 
+| ------------- |:-------------:| 
+| entry_id     | A unique identifier for email requests (automatically created in the new_register table) | 
+| email      |   The user entered email (validated at the front end)    |   
+| register_date |   The date and time of the request     |    
+| keywords     | The user-entered search keywords | 
+| status      | Request current status. Can be either ‘New’ if no hits still matching, or ‘Failed’ if the last attempt to send an email failed, the detailed error will be stored in Failed_emails |   
+| last_modified | The date and time for the last modification of this record |  
+| hits| The current number of matching hits exists against the search keywords. This should be ‘0’ for records remaining in ‘New’ status, and an actual number for ‘Failed’ records
+|
+|failed_reqid|This is the reference for the latest corresponding Failed_emails record, showing the exact error that explains why this request failed|
+
+5. __ARCHIEVED_LIST__
+6. __FAILED_EMAILS__
 
 ## Required Packages
 - configparser
