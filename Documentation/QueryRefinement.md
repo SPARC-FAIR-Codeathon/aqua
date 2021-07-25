@@ -17,19 +17,31 @@ NIF Standard ontology (**NIFS ontology**) is a neuroscience ontology that mainta
 
 # Sections of the "AQUA Query refinement" module
 
-## Scigraph
+## Suggestions path:
+### Scigraph
 xxx
 
-## Auto-correction n-grams model
+### Auto-correction n-grams model
 In spelling correction task, an n-gram is a contiguous sequence of n letters from a given sample of text. An n-gram model is utilised to compare strings and compute the similarity between two words, by counting the number of similar n-grams they share. This technique is language independent. The more similar n-grams between two words exist the more similar they are ([Ahmed et al.](http://www.scielo.org.mx/pdf/poli/n40/n40a7.pdf)). 
 
-## SymSpellPy
+### SymSpellPy
 xxxxx
 
-### Word segmentstion
+*__Word segmentstion__
 xxxx
 
-### Spelling correction
+*__Spelling correction__
 xxx
 
-# Packages
+## Auto-completion path:
+
+### Auto-completion model
+
+### Fast auto-complete
+
+
+# Packages:
+
+1. symspellpy
+2. scigraph
+3. ???
