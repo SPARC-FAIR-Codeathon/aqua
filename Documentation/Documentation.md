@@ -236,7 +236,7 @@ The experiment is set to return 10 completion in maximum for each query.
 __Execution Time Analysis:__
 
 <p align="center">
-   <img src="https://github.com/Niloofar-Sh/aqua/blob/main/src/assets/images/return_number.png" alt="interface" width="700" height="500"></br>
+   <img src="https://github.com/Niloofar-Sh/aqua/blob/main/src/assets/images/return_number.png" alt="interface" width="800" height="500"></br>
   <i>Fig 14. Execution time analysis.</i>
 </p>
 
@@ -300,7 +300,7 @@ The number of completion:
 __SciGraph__ returns a smaller number of completion. When there is a typo, SciGraph returns *almost zero completion*.
 Longer words cause a reduce in the completion number. Typo tends to increase the number of completion for __fast-autocomplete__.
 
-:triangular_flag_on_post: __In all case, fast-completion can return results.__
+:triangular_flag_on_post: __In all case, fast-autocomplete can return results.__
  
 # :speech_balloon: Ideas?
 To share your ideas, feedback, and comments contact any of our team members.
