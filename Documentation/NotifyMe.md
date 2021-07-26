@@ -12,12 +12,15 @@ Additionally, as requests are saved in a database, this information can be furth
 
 ## How to run
 
-1. First, update the [properties.ini](./properties.ini) with the required information like sending email password and the scicrunch api-key
+1. First, update the [properties.ini](https://github.com/Niloofar-Sh/aqua/blob/main/NotifyMe/properties.ini) with the required information like sending email password and the scicrunch api-key
  
  
-2. Run [notifyme_api.py](./notifyme_api.py), in order fetch the user email and search keywords.
-   An example call:  http://localhost:5432/aqua/notifyme?email="<email>"&keywords="<keywords>"
-3. In order to schedule the keywords search and sending emails, you need to run [notifyme_sched.py](./notifyme_sched.py) <br/>
+2. Run [notifyme_api.py](https://github.com/Niloofar-Sh/aqua/blob/main/NotifyMe/notifyme_api.py), in order fetch the user email and search keywords.
+   An example call:  
+   ```
+   http://localhost:5432/aqua/notifyme?email="<email>"&keywords="<keywords>"
+   ```
+3. In order to schedule the keywords search and sending emails, you need to run [notifyme_sched.py](https://github.com/Niloofar-Sh/aqua/blob/main/NotifyMe/notifyme_sched.py) <br/>
 
 The current setting is scheduling emails to be sent daily at 2 AM EDT
 
