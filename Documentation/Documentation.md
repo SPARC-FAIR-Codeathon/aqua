@@ -235,7 +235,7 @@ Thereafter, we created a second dataset by changing one character in ```DataTest
 __Execution Time Analysis:__
 
 <p align="center">
-   <img src="https://github.com/SPARC-FAIR-Codeathon/aqua/raw/main/src/assets/images/return_number.png" alt="interface" width="700" height="500"></br>
+   <img src="https://github.com/Niloofar-Sh/aqua/blob/main/src/assets/images/return_number.png" alt="interface" width="700" height="500"></br>
   <i>Fig 14. xxxxxx.</i>
 </p>
 
