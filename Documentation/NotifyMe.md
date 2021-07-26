@@ -99,6 +99,9 @@ The database consists of 4 main tables:
 |error_message | The detailed error message leading for email posting failure | 
 |error_date | The system date and time when the error was triggered  |   
 
+<br/>
+<br/>
+
 
 ## A sample analytical visualization
 
