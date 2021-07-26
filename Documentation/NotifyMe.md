@@ -107,7 +107,7 @@ import NM_analytics_utils as ut
 ut.plot_most_frequent_wait()
 ```
 <p align="left">
-  <img src="https://github.com/Niloofar-Sh/aqua/blob/main/src/assets/images/NotifyMe.jpeg" alt="interface" width="900" height="550"> 
+  <img src="https://github.com/Niloofar-Sh/aqua/blob/main/src/assets/images/not_matched.png" alt="interface" width="900" height="550"> 
   <br/> 
   </img>
 </p>
@@ -118,7 +118,7 @@ ut.plot_most_frequent_wait()
 ut.plot_most_freq_search_term(10)
 ```
 <p align="left">
-  <img src="https://github.com/Niloofar-Sh/aqua/blob/main/src/assets/images/NotifyMe.jpeg" alt="interface" width="900" height="550"> 
+  <img src="https://github.com/Niloofar-Sh/aqua/blob/main/src/assets/images/topTen.png" alt="interface" width="900" height="550"> 
   <br/> 
   </img>
 </p>
@@ -130,7 +130,7 @@ ut.plot_key_hits_pie()
 ```
 
 <p align="left">
-  <img src="https://github.com/Niloofar-Sh/aqua/blob/main/src/assets/images/NotifyMe.jpeg" alt="interface" width="900" height="550"> 
+  <img src="https://github.com/Niloofar-Sh/aqua/blob/main/src/assets/images/numOfHits.png" alt="interface" width="900" height="550"> 
   <br/> 
   </img>
 </p>
@@ -141,7 +141,7 @@ ut.plot_key_hits_pie()
 ut.plot_key_timetomatch()
 ```
 <p align="left">
-  <img src="https://github.com/Niloofar-Sh/aqua/blob/main/src/assets/images/NotifyMe.jpeg" alt="interface" width="900" height="550"> 
+  <img src="https://github.com/Niloofar-Sh/aqua/blob/main/src/assets/images/maxTime.png" alt="interface" width="900" height="550"> 
   <br/> 
   </img>
 </p>
