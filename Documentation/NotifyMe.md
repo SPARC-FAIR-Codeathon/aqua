@@ -12,19 +12,22 @@ Additionally, as requests are saved in a database, this information can be furth
 
 ## How to run
 
-1. Run notifyme_api.py, in order fetch the user email and search keywords.
- 
- an example call:
- 	
-  http://localhost:5432/aqua/notifyme?email=<email>&keywords=<keywords>
+1. First, update the [properties.ini](https://github.com/Niloofar-Sh/aqua/blob/main/NotifyMe/properties.ini) with the required information like sending email password and the scicrunch api-key
  
  
-2. In order to schedule the keywords search and sending emails, you need to run notifyme_sched.py
+2. Run [notifyme_api.py](https://github.com/Niloofar-Sh/aqua/blob/main/NotifyMe/notifyme_api.py), in order fetch the user email and search keywords.
+   An example call:  
+   ```
+   http://localhost:5432/aqua/notifyme?email="<email>"&keywords="<keywords>"
+   ```
+3. In order to schedule the keywords search and sending emails, you need to run [notifyme_sched.py](https://github.com/Niloofar-Sh/aqua/blob/main/NotifyMe/notifyme_sched.py) <br/>
 
 The current setting is scheduling emails to be sent daily at 2 AM EDT
 
 
- 3. A sample analytics visualization can run through [NotifyMe_analytics_visual.ipynb](https://nbviewer.jupyter.org/github/lrasmy/aqua/blob/main/NotifyMe/NotifyMe_analytics_visual.ipynb)
+ 4. The request are saved in a SQLite database. the description of the database tables has come in [How it works](##how-it-works).
+ 
+ 5. A sample analytical visualization can run through [NotifyMe_analytics_visual.ipynb](https://nbviewer.jupyter.org/github/lrasmy/aqua/blob/main/NotifyMe/NotifyMe_analytics_visual.ipynb)
  
 
 ## How it works
@@ -96,7 +99,57 @@ The database consists of 4 main tables:
 |error_message | The detailed error message leading for email posting failure | 
 |error_date | The system date and time when the error was triggered  |   
 
+<br/>
+<br/>
 
+
+## A sample analytical visualization
+
+```
+import NM_analytics_utils as ut
+ut.plot_most_frequent_wait()
+```
+<p align="left">
+  <img src="https://github.com/Niloofar-Sh/aqua/blob/main/src/assets/images/not_matched.png" alt="interface" width="700" height="400"> 
+  <br/> 
+  </img>
+</p>
+
+<br/>
+
+```
+ut.plot_most_freq_search_term(10)
+```
+<p align="left">
+  <img src="https://github.com/Niloofar-Sh/aqua/blob/main/src/assets/images/topTen.png" alt="interface" width="900" height="550"> 
+  <br/> 
+  </img>
+</p>
+
+<br/>
+
+```
+ut.plot_key_hits_pie()
+```
+
+<p align="left">
+  <img src="https://github.com/Niloofar-Sh/aqua/blob/main/src/assets/images/numOfHits.png" alt="interface" width="700" height="400"> 
+  <br/> 
+  </img>
+</p>
+
+<br/>
+
+```
+ut.plot_key_timetomatch()
+```
+<p align="left">
+  <img src="https://github.com/Niloofar-Sh/aqua/blob/main/src/assets/images/maxTime.png" alt="interface" width="750" height="450"> 
+  <br/> 
+  </img>
+</p>
+
+<br/>
 
 ## Required Packages
 - configparser

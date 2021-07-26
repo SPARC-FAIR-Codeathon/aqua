@@ -54,7 +54,7 @@ Supports compound aware automatic spelling correction of multi-word input string
 
 Find suggested spellings for a multi-word input string (supports word splitting/merging).
 
-## Auto-completion path (yellow path):
+## Auto-completion path (yellow box):
 It is an added feature to auto-complete the queries while the user is typing. The idea of auto-completion is to prevent typos occuring and to give a better user experience in the SPARC Portal. We have created an n-gram model for auto-completion and utilised a Python library *fast-autocomplete* ([fast-autocomplete](https://pypi.org/project/fast-autocomplete/)).
 
 ### Auto-completion model
