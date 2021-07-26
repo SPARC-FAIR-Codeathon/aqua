@@ -220,7 +220,7 @@ $ yarn start
 
 # :mag_right: Testing
 
-__Auto-completion experiment:__
+:point_right: __Auto-completion experiment:__
 
 Comparing **Scigraph** and **fast auto-complete**
 
@@ -235,7 +235,7 @@ Thereafter, we created a second dataset by changing one character in ```DataTest
 
 The experiment is set to return 10 completion in maximum for each query.
 
-__Execution Time Analysis:__
+:point_right: __Execution Time Analysis:__
 
 <p align="center">
    <img src="https://github.com/Niloofar-Sh/aqua/blob/main/src/assets/images/return_number.png" alt="interface" width="750" height="500"></br>
