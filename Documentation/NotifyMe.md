@@ -24,7 +24,7 @@ The current setting is scheduling emails to be sent daily at 2 AM EDT
 
  4. The request are saved in a SQLite database. the description of the database tables has come in [How it works](##how-it-works).
  
- 5. A sample analytics visualization can run through [NotifyMe_analytics_visual.ipynb](https://nbviewer.jupyter.org/github/lrasmy/aqua/blob/main/NotifyMe/NotifyMe_analytics_visual.ipynb)
+ 5. A sample analytical visualization can run through [NotifyMe_analytics_visual.ipynb](https://nbviewer.jupyter.org/github/lrasmy/aqua/blob/main/NotifyMe/NotifyMe_analytics_visual.ipynb)
  
 
 ## How it works
@@ -97,6 +97,53 @@ The database consists of 4 main tables:
 |error_date | The system date and time when the error was triggered  |   
 
 
+## A sample analytical visualization
+
+```
+import NM_analytics_utils as ut
+ut.plot_most_frequent_wait()
+```
+<p align="left">
+  <img src="https://github.com/Niloofar-Sh/aqua/blob/main/src/assets/images/NotifyMe.jpeg" alt="interface" width="900" height="550"> 
+  <br/> 
+  </img>
+</p>
+
+<br/>
+
+```
+ut.plot_most_freq_search_term(10)
+```
+<p align="left">
+  <img src="https://github.com/Niloofar-Sh/aqua/blob/main/src/assets/images/NotifyMe.jpeg" alt="interface" width="900" height="550"> 
+  <br/> 
+  </img>
+</p>
+
+<br/>
+
+```
+ut.plot_key_hits_pie()
+```
+
+<p align="left">
+  <img src="https://github.com/Niloofar-Sh/aqua/blob/main/src/assets/images/NotifyMe.jpeg" alt="interface" width="900" height="550"> 
+  <br/> 
+  </img>
+</p>
+
+<br/>
+
+```
+ut.plot_key_timetomatch()
+```
+<p align="left">
+  <img src="https://github.com/Niloofar-Sh/aqua/blob/main/src/assets/images/NotifyMe.jpeg" alt="interface" width="900" height="550"> 
+  <br/> 
+  </img>
+</p>
+
+<br/>
 
 ## Required Packages
 - configparser
