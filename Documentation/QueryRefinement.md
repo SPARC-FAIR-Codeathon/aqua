@@ -70,14 +70,14 @@ The format of the n-gram model needs to be in the following format:
 }
 ``` 
 
-* "phrase" can be 1-2 words. <br/>
-* The "context" is related to the context of words, for example Anatomy, chemical reactions, proteins, etc. <br/>
+* "phrase" can be 1-2 words. 
+* The "context" is related to the context of words, for example Anatomy, chemical reactions, proteins, etc. 
 * "display value" defines the standard display of the phrase based on the context.
 * "count" is the appearance of the phrase in the SPARC dataset and the NIFS ontology.
 
 
 ### Fast auto-complete
-The Elasticsearch's Autocomplete suggestor is not fast enough and doesn't do everything that we need. Consequently, we have utilised fast-autocomplete library which provides us with a much faster process (reducing the auto-completion required time from 900 ms to 30 ms).
+The Elasticsearch's Autocomplete suggestor is not fast enough and does not do everything that we need. Consequently, we have utilised fast-autocomplete library which provides us with a much faster process (reducing the auto-completion required time from 900 ms to 30 ms).
 
 # Packages:
 
