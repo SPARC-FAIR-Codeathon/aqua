@@ -12,6 +12,7 @@
 * [How it works](#how-it-works)
 * [How to install](#how-to-install)
 * [Documentation](#documentation)
+* [API](#api)
 * [Developers](#developers)
 
 ## About AQUA
@@ -71,6 +72,10 @@ $ yarn start
 ## Documentation
 
 For a detailed user documentation of our application, please visit [:arrow_forward: Documentation](https://github.com/SPARC-FAIR-Codeathon/aqua/blob/main/Documentation/Documentation.md).
+
+## API
+
+To read the AQUA API refer to: [AQUA API](https://github.com/SPARC-FAIR-Codeathon/aqua/experiment).
 
 ## Developers
 
