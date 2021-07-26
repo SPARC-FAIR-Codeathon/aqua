@@ -107,7 +107,7 @@ import NM_analytics_utils as ut
 ut.plot_most_frequent_wait()
 ```
 <p align="left">
-  <img src="https://github.com/Niloofar-Sh/aqua/blob/main/src/assets/images/not_matched.png" alt="interface" width="900" height="550"> 
+  <img src="https://github.com/Niloofar-Sh/aqua/blob/main/src/assets/images/not_matched.png" alt="interface" width="700" height="400"> 
   <br/> 
   </img>
 </p>
