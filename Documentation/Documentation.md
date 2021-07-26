@@ -1,7 +1,7 @@
 # Application name:
 
 <p align="center">
-  <img src="https://github.com/Niloofar-Sh/aqua/blob/main/src/assets/images/logo_aqua-1.jpg" alt="interface" width="500" height="300"> 
+  <img src="https://github.com/SPARC-FAIR-Codeathon/aqua/raw/main/src/assets/images/logo_aqua-1.jpg" alt="interface" width="500" height="300"> 
   <br/> 
   </img>
 </p>
@@ -24,7 +24,7 @@
 **1. Limited search feature of the SPARC Portal:** It does not recognize nearby words (in case of **typos**). As an example, if we type "rattis" (typo) instead of "rattus", it does not recognize it or give any suggestion (Fig 1).
 <br/>
 <p align="center">
-   <img src="https://github.com/Niloofar-Sh/aqua/blob/main/src/assets/images/rattis_current_result.jpg" width="800" height="450"></br>
+   <img src="https://github.com/SPARC-FAIR-Codeathon/aqua/raw/main/src/assets/images/rattis_current_result.jpg" width="800" height="450"></br>
   <i>Fig 1. Search results for a typo (rattis) on the SPARC portal. </i>
 </p>
   
@@ -33,7 +33,7 @@
 **2. Vague result display:** You need to enter the exact correct keywords in the search bar (Fig 2) and yet, it does not **bold/highlight the search keywords** among the search results.
 
 <p align="center">
-   <img src="https://github.com/Niloofar-Sh/aqua/blob/main/src/assets/images/rattus_current_result.jpg" width="800" height="450"></br>
+   <img src="https://github.com/SPARC-FAIR-Codeathon/aqua/raw/main/src/assets/images/rattus_current_result.jpg" width="800" height="450"></br>
   <i>Fig 2. Search results for a correct keyword (rattis) on the SPARC portal. Keywords are not bolded/highlighted in the results.</i>
 </p>
    
@@ -42,7 +42,7 @@
 **4. Limited result sorting:** The website currently sorts the results by either "Title" (listed alphabetically) or "Published date" (Fig 3).
 
 <p align="center">
-   <img src="https://github.com/Niloofar-Sh/aqua/blob/main/src/assets/images/rattus_filters_1.JPG" width="800" height="450"></br>
+   <img src="https://github.com/SPARC-FAIR-Codeathon/aqua/raw/main/src/assets/images/rattus_filters_1.JPG" width="800" height="450"></br>
   <i>Fig 3. Limited filterings for the results display on the SPARC portal.</i>
 </p>
    <br/>
@@ -76,7 +76,7 @@ Specific features of AQUA are listed below:
 </p>
 <br/>
 <p align="center">
-   <img src="https://github.com/Niloofar-Sh/aqua/blob/main/src/assets/images/aqua_pipeline.jpg" width="550" height="1000"></br>
+   <img src="https://github.com/SPARC-FAIR-Codeathon/aqua/raw/main/src/assets/images/aqua_pipeline.jpg" width="550" height="1000"></br>
   <i>Fig 4. AQUA pipeline including three major sections: Query refinement, Results filtering, and Notify me.</i>
 </p>
    <br/>
@@ -97,12 +97,13 @@ The AQUA backend focuses on two main features:
 :sparkles: __Behind the scenes of AQUA's Query refinement__ 
 
 <p align="center">
-   <img src="https://github.com/Niloofar-Sh/aqua/raw/main/src/assets/images/Suggestion_AutoComplete.jpg" alt="interface" width="780" height="700"></br>
+   <img src="https://github.com/SPARC-FAIR-Codeathon/aqua/blob/main/src/assets/images/Suggestion_AutoComplete.jpg" alt="interface" width="780" height="700"></br>
   <i>Fig 5. Query refinement by Auto-completion/Suggestions.</i>
 </p>
 <br/>
 
 AQUA utilises SciGraph for auto-completion and suggestion. However, we found that SciGraph’s suggestions do not deal with query problems such as error spelling and continuous script (*scriptio continua*). Therefore, we have added a new auto-correction feature to segment queries with missing spaces and fix error spelling by creating a pipeline to [SymSpellPy](https://pypi.org/project/symspellpy/). The auto-correction result is combined with the suggestion results and then executed as the final query search terms.
+
 (To read more, please visit: ["Query refinement" Readme](https://github.com/SPARC-FAIR-Codeathon/aqua/tree/main/Documentation/QueryRefinement.md))  
 
 <br/>
@@ -111,7 +112,7 @@ AQUA utilises SciGraph for auto-completion and suggestion. However, we found tha
 :sparkles: __Behind the scenes of AQUA's Email notification__ 
 <br/>
 <p align="center">
-   <img src="https://github.com/Niloofar-Sh/aqua/raw/main/src/assets/images/NotifyMe.jpeg" alt="interface" width="780" height="500"></br>
+   <img src="https://github.com/SPARC-FAIR-Codeathon/aqua/blob/main/src/assets/images/NotifyMe.jpeg" alt="interface" width="780" height="500"></br>
   <i>Fig 6. "Notify me" module.</i>
 </p>
  <br/>
@@ -138,13 +139,18 @@ How to use the 7 features added to the existing SPARC Portal Search engine by AQ
 AQUA provides autocompletion for user's query as they type. This feature is powered by training data from the NIF Ontologies and Scigraph. To avoid too many results being returned that can slow down the application, we only show autocompletion after users type 3 letters and more. (Figure 7)
 
 <p align="center">
-   <img src="https://github.com/SPARC-FAIR-Codeathon/aqua/raw/main/src/assets/images/UI-autocompletion.png" alt="interface" width="780" height="500"></br>
+   <img src="https://github.com/SPARC-FAIR-Codeathon/aqua/raw/main/src/assets/images/UI-autocompletion.png" alt="interface" width="850" height="580"></br>
   <i>Fig 7. Predictive typing interface.</i>
 </p>
 
 #### 2. Advanced search options
 
-There are currently 2 options for user's search query: "Exact match" or "Any of the words match". The default is "Any of the words match". If users want to return datasets for their exact search phrase, they can do that by clicking on "Advanced search" under the search box.
+There are currently 2 options for user's search query: "Exact match" or "Any of the words match". The default is "Any of the words match". If users want to return datasets for their exact search phrase, they can do that by clicking on "Advanced search" under the search box (Figure 8).
+
+<p align="center">
+   <img src="https://github.com/SPARC-FAIR-Codeathon/aqua/raw/main/src/assets/images/advanced-search.png" alt="interface" width="850" height="500"></br>
+  <i>Fig 8. Advanced search interface.</i>
+</p>
 
 #### 3. Advanced Sorting
 The existing SPARC Portal allows sorting based on dataset titles (alphabetically) and by published date. AQUA adds a "Relevance" sorting criterion that returns results based on how relevant the results are to their search query. This is set as the default sorting option (Figure 9).
@@ -205,13 +211,6 @@ $ yarn start
 ```
 
 # :mag_right: Testing
-
-# :round_pushpin: Examples
-Here, we have provided examples of how AQUA improves the search experience in two scenarios, i.e.:  <br/>
-1) AQUA auto-completion feature helps the user find a correct keyword while typing (Fig x), and
-2) AQUA suggests close-matches for a query with typo (Fig xx).  
-The user's decision to either select one of the close-matches or go with thier raw, uncorrected query leads to "Result(s) display" or "No results" notification (Fig xxx). When at least one result is returned, AQUA displays options to sort or filter the results. This is shown with an example in Fig xxxx.
-
  
 # :speech_balloon: Ideas?
 To share your ideas, feedback, and comments contact any of our team members.
