@@ -219,6 +219,20 @@ $ yarn start
 ```
 
 # :mag_right: Testing
+
+__Autocomplete experiment:__
+
+Comparing **Scigraph** and **fast auto-complete**
+
+We have 465142 of 1-gram and 2-grams extracted from NIFS Ontology and datasets.
+```DataTest1``` consist of 200 words is selected randomly from those n-grams. The selection criteria is:
+
+* word with length between 3 and 15
+* word does not contain number
+
+Thereafter, we created a second dataset by changing one character in ```DataTest1``` randomly at position 2 until 15, then it names ```DataTestWithTypo```.
+
+
  
 # :speech_balloon: Ideas?
 To share your ideas, feedback, and comments contact any of our team members.
