@@ -236,7 +236,7 @@ The experiment is set to return 10 completion in maximum for each query.
 __Execution Time Analysis:__
 
 <p align="center">
-   <img src="https://github.com/Niloofar-Sh/aqua/blob/main/src/assets/images/return_number.png" alt="interface" width="800" height="500"></br>
+   <img src="https://github.com/Niloofar-Sh/aqua/blob/main/src/assets/images/return_number.png" alt="interface" width="750" height="500"></br>
   <i>Fig 14. Execution time analysis.</i>
 </p>
 
