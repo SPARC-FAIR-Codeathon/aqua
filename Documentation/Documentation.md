@@ -230,7 +230,8 @@ We have 465142 of 1-gram and 2-grams extracted from NIFS Ontology and datasets.
 * word with length between 3 and 15
 * word does not contain number
 
-Thereafter, we created a second dataset by changing one character in ```DataTest1``` randomly at position 2 until 15, then it names ```DataTestWithTypo```.
+Thereafter, we created a second dataset by changing one character in ```DataTest1``` randomly at position 2 until 15 with * , then it names ```DataTestWithTypo```.
+The experiment is set to return 10 completion in maximum for each query.
 
 __Execution Time Analysis:__
 
@@ -239,14 +240,65 @@ __Execution Time Analysis:__
   <i>Fig 14. xxxxxx.</i>
 </p>
 
-Execution rate:
+Example results plus the execution rates:
 1) SciGraph + ```DataTest1``` : 0.8019 second
+ ```
+ 'sinonasal': [],
+ 'acid-oxo': [],
+ 'chondrichthyes': ['chondrichthyes'],
+ 'turbellarian': 
+  ['turbellarian platyhelminths']
+  ```
 2) SciGraph + ```DataTestWithTypo```: 0.81809 second
+
+```
+'sinon*sal': [],
+ 'acid-o*o': [],
+ 'chondricht*yes': [],
+ 'turbel*arian': []
+```
 3) fast-autocomplete + ```DataTest1``` : 0.03280 second
+
+```
+'sinonasal': ['sinonasal', 'sinonasal papilloma', 'sinonasal undifferentiated'],
+'acid-oxo':['acid oxo',
+   'acid oxoanion',
+   'acid oxo group',
+   'acid oxoacid',
+   'acid oxoanions',
+   'acid oxoacids',
+   'acid oxoglutarate',
+   'acid oxoglutarate dehydrogenase',
+   'acid oxoacyl-',
+   'acid oxoacyl- and'],
+'chondrichthyes': ['chondrichthyes'],
+'turbellarian': ['turbellarian', 'turbellarian platyhelminths']
+```
+
 4) fast-autocomplete + ```DataTestWithTypo```: 0.07471 second
 
+```
+'sinon*sal': ['sinonasal', 'sinonasal papilloma', 'sinonasal undifferentiated'],
+ 'acid-o*o': ['acid',
+   'acid oxidase',
+   'acid oxidation',
+   'acid o-linked',
+   'acid omega-hydroxylase',
+   'acid or',
+   'acid o-methyltransferase',
+   'acid oxygenase',
+   'acid optimum',
+   'acid oxidoreductase'],
+ 'chondricht*yes':  ['chondrichthyes'],
+ 'turbel*arian': ['turbellarian', 'turbellarian platyhelminths']
+```
 
 In general longer words will need a longer execution time.
+
+The number of completion:
+SciGraph returns a smaller number of completion. When there is a typo, SciGraph returns almost zero completion.
+Longer word causes a reduce of completion number. Typo tends to increase the number of completion for fast-autocomplete.
+In all case, fast-completion can return results.
  
 # :speech_balloon: Ideas?
 To share your ideas, feedback, and comments contact any of our team members.
