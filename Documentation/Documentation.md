@@ -319,7 +319,7 @@ Longer words cause a reduce in the completion number. Typo tends to increase the
 
 :triangular_flag_on_post: __In all cases, fast-autocomplete can return results.__
  
-The code for the experiments can be found at [AQUA experiments](https://github.com/SPARC-FAIR-Codeathon/aqua/experiment)
+The code for the experiments can be found at [AQUA experiments](https://github.com/Niloofar-Sh/aqua/tree/main/experiment)
 # :speech_balloon: Ideas?
 To share your ideas, feedback, and comments, please either report an issue via Github Issue or contact any of our team members. Thank you!
 
