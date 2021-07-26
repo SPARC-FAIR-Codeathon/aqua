@@ -70,10 +70,10 @@ The format of the n-gram model needs to be in the following format:
 }
 ``` 
 
-*"phrase" can be 1-2 words. <br/>
-*The "context" is related to the context of words, for example Anatomy, chemical reactions, proteins, etc. <br/>
-*"display value" defines the standard display of the phrase based on the context.
-*"count" is the appearance of the phrase in the SPARC dataset and the NIFS ontology.
+* "phrase" can be 1-2 words. <br/>
+* The "context" is related to the context of words, for example Anatomy, chemical reactions, proteins, etc. <br/>
+* "display value" defines the standard display of the phrase based on the context.
+* "count" is the appearance of the phrase in the SPARC dataset and the NIFS ontology.
 
 
 ### Fast auto-complete
