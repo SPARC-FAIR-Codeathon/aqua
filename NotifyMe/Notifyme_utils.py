@@ -1,9 +1,8 @@
-## Lrasmy@AQUA Team   July 17 2021      ##
-##########################################
-#!/usr/bin/env python
-# coding: utf-8
-# In[1]:
-
+### Lrasmy@AquaTeam last revised July 24 2021 ###
+#################################################
+#!/usr/bin/env python			    	#
+# coding: utf-8					#
+#################################################				
 
 ### loading required packages
 
@@ -17,21 +16,13 @@ import numpy as np
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 
-
-# In[2]:
-
-
 ### loading configurations from properties.ini
-
 config = configparser.ConfigParser()
 config.read('properties.ini')
 gmail_user = config['EMAIL']['user']
 gmail_password = config['EMAIL']['password']
 dbname=config['SQLite']['dbname']
-
-
-# In[3]:
-
+api_key=config['Scicrunch']['api_key']
 
 ### Database creation, if not already previously available
 def create_notifyme_db(db_name, clean=False):      
@@ -51,10 +42,6 @@ def create_notifyme_db(db_name, clean=False):
     
 create_notifyme_db(dbname)
 
-
-# In[4]:
-
-
 ### This is the main function to be called by the front end to save the entries
 ## No cookies stored now, can easily ammend later
 def add_new_single_entry(email,keyword):
@@ -66,17 +53,11 @@ def add_new_single_entry(email,keyword):
     conn.close()
 
 
-# In[5]:
-
-
 ### to get how many hits currently exist against keywords, mainly used in scan_new_register 
 def get_hits_count(keyword):    
-    rsp = requests.get('https://scicrunch.org/api/1/elastic/SPARC_PortalDatasets_pr/_search?api_key=yu3Dsi11Saczah4etEycedoYBvXvPSkS&q='+ keyword)
+    rsp = requests.get('https://scicrunch.org/api/1/elastic/SPARC_PortalDatasets_pr/_search?api_key='+api_key+'&q='+ keyword)
     rsp = json.loads(rsp.text)
     return rsp['hits']['total']
-
-
-# In[6]:
 
 
 ### to check if there is any duplicate entries and archieve those for efficency, mainly called in scan_new_register and scan_waiting_list() 
@@ -93,12 +74,22 @@ def archieve_duplicates(df):
     return df
 
 
-# In[15]:
-
+### to check if there are long pending failed requests and archieve those for efficency, mainly called in scan_waiting_list() 
+def archieve_long_failed(df, d=30):
+    df['longfail_flag']= (pd.to_datetime(df['last_modified']) - pd.to_datetime(df['register_date'])).dt.days > d
+    df_lf=df[df['longfail_flag']==True]
+    df_lf['status']='Failed'
+    df_lf['last_modified']=str(pd.to_datetime('now')).split('.')[0]
+    df_lf.drop(columns=['longfail_flag'],inplace=True)
+    conn = sqlite3.connect(dbname)
+    df_lf.to_sql('archieved_list', conn, if_exists='append', index=False)
+    conn.close()
+    df=df[df['longfail_flag']==False].drop(columns=['longfail_flag'])
+    return df
 
 ### This is the main function to retrieve search results as a pandas df to embedd in the email message
 def retrieve_search_to_df(keyword):
-    rsp = requests.get('https://scicrunch.org/api/1/elastic/SPARC_PortalDatasets_pr/_search?api_key=yu3Dsi11Saczah4etEycedoYBvXvPSkS&q='+ keyword)
+    rsp = requests.get('https://scicrunch.org/api/1/elastic/SPARC_PortalDatasets_pr/_search?api_key='+api_key+'&q='+ keyword)
     ### need to make sure I got the most matching and get the top 10, that should use our improved search and not just the k core
     rsp = json.loads(rsp.text)
     if rsp['hits']['total']==0:
@@ -106,17 +97,13 @@ def retrieve_search_to_df(keyword):
     else:
         df_search=pd.DataFrame.from_dict(rsp['hits']['hits'])
         df_search=pd.concat([df_search['_source'].apply(pd.Series)['pennsieve'].apply(pd.Series)[['identifier']],
-            df_search[['_id','_score']],
+        df_search[['_id']],#df_search[['_id','_score']],
         df_search['_source'].apply(pd.Series)['item'].apply(pd.Series)[['name','description']],
         df_search['_source'].apply(pd.Series)['item'].apply(pd.Series)['published'].apply(pd.Series)['status'],
         ], axis=1)
         df_search['link']= 'https://sparc.science/datasets/'+df_search['identifier']
-
+        df_search=df_search[['_id','name','description','status','link']]
         return df_search
-
-
-# In[8]:
-
 
 ### Sending Email with the results
 def send_email_alert_withtable(emaillist, keyword):
@@ -125,6 +112,7 @@ def send_email_alert_withtable(emaillist, keyword):
     msg['From'] = gmail_user
     
     df_results=retrieve_search_to_df(keyword)
+    df_results.columns=['DOI','Dataset Title','Dataset Description','Status','Link']
     
     html = """    <html>
       <head></head>
@@ -132,7 +120,7 @@ def send_email_alert_withtable(emaillist, keyword):
         {0}
       </body>
     </html>
-    """.format(df_results.to_html(render_links=True))
+    """.format(df_results.to_html(render_links=True, index=False))
     
     part1 = MIMEText(html, 'html')
     msg.attach(part1)
@@ -149,10 +137,6 @@ def send_email_alert_withtable(emaillist, keyword):
         for x in emaillist: mail_errors[x]=e
         
     return mail_errors
-
-
-# In[9]:
-
 
 ### This function is to send email and capture errors, normally called for records with hits>0 in scan_waiting_list
 def send_mail_capture_error(df):
@@ -171,10 +155,6 @@ def send_mail_capture_error(df):
             else:sent_entries.extend(entries_list)
     return sent_entries,Failed_entries
 
-
-# In[10]:
-
-
 def clean_update_hits_df(df,list_entries, status):
     df_clean=df[df['entry_id'].isin(list_entries)]
     df_clean.loc[:,['status']]=status
@@ -183,22 +163,15 @@ def clean_update_hits_df(df,list_entries, status):
     df_clean.drop(columns='updated_hits',inplace=True)
     return df_clean
 
-
-# In[11]:
-
-
 def update_failed_email(entry_id,exception):
     conn = sqlite3.connect(dbname)
     cur = conn.cursor()
     cur.execute('INSERT INTO Failed_emails(corresponding_entry_id,error_message, error_date) VALUES (?,?,  CURRENT_TIMESTAMP)',(entry_id,exception))
     conn.commit()
-    cur.execute('Update waiting_list set status="Failed",failed_reqid=(select max(failed_reqid) from Failed_emails where corresponding_entry_id=? ) where entry_id=?',
+    cur.execute('Update waiting_list set status="Failed", last_modified=CURRENT_TIMESTAMP , failed_reqid=(select max(failed_reqid) from Failed_emails where corresponding_entry_id=? ) where entry_id=?',
                 (entry_id,entry_id ))
     conn.commit()
     conn.close()
-
-
-# In[12]:
 
 
 ### This is the first function to run in the periodic (daily routine), mainly to check all new entries,
@@ -219,15 +192,13 @@ def scan_new_register():
     conn.close()
 
 
-# In[13]:
-
-
 ### this is the next function following the scan of new entries, and the resposible one for sending emails and capture errors
 def scan_waiting_list():    
     conn = sqlite3.connect(dbname)
     df = pd.read_sql_query("SELECT * FROM waiting_list", conn)
     conn.close()
     df = archieve_duplicates(df)
+    df = archieve_long_failed(df, d=30) ### this is to archieve requests failed for more than 1 month
     conn = sqlite3.connect(dbname)
     cur = conn.cursor()
     cur.execute("Delete from waiting_list where entry_id in (select distinct entry_id from archieved_list)" )
@@ -244,3 +215,6 @@ def scan_waiting_list():
     ### Store the failed entries in the failed table and flag the failed entries in the waiting list table 
     if len(failed_dict)>0: 
         for k,v in failed_dict.items(): update_failed_email(k,str(v)) 
+
+
+

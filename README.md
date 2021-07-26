@@ -10,6 +10,7 @@
 * [The Problem](#the-problem)
 * [AQUA solution](#aqua-solution)
 * [How it works](#how-it-works)
+* [How to install](#how-to-install)
 * [Documentation](#documentation)
 * [Developers](#developers)
 
@@ -48,10 +49,28 @@ Currently, the search feature of the SPARC Portal is very limited:
   </img>
 </p>
  
+## How to install
+
+**Step 1:** Git clone the AQUA project: `git clone https://github.com/SPARC-FAIR-Codeathon/aqua.git`
+
+**Step 2:** Go into the `aqua` directory and run the following commands:
+
+```
+# install dependencies
+$ yarn install
+
+# serve with hot reload at localhost:3000
+$ yarn dev
+
+# build for production and launch server
+$ yarn build
+$ yarn start
+
+```
 
 ## Documentation
 
-For a detailed documentation of our application, please visit [documentation](https://github.com/Niloofar-Sh/aqua/blob/main/Documentation/Documentation.md).
+For a detailed user documentation of our application, please visit [documentation](https://github.com/SPARC-FAIR-Codeathon/aqua/blob/main/Documentation/Documentation.md).
 
 ## Developers
 
