@@ -75,7 +75,7 @@ For a detailed user documentation of our application, please visit [:arrow_forwa
 
 ## API
 
-To read the AQUA API refer to: [AQUA API](https://github.com/SPARC-FAIR-Codeathon/aqua/experiment).
+To read the AQUA API refer to: [AQUA API](https://github.com/SPARC-FAIR-Codeathon/aqua/tree/main/aqua_docker/docs/api).
 
 ## Developers
 
