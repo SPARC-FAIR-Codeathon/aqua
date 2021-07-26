@@ -225,12 +225,14 @@ __Auto-completion experiment:__
 Comparing **Scigraph** and **fast auto-complete**
 
 We have 465142 of 1-gram and 2-grams extracted from NIFS Ontology and datasets.
-```DataTest1``` (test_autocomplete_pure.json) consist of 200 words is selected randomly from those n-grams. The selection criteria is:
+
+```DataTest1``` (test_autocomplete_pure.json) consists of 200 words selected randomly from the n-grams. The selection criteria is:
 
 * word with length between 3 and 15
 * word does not contain number
 
-Thereafter, we created a second dataset by changing one character in ```DataTest1``` randomly at position 2 until 15 with * , then it names ```DataTestWithTypo``` (test_autocomplete_typo.json).
+Thereafter, we created a second dataset by changing one character in ```DataTest1``` randomly at position 2 until 15 with * , named ```DataTestWithTypo``` (test_autocomplete_typo.json).
+
 The experiment is set to return 10 completion in maximum for each query.
 
 __Execution Time Analysis:__
@@ -293,9 +295,9 @@ Example results plus the execution rates:
  'turbel*arian': ['turbellarian', 'turbellarian platyhelminths']
 ```
 
-In general longer words will need a longer execution time.
+In general longer words will need longer execution times.
 
-The number of completion:
+:point_right: __The number of completion:__
 
 __SciGraph__ returns a smaller number of completion. When there is a typo, SciGraph returns *almost zero completion*.
 Longer words cause a reduce in the completion number. Typo tends to increase the number of completion for __fast-autocomplete__.
