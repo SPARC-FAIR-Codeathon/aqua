@@ -238,7 +238,7 @@ The experiment is set to return 10 completion in maximum for each query.
 :point_right: __Execution Time Analysis:__
 
 <p align="center">
-   <img src="https://github.com/Niloofar-Sh/aqua/blob/main/src/assets/images/.png" alt="interface" width="750" height="500"></br>
+   <img src="https://github.com/Niloofar-Sh/aqua/blob/main/src/assets/images/execution_time.png" alt="interface" width="750" height="500"></br>
   <i>Fig 14. Execution time analysis.</i>
 </p>
 
