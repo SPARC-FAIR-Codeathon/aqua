@@ -60,6 +60,7 @@ It is an added feature to auto-complete the queries while the user is typing. Th
 ### Auto-completion model
 The format of the n-gram model needs to be in the following format:
 
+``` 
 {
     phrase: [
         context,
@@ -67,6 +68,7 @@ The format of the n-gram model needs to be in the following format:
         count
     ]
 }
+``` 
 
 "phrase" can be 1-2 words. <br/>
 The "context" is related to the context of words, for example Anatomy, chemical reactions, proteins, etc. <br/>
