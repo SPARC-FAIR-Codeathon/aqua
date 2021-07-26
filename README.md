@@ -70,7 +70,7 @@ $ yarn start
 
 ## Documentation
 
-For a detailed user documentation of our application, please visit [ :books: documentation :books:](https://github.com/SPARC-FAIR-Codeathon/aqua/blob/main/Documentation/Documentation.md).
+For a detailed user documentation of our application, please visit [:arrow_forward: Documentation](https://github.com/SPARC-FAIR-Codeathon/aqua/blob/main/Documentation/Documentation.md).
 
 ## Developers
 
