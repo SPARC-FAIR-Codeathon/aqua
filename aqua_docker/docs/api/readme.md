@@ -2,7 +2,7 @@
 
 # About
 
-API module for AQUA SPARK
+API module for AQUA SPARC
 
 ## Searching for datasets
 GET datasets based on the provided query
