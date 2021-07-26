@@ -321,5 +321,5 @@ Longer words cause a reduce in the completion number. Typo tends to increase the
  
 The code for the experiments can be found at [AQUA experiments](https://github.com/SPARC-FAIR-Codeathon/aqua/experiment)
 # :speech_balloon: Ideas?
-To share your ideas, feedback, and comments contact any of our team members.
+To share your ideas, feedback, and comments, please either report an issue via Github Issue or contact any of our team members. Thank you!
 
