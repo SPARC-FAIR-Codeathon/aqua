@@ -220,7 +220,7 @@ $ yarn start
 
 # :mag_right: Testing
 
-__Autocomplete experiment:__
+__Auto-completion experiment:__
 
 Comparing **Scigraph** and **fast auto-complete**
 
@@ -232,7 +232,16 @@ We have 465142 of 1-gram and 2-grams extracted from NIFS Ontology and datasets.
 
 Thereafter, we created a second dataset by changing one character in ```DataTest1``` randomly at position 2 until 15, then it names ```DataTestWithTypo```.
 
+__Execution Time Analysis:__
 
+Execution rate:
+1) SciGraph + DataTest1 : 0.8019 second
+2) SciGraph + DataTestWithTypo: 0.81809 second
+3) fast-autocomplete + ```DataTest1``` : 0.03280 second
+4) fast-autocomplete + ```DataTestWithTypo```: 0.07471 second
+
+
+In general longer words will need a longer execution time.
  
 # :speech_balloon: Ideas?
 To share your ideas, feedback, and comments contact any of our team members.
