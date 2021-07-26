@@ -129,13 +129,13 @@ Additionally, the "Notify Me" module stores all requests in an SQLite database, 
 ## 2. AQUA UI
 <br/>
 
-AQUA UI receives the user's queries, formulates them, and transfers to the AQUA Backend module. When the response from the AQUA backend is received, the AQUA UI interprets it and displays the content on the screen. Like the SPARC portal web application, the AQUA UI is implemented by the HTML-CSS-JS trio using: [VueJS](https://vuejs.org/) and [NuxtJS](https://nuxtjs.org/).
+AQUA UI receives the user's queries, formulates them, and transfers to the AQUA Backend module. When the response from the AQUA backend is received, the AQUA UI interprets it and displays the content on the screen. Like the SPARC portal web application, the AQUA UI is implemented by the HTML-CSS-JS trio using: [VueJS](https://vuejs.org/) and [NuxtJS](https://nuxtjs.org/). Nuxt.js is an upper-level framework that is built over Vue.js to design and create highly advanced web applications [1](https://cubettech.com/resources/blog/nuxt-js-and-vue-js-reasons-why-they-differ-and-when-do-they-combine/).
 
 
 
 <p align="center">
    <img src="https://github.com/Niloofar-Sh/aqua/blob/main/src/assets/images/vuejsTOnuxtjs.png" alt="interface" width="500" height="300"></br>
-  <i> Image adopted from: (https://medium.com/@nicogranja19/how-to-migrate-a-vuejs-project-to-nuxtjs-in-7-steps-b340faf2977b). </i>
+  <i>  </i>
 </p>
    <br/>
    
