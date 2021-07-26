@@ -141,7 +141,7 @@ ut.plot_key_hits_pie()
 ut.plot_key_timetomatch()
 ```
 <p align="left">
-  <img src="https://github.com/Niloofar-Sh/aqua/blob/main/src/assets/images/maxTime.png" alt="interface" width="800" height="450"> 
+  <img src="https://github.com/Niloofar-Sh/aqua/blob/main/src/assets/images/maxTime.png" alt="interface" width="750" height="450"> 
   <br/> 
   </img>
 </p>
