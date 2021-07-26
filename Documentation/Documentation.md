@@ -243,7 +243,26 @@ The experiment is set to return 10 completion in maximum for each query.
 </p>
 
 Example results plus the execution rates:
+
 1) SciGraph + ```DataTest1``` : 0.8019 second
+`
+2) SciGraph + ```DataTestWithTypo```: 0.81809 second
+
+3) fast-autocomplete + ```DataTest1``` : 0.03280 second
+
+4) fast-autocomplete + ```DataTestWithTypo```: 0.07471 second
+
+
+In general longer words will need longer execution times.
+
+:point_right: __The number of completions:__
+
+<p align="center">
+   <img src="https://github.com/Niloofar-Sh/aqua/blob/main/src/assets/images/return_number.png" alt="interface" width="750" height="500"></br>
+  <i>Fig 15. Number of completions returned.</i>
+</p>
+
+1) SciGraph + ```DataTest1``` : 
  ```
  'sinonasal': [],
  'acid-oxo': [],
@@ -251,7 +270,7 @@ Example results plus the execution rates:
  'turbellarian': 
   ['turbellarian platyhelminths']
   ```
-2) SciGraph + ```DataTestWithTypo```: 0.81809 second
+2) SciGraph + ```DataTestWithTypo```:
 
 ```
 'sinon*sal': [],
@@ -259,7 +278,7 @@ Example results plus the execution rates:
  'chondricht*yes': [],
  'turbel*arian': []
 ```
-3) fast-autocomplete + ```DataTest1``` : 0.03280 second
+3) fast-autocomplete + ```DataTest1``` : 
 
 ```
 'sinonasal': ['sinonasal', 'sinonasal papilloma', 'sinonasal undifferentiated'],
@@ -277,7 +296,7 @@ Example results plus the execution rates:
 'turbellarian': ['turbellarian', 'turbellarian platyhelminths']
 ```
 
-4) fast-autocomplete + ```DataTestWithTypo```: 0.07471 second
+4) fast-autocomplete + ```DataTestWithTypo```:
 
 ```
 'sinon*sal': ['sinonasal', 'sinonasal papilloma', 'sinonasal undifferentiated'],
@@ -294,15 +313,6 @@ Example results plus the execution rates:
  'chondricht*yes':  ['chondrichthyes'],
  'turbel*arian': ['turbellarian', 'turbellarian platyhelminths']
 ```
-
-In general longer words will need longer execution times.
-
-:point_right: __The number of completions:__
-
-<p align="center">
-   <img src="https://github.com/Niloofar-Sh/aqua/blob/main/src/assets/images/return_number.png" alt="interface" width="750" height="500"></br>
-  <i>Fig 15. Number of completions returned.</i>
-</p>
 
 __SciGraph__ returns a smaller number of completions. When there is a typo, SciGraph returns *almost zero completion*.
 Longer words cause a reduce in the completion number. Typo tends to increase the number of completion for __fast-autocomplete__.
