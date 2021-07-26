@@ -8,6 +8,7 @@ Docker module for AQUA SPARK
   - go to the containing directory (the one that having docker-compose.yml):
     - `cd aqua_docker`
   - create `.env` file, set the value:
+
         SANIC_LOGO="OVERRIDE LOGO USING CONFIG"
         ES_API_KEY = "api-key to acces SciCrunch"
         NM_EMAIL_USR = "email address for notifyme"
