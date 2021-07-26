@@ -317,7 +317,7 @@ In general longer words will need longer execution times.
 __SciGraph__ returns a smaller number of completions. When there is a typo, SciGraph returns *almost zero completion*.
 Longer words cause a reduce in the completion number. Typo tends to increase the number of completion for __fast-autocomplete__.
 
-:triangular_flag_on_post: __In all case, fast-autocomplete can return results.__
+:triangular_flag_on_post: __In all cases, fast-autocomplete can return results.__
  
 # :speech_balloon: Ideas?
 To share your ideas, feedback, and comments contact any of our team members.
