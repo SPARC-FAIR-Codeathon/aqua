@@ -129,8 +129,16 @@ Additionally, the "Notify Me" module stores all requests in an SQLite database, 
 ## 2. AQUA UI
 <br/>
 
-AQUA UI receives the user's queries, formulates them, and transfers to the AQUA Backend module. When the response from the AQUA backend is received, the AQUA UI interprets it and displays the content on the screen. Like the SPARC portal web application, the AQUA UI is implemented by the HTML-CSS-JS trio using: [VueJS](https://vuejs.org/) and [NuxtJS](https://nuxtjs.org/).
+AQUA UI receives the user's queries, formulates them, and transfers to the AQUA Backend module. When the response from the AQUA backend is received, the AQUA UI interprets it and displays the content on the screen. Like the SPARC portal web application, the AQUA UI is implemented by the HTML-CSS-JS trio using: [VueJS](https://vuejs.org/) and [NuxtJS](https://nuxtjs.org/). Nuxt.js is an upper-level framework that is built over Vue.js to design and create highly advanced web applications [[1](https://cubettech.com/resources/blog/nuxt-js-and-vue-js-reasons-why-they-differ-and-when-do-they-combine/)].
 
+
+
+<p align="center">
+   <img src="https://github.com/Niloofar-Sh/aqua/blob/main/src/assets/images/vuejsTOnuxtjs.jpg" alt="interface" width="500" height="300"></br>
+  <i> Vue.js and Nuxt </i>
+</p>
+   <br/>
+   
 # :information_desk_person: How to use AQUA? 
 
 How to use the 7 features added to the existing SPARC Portal Search engine by AQUA:
@@ -211,7 +219,107 @@ $ yarn start
 ```
 
 # :mag_right: Testing
+
+:point_right: __Auto-completion experiment:__
+
+Comparing **Scigraph** and **fast auto-complete**
+
+We have 465142 of 1-gram and 2-grams extracted from NIFS Ontology and datasets.
+
+```DataTest1``` (test_autocomplete_pure.json) consists of 200 words selected randomly from the n-grams. The selection criteria is:
+
+* word with length between 3 and 15
+* word does not contain number
+
+Thereafter, we created a second dataset by changing one character in ```DataTest1``` randomly at position 2 until 15 with * , named ```DataTestWithTypo``` (test_autocomplete_typo.json).
+
+The experiment is set to return 10 completion in maximum for each query.
+
+:point_right: __Execution Time Analysis:__
+
+<p align="center">
+   <img src="https://github.com/Niloofar-Sh/aqua/blob/main/src/assets/images/execution_time.png" alt="interface" width="750" height="500"></br>
+  <i>Fig 14. Execution time analysis.</i>
+</p>
+
+Example results plus the execution rates:
+
+1) SciGraph + ```DataTest1``` : 0.8019 second
+`
+2) SciGraph + ```DataTestWithTypo```: 0.81809 second
+
+3) fast-autocomplete + ```DataTest1``` : 0.03280 second
+
+4) fast-autocomplete + ```DataTestWithTypo```: 0.07471 second
+
+
+In general longer words will need longer execution times.
+
+:point_right: __The number of completions:__
+
+<p align="center">
+   <img src="https://github.com/Niloofar-Sh/aqua/blob/main/src/assets/images/return_number.png" alt="interface" width="750" height="500"></br>
+  <i>Fig 15. Number of completions returned.</i>
+</p>
+
+1) SciGraph + ```DataTest1``` : 
+ ```
+ 'sinonasal': [],
+ 'acid-oxo': [],
+ 'chondrichthyes': ['chondrichthyes'],
+ 'turbellarian': 
+  ['turbellarian platyhelminths']
+  ```
+2) SciGraph + ```DataTestWithTypo```:
+
+```
+'sinon*sal': [],
+ 'acid-o*o': [],
+ 'chondricht*yes': [],
+ 'turbel*arian': []
+```
+3) fast-autocomplete + ```DataTest1``` : 
+
+```
+'sinonasal': ['sinonasal', 'sinonasal papilloma', 'sinonasal undifferentiated'],
+'acid-oxo':['acid oxo',
+   'acid oxoanion',
+   'acid oxo group',
+   'acid oxoacid',
+   'acid oxoanions',
+   'acid oxoacids',
+   'acid oxoglutarate',
+   'acid oxoglutarate dehydrogenase',
+   'acid oxoacyl-',
+   'acid oxoacyl- and'],
+'chondrichthyes': ['chondrichthyes'],
+'turbellarian': ['turbellarian', 'turbellarian platyhelminths']
+```
+
+4) fast-autocomplete + ```DataTestWithTypo```:
+
+```
+'sinon*sal': ['sinonasal', 'sinonasal papilloma', 'sinonasal undifferentiated'],
+ 'acid-o*o': ['acid',
+   'acid oxidase',
+   'acid oxidation',
+   'acid o-linked',
+   'acid omega-hydroxylase',
+   'acid or',
+   'acid o-methyltransferase',
+   'acid oxygenase',
+   'acid optimum',
+   'acid oxidoreductase'],
+ 'chondricht*yes':  ['chondrichthyes'],
+ 'turbel*arian': ['turbellarian', 'turbellarian platyhelminths']
+```
+
+__SciGraph__ returns a smaller number of completions. When there is a typo, SciGraph returns *almost zero completion*.
+Longer words cause a reduce in the completion number. Typo tends to increase the number of completion for __fast-autocomplete__.
+
+:triangular_flag_on_post: __In all cases, fast-autocomplete can return results.__
  
+The code for the experiments can be found at [AQUA experiments](https://github.com/SPARC-FAIR-Codeathon/aqua/experiment)
 # :speech_balloon: Ideas?
 To share your ideas, feedback, and comments contact any of our team members.
 
