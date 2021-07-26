@@ -1,7 +1,7 @@
 
 <p align="center">
    <img src="https://github.com/Niloofar-Sh/aqua/raw/main/src/assets/images/Suggestion%26AutoComplete.jpg" alt="interface" width="780" height="500"></br>
-  <i>Fig 5. Query refinement by Auto-completion/Suggestions.</i>
+  <i> Query refinement by Auto-completion/Suggestions.</i>
 </p>
 <br/>
 
@@ -38,7 +38,7 @@ symspellpy is a Python port of SymSpell for spelling correction, fuzzy search an
 
 * __Word segmentstion__
 
-```javascript 
+``` 
 lookup_compound(phrase, max_edit_distance, ignore_non_words=False, transfer_casing=False, split_phrase_by_space=False, ignore_term_with_digits=False)
 ```
 
