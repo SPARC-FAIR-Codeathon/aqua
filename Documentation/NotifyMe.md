@@ -22,7 +22,7 @@ Additionally, as requests are saved in a database, this information can be furth
 The current setting is scheduling emails to be sent daily at 2 AM EDT
 
 
- 4. The request are saved in a SQLite database. the description of the database tables is available in [NotifyMe_Database.pdf](./NotifyMe_Database.pdf)
+ 4. The request are saved in a SQLite database. the description of the database tables has come in [How it works](## How it works).
  
  5. A sample analytics visualization can run through [NotifyMe_analytics_visual.ipynb](https://nbviewer.jupyter.org/github/lrasmy/aqua/blob/main/NotifyMe/NotifyMe_analytics_visual.ipynb)
  
