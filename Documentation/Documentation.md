@@ -134,7 +134,7 @@ AQUA UI receives the user's queries, formulates them, and transfers to the AQUA 
 
 
 <p align="center">
-   <img src="https://github.com/Niloofar-Sh/aqua/blob/main/src/assets/images/vuejsTOnuxtjs.png" alt="interface" width="500" height="300"></br>
+   <img src="https://github.com/Niloofar-Sh/aqua/blob/main/src/assets/images/vuejsTOnuxtjs.jpg" alt="interface" width="500" height="300"></br>
   <i>  </i>
 </p>
    <br/>
