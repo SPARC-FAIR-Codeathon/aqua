@@ -131,9 +131,14 @@ Additionally, the "Notify Me" module stores all requests in an SQLite database, 
 
 AQUA UI receives the user's queries, formulates them, and transfers to the AQUA Backend module. When the response from the AQUA backend is received, the AQUA UI interprets it and displays the content on the screen. Like the SPARC portal web application, the AQUA UI is implemented by the HTML-CSS-JS trio using: [VueJS](https://vuejs.org/) and [NuxtJS](https://nuxtjs.org/).
 
-<img src="https://github.com/Niloofar-Sh/aqua/blob/main/src/assets/images/vuejsTOnuxtjs.png" alt="interface" width="500" height="300">
 
 
+<p align="center">
+   <img src="https://github.com/Niloofar-Sh/aqua/blob/main/src/assets/images/vuejsTOnuxtjs.png" alt="interface" width="500" height="300"></br>
+  <i></i>
+</p>
+   <br/>
+   
 # :information_desk_person: How to use AQUA? 
 
 How to use the 7 features added to the existing SPARC Portal Search engine by AQUA:
