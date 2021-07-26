@@ -5,16 +5,18 @@
 API module for AQUA SPARK
 
 ## Searching for datasets
-
+GET datasets based on the provided query
 #### Format:
 
-    GET /search?query={query}&force={yes|no}
+    GET /search?query={query}&force={yes|no}&match={yes|no}
 
--   query : is a query terms (optional)
--   force : an argument to force the server to execute the query
-    -   yes : the query is not modify
-    -   no : the query is modified if results are not found
--   match : an argument to exacute search datasets having exact query string.
+-   query (optional): is a query terms.
+-   force (optional): to force the server to execute a refined query or not.
+    -   yes : execute the refined query.
+    -   no (default): execute the original query.
+-   match : to signal the server to identify datasets with full query phrase or not.
+    -   yes : return datasets having the query phrase.
+    -   no (default): return dataset having at least one term of the query phrase.
 
 #### Examples:
 
@@ -25,18 +27,19 @@ API module for AQUA SPARK
         -   since `rat` is available, query `rat` is executed
 -   Example of query: `rattis`
     -   `http://130.216.216.55/search?query=ratis`
-        -   since `rattis` is not available, it is corrected to `rattus`
+        -   since `rattis` is not available, it is refined to `rattus`
         -   `rattus` is executed
     -   `http://130.216.216.55/search?query=ratis&force=yes`
-        -   although `rattis` is not available, it is forced to execute
-        -   no results
--   Example of query: `rattis norvegicu`
+        -   `rattis` is executed since `force` is set to `yes`
+        -   no datasets returned since `rattis` is not available in all datasets
+-   Example of query: `rattisnorvegicu`
     -   `http://130.216.216.55/search?query=rattis%20norvegicu&match=yes`
-        -   `rattis novergicu` is corrected to `rattus norvegicus`
+        -   `rattisnovergicu` is segmented to `rattis norvegicu`
+        -   `rattis norvegicu` is refined to `rattus norvegicus`
         -   `rattus norvegicus` is executed
-        -   returning datasets having phrase `rattus norvegicus`
+        -   since `match` is `yes`, only datasets having phrase `rattus norvegicus` are returned.
 
-#### Return format:
+#### Return example:
 
     {
       "query": "rattus",
@@ -46,14 +49,18 @@ API module for AQUA SPARK
       "suggestions": ["rattle", "rattus sp.", "rousettus"],
       "total": 27,
       "filters": {
-      "keywords": {
-        "vagus nerve stimulation": ["60", "16", "9"],
+        "keywords": {
+          "vagus nerve stimulation": ["60", "16", "9"],
+          },
+        "authors": {
+          "Terry Powley": ["10", "12", "9", "123", "107", "90", "11", "24", "121"],
+          ....
+          }
         },
-      "authors": {
-        "Terry Powley": ["10", "12", "9", "123", "107", "90", "11", "24", "121"],
-        ....
+        "status": {
+          "public": ["10", "12", "9", ...],
+          "embargoed": ["137"]
         }
-      },
       "sorts": {
         "ranking": ["29", "60", "20", "16", "21", "10", "12", "9", "139", "123", "77", "51", "107", "88", "90", "130", "37", "31", "11", "106", "48", "24", "121", "52", "151", "62", "105"],
         "date": ["151", "139", "105", "130", "123", "121", "107", "106", "90", "60", "88", "77", "37", "16", "51", "29", "12", "11", "10", "62", "20", "21", "52", "24", "31", "9", "48"],
@@ -78,7 +85,6 @@ API module for AQUA SPARK
           "organisms": ["Rattus norvegicus"],
           "publication": "true",
           "techniques": ["euthanasia technique", "dissection technique", "tissue fixation technique", "staining technique", "computational technique"],
-          "embargoed": "false",
           "highlight": {
             "name":[...],
             "description":[...],
@@ -92,48 +98,77 @@ API module for AQUA SPARK
 
 ## Get query autocomplete
 
+### Autocomplete using fast_autocomplete
+GET autocomplete from fast-autocomplete
 #### Format:
 
-    GET /autocomplete?query=query&limit={limit}&verbose={yes|no}
+    GET /autocomplete?query=query&limit={limit}
 
--   query : is a query terms (mandatory)
--   limit : the number of returns
--   verbose :
-    -   no : get list of autocomplete
-    -   yes : get detail autocomplete in json format
-
-#### Results:
-    ["rat","rattus norvegicus","brown rat","norway rat","rattus sp. strain wistar","rattus rattiscus","rattus norwegicus","rats","rattus norvegicus8","gunn rats","rattus"]
+-   query (mandatory): is a query terms
+-   limit (optional): the number of returns (default = 10)
 
 #### Example:
 
--   Example of query: `rat`
-    -   `http://130.216.216.55/autocomplete?query=rat&limit=10`
-        -   get autocomplete of rat as a list
+-   Example of query: `ratt`
+    -   `http://130.216.216.55/autocomplete?query=ratt&limit=10`
+        -   get the autocomplete of ratt as a list
         -   return 10 phrases
-    -   `http://130.216.216.55/autocomplete?query=rat`
-        -   get autocomplete of rat as a list
-    -   `http://130.216.216.55/autocomplete?query=rat&limit=10&verbose=true`
-        -   get autocomplete of rat as a detail dictionary
+    -   `http://130.216.216.55/autocomplete?query=ratt`
+        -   get the autocomplete of ratt as a list
+
+#### Return example:
+    ["rattus","rattlesnake","rattle","rattle virus","ratti","rattus rattus","rattus norvegicus","rattay","rattails","rattus sp"]
+
+### Autocomplete using SciGraph
+GET autocomplete from SciGraph
+#### Format:
+
+    GET /autocomplete_sc?query=query&limit={limit}
+
+-   query (mandatory): is a query terms
+-   limit (optional): the number of returns (default = 10)
+
+#### Example:
+
+-   Example of query: `ratt`
+    -   `http://130.216.216.55/autocomplete_sc?query=ratt&limit=10`
+        -   get the autocomplete of ratt as a list
         -   return 10 phrases
+    -   `http://130.216.216.55/autocomplete_sc?query=ratt`
+        -   get the autocomplete of ratt as a list
+
+#### Return example:
+    ["rattails","rattle","rattus","rattus leucopus","rattus muelleri","rattus norvegicus","rattus norvegicus genome","rattus norvegicus8","rattus norwegicus"]
 
 ## Get query suggestions
-
+GET autocorrection from symspellpy pipeline and suggestions from SciGraph
 #### Format:
 
     GET /suggestions?query=query&limit={limit}
 
--   query : is a query terms (mandatory)
--   limit : the number of returns
+-   query (mandatory): is a query terms
+-   limit (optional): the number of returns (default = 10)
 
 #### Example:
 
--   Example of query: `rat`
-    -   `http://130.216.216.55/suggestions?query=rat&limit=10`
-        -   get autocomplete of rat as a list
+-   Example of query: `rattus`
+    -   `http://130.216.216.55/suggestions?query=rattus&limit=10`
+        -   get the suggestion of rattus as a list
         -   return 10 phrases
-    -   `http://130.216.216.55/suggestions?query=rat`
-        -   get autocomplete of rat as a list
+    -   `http://130.216.216.55/suggestions?query=rattus`
+        -   get the suggestion of rattus as a list
 
-#### Results:
-    ["rat","brat","rate","rmat","cat","ras"]
+#### Return example:
+    ["rattus","rattle","rattus sp.","rousettus"]
+
+## NotifyMe
+POST email and keywords to get notification for new datasets
+#### Format:
+
+    curl -d “email=email_address&keywords=keywords”
+
+- email: the registrating email
+- keywords: the topic keywords to match to new datasets
+
+#### Return:
+      - {'success':'true|false'}
