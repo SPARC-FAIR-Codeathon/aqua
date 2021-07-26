@@ -296,9 +296,11 @@ Example results plus the execution rates:
 In general longer words will need a longer execution time.
 
 The number of completion:
-SciGraph returns a smaller number of completion. When there is a typo, SciGraph returns almost zero completion.
-Longer word causes a reduce of completion number. Typo tends to increase the number of completion for fast-autocomplete.
-In all case, fast-completion can return results.
+
+__SciGraph__ returns a smaller number of completion. When there is a typo, SciGraph returns *almost zero completion*.
+Longer words cause a reduce in the completion number. Typo tends to increase the number of completion for __fast-autocomplete__.
+
+:triangular_flag_on_post: __In all case, fast-completion can return results.__
  
 # :speech_balloon: Ideas?
 To share your ideas, feedback, and comments contact any of our team members.
