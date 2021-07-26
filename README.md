@@ -44,7 +44,7 @@ Currently, the search feature of the SPARC Portal is very limited:
 ## How it works
 
 <p align="left">
-  <img src="https://github.com/SPARC-FAIR-Codeathon/aqua/raw/main/src/assets/images/workflow_new.jpg" alt="interface" width="850" height="450"> 
+  <img src="https://github.com/SPARC-FAIR-Codeathon/aqua/raw/main/src/assets/images/workflow_new.jpg" alt="interface" width="850" height="470"> 
   <br/> 
   </img>
 </p>
