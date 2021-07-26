@@ -135,7 +135,7 @@ AQUA UI receives the user's queries, formulates them, and transfers to the AQUA 
 
 <p align="center">
    <img src="https://github.com/Niloofar-Sh/aqua/blob/main/src/assets/images/vuejsTOnuxtjs.png" alt="interface" width="500" height="300"></br>
-  <i> Image adopted from: ![VueJS to NuxtJS](https://medium.com/@nicogranja19/how-to-migrate-a-vuejs-project-to-nuxtjs-in-7-steps-b340faf2977b). </i>
+  <i> Image adopted from: (https://medium.com/@nicogranja19/how-to-migrate-a-vuejs-project-to-nuxtjs-in-7-steps-b340faf2977b). </i>
 </p>
    <br/>
    
