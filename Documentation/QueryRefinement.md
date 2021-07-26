@@ -81,7 +81,7 @@ The format of the n-gram model needs to be in the following format:
 
 
 ### Fast auto-complete
-The Elasticsearch's Autocomplete suggestor is not fast enough and does not do everything that we need. Consequently, we have utilised fast-autocomplete library which provides us with a much faster process (reducing the auto-completion required time from 900 ms to 30 ms).
+The Elasticsearch's Autocomplete suggestor is not fast enough and does not do everything that we need. Consequently, we have utilised fast-autocomplete library which provides us with a much faster process (reducing the average latency from 900 ms to 30 ms).
 
 # Packages:
 
