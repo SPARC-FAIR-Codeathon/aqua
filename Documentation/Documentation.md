@@ -98,7 +98,7 @@ The AQUA backend focuses on two main features:
 :sparkles: __Behind the scenes of AQUA's Query refinement__ 
 
 <p align="center">
-   <img src="https://github.com/SPARC-FAIR-Codeathon/aqua/raw/main/src/assets/images/Suggestion%26AutoComplete.jpg" alt="interface" width="780" height="500"></br>
+   <img src="https://github.com/Niloofar-Sh/aqua/raw/main/src/assets/images/Suggestion_AutoComplete.jpg" alt="interface" width="780" height="700"></br>
   <i>Fig 5. Query refinement by Auto-completion/Suggestions.</i>
 </p>
 <br/>
@@ -144,12 +144,8 @@ AQUA provides autocompletion for user's query as they type. This feature is powe
 </p>
 
 #### 2. Advanced search options
-There are currently 2 options for user's search query: "Exact match" or "Any of the words match". The default is "Any of the words match". If users want to return datasets for their exact search phrase, they can do that by clicking on "Advanced search" under the search box (Figure 8).
 
-<p align="center">
-   <img src="https://github.com/SPARC-FAIR-Codeathon/aqua/raw/main/src/assets/images/advanced-search.png" alt="interface" width="900" height="500"></br>
-  <i>Fig 8. Advanced Search interface.</i>
-</p>
+There are currently 2 options for user's search query: "Exact match" or "Any of the words match". The default is "Any of the words match". If users want to return datasets for their exact search phrase, they can do that by clicking on "Advanced search" under the search box.
 
 #### 3. Advanced Sorting
 The existing SPARC Portal allows sorting based on dataset titles (alphabetically) and by published date. AQUA adds a "Relevance" sorting criterion that returns results based on how relevant the results are to their search query. This is set as the default sorting option (Figure 9).

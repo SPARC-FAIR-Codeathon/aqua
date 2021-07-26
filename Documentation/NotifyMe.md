@@ -21,7 +21,7 @@ Additionally, as requests are saved in a database, this information can be furth
  
 2. In order to schedule the keywords search and sending emails, you need to run notifyme_sched.py
 
-The current setting is scheduling emails to be sent daily at 2 am
+The current setting is scheduling emails to be sent daily at 2 AM EDT
 
 
  3. A sample analytics visualization can run through [NotifyMe_analytics_visual.ipynb](https://nbviewer.jupyter.org/github/lrasmy/aqua/blob/main/NotifyMe/NotifyMe_analytics_visual.ipynb)
