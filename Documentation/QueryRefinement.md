@@ -81,7 +81,10 @@ The format of the n-gram model needs to be in the following format:
 
 
 ### Fast auto-complete
+
 The Elasticsearch's Autocomplete suggestor is not fast enough and does not do everything that we need. Consequently, we have utilised fast-autocomplete library which provides us with a much faster process (reducing the average latency from 900 ms to 30 ms).
+
+Elasticsearch's Autocomplete suggestor does not handle any sort of combination of the words you have put in. For example Fast Autocomplete can handle "brainstem neuron in rat" when the words brainstem, neuron, rat are seperately fed into it. While Elasticsearch's autocomplete needs that whole sentence to be fed to it to show it in Autocomplete results.
 
 # Packages:
 
