@@ -1,7 +1,7 @@
 
 <p align="center">
    <img src="https://github.com/Niloofar-Sh/aqua/raw/main/src/assets/images/Suggestion%26AutoComplete.jpg" alt="interface" width="780" height="700"></br>
-  <i> Query refinement by Auto-completion/Suggestions.</i>
+  <i> Query refinement by Auto-completion/Suggestions. Purple box: suggestions, yellow box: auto-completion.</i>
 </p>
 <br/>
 
