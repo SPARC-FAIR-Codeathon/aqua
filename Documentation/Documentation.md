@@ -235,8 +235,8 @@ Thereafter, we created a second dataset by changing one character in ```DataTest
 __Execution Time Analysis:__
 
 Execution rate:
-1) SciGraph + DataTest1 : 0.8019 second
-2) SciGraph + DataTestWithTypo: 0.81809 second
+1) SciGraph + ```DataTest1``` : 0.8019 second
+2) SciGraph + ```DataTestWithTypo```: 0.81809 second
 3) fast-autocomplete + ```DataTest1``` : 0.03280 second
 4) fast-autocomplete + ```DataTestWithTypo```: 0.07471 second
 
