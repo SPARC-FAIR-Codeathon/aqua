@@ -104,7 +104,7 @@ The AQUA backend focuses on two main features:
 <br/>
 
 AQUA utilises SciGraph for auto-completion and suggestion. However, we found that SciGraph’s suggestions do not deal with query problems such as error spelling and continuous script (*scriptio continua*). Therefore, we have added a new auto-correction feature to segment queries with missing spaces and fix error spelling by creating a pipeline to [SymSpellPy](https://pypi.org/project/symspellpy/). The auto-correction result is combined with the suggestion results and then executed as the final query search terms.
-(To read more visit: ["Query refinement" Readme](https://github.com/Niloofar-Sh/aqua/blob/main/Documentation/QueryRefinement.md))  
+(To read more, please visit: ["Query refinement" Readme](https://github.com/SPARC-FAIR-Codeathon/aqua/tree/main/Documentation/QueryRefinement.md))  
 
 <br/>
 <br/>
@@ -123,7 +123,7 @@ The "Notify Me" option is to send emails that summarize search results against e
 2.	Emailing the current search results in a tabular format, which can be found helpful for users.
 Additionally, the "Notify Me" module stores all requests in an SQLite database, which the SPARC team can further analyze to understand the search pattern and get more insights on demand. For example, the SPARC team can find the most common keywords searched with no existing matches and decide to fulfil such needs. 
 
-(To read more visit: ["Notify me" Readme](https://github.com/Niloofar-Sh/aqua/blob/main/Documentation/NotifyMe.md))
+(To read more, please visit: ["Notify me" Readme](https://github.com/SPARC-FAIR-Codeathon/aqua/tree/main/Documentation/NotifyMe.md))
 <br/>
 
 ## 2. AQUA UI
@@ -144,53 +144,66 @@ AQUA provides autocompletion for user's query as they type. This feature is powe
 </p>
 
 #### 2. Advanced search options
+
 There are currently 2 options for user's search query: "Exact match" or "Any of the words match". The default is "Any of the words match". If users want to return datasets for their exact search phrase, they can do that by clicking on "Advanced search" under the search box.
 
 #### 3. Advanced Sorting
-The existing SPARC Portal allows sorting based on dataset titles (alphabetically) and by published date. AQUA adds a "Relevance" sorting criterion that returns results based on how relevant the results are to their search query. This is set as the default sorting option (Figure 8).
+The existing SPARC Portal allows sorting based on dataset titles (alphabetically) and by published date. AQUA adds a "Relevance" sorting criterion that returns results based on how relevant the results are to their search query. This is set as the default sorting option (Figure 9).
 
 <p align="center">
    <img src="https://github.com/SPARC-FAIR-Codeathon/aqua/raw/main/src/assets/images/UI-sorting.png" alt="interface" width="700" height="500"></br>
-  <i>Fig 8. Advanced sorting interface.</i>
+  <i>Fig 9. Advanced sorting interface.</i>
 </p>
 
 #### 4. Advanced Filtering
-The existing SPARC Portal only allows for filtering based on "Dataset status", which is either Published or Embargoed. Aqua adds more sophisticated filtering options: by "Published Date", "Keyword", "Author", and "Category". Users can filter datasets by one or several keywords, authors, and categories. Hit "Enter" after each "keyword", "author", or "category" in their respective box to register it. After the entries are registered, click "Apply" to filter dataset results (Filter 9).
+The existing SPARC Portal only allows for filtering based on "Dataset status", which is either Published or Embargoed. Aqua adds more sophisticated filtering options: by "Published Date", "Keyword", "Author", and "Category". Users can filter datasets by one or several keywords, authors, and categories. Hit "Enter" after each "keyword", "author", or "category" in their respective box to register it. After the entries are registered, click "Apply" to filter dataset results (Filter 10).
 
 <p align="center">
-   <img src="https://github.com/SPARC-FAIR-Codeathon/aqua/raw/main/src/assets/images/UI-filtering-feature.png" alt="interface" width="780" height="500"></br>
-  <i>Fig 9. Advanced filtering interface.</i>
+   <img src="https://github.com/SPARC-FAIR-Codeathon/aqua/raw/main/src/assets/images/UI-filtering-feature.png" alt="interface" width="740" height="500"></br>
+  <i>Fig 10. Advanced filtering interface.</i>
 </p>
 
 #### 5. Email notifications for new matched datasets
-Users can opt in to receive emails about new datasets that match their search query. AQUA believes this is a much needed option for users to stay updated about their search and SPARC datasets. Simply click on "Create alerts" under the search box and enter an email. AQUA will trigger an email send when newly added dataset(s) that match the search query are published by SPARC. This is a one-time only email subscription. Options to be alerted more than once can be added in the future. (Figure 10)
+Users can opt in to receive emails about new datasets that match their search query. AQUA believes this is a much needed option for users to stay updated about their search and SPARC datasets. Simply click on "Create alerts" under the search box and enter an email. AQUA will trigger an email send when newly added dataset(s) that match the search query are published by SPARC. This is a one-time only email subscription. Options to be alerted more than once can be added in the future. (Figure 11)
 
 <p align="center">
    <img src="https://github.com/SPARC-FAIR-Codeathon/aqua/raw/main/src/assets/images/UI-email.png" alt="interface" width="780" height="500"></br>
-  <i>Fig 10. Email Notification interface.</i>
+  <i>Fig 11. Email Notification interface.</i>
 </p>
 
 #### 6. Bold matched texts in result display
-When a dataset is returned, any matched text in the dataset title and description will be bolded for easy and convenient lookup (Figure 11). 
+When a dataset is returned, any matched text in the dataset title and description will be bolded for easy and convenient lookup (Figure 12). 
 
 <p align="center">
-   <img src="https://github.com/SPARC-FAIR-Codeathon/aqua/raw/main/src/assets/images/highlighted.png" alt="interface" width="780" height="500"></br>
-  <i>Fig 11. Bolded matched text in result display.</i>
+   <img src="https://github.com/SPARC-FAIR-Codeathon/aqua/raw/main/src/assets/images/highlighted.png" alt="interface" width="850" height="500"></br>
+  <i>Fig 12. Bolded matched text in result display.</i>
 </p>
 
 #### 7. View type
-AQUA adds view type to the existing SPARC Portal to enhance user experience with the website. The default option is List view, which is the SPARC Portal's existing view type. AQUA proposes to add a gallery view option in the future.
+AQUA adds view type to the existing SPARC Portal to enhance user experience with the website. The default option is List view, which is the SPARC Portal's existing view type. AQUA proposes to add a gallery view option in the future. (Figure 13)
 
 <p align="center">
-   <img src="https://github.com/SPARC-FAIR-Codeathon/aqua/raw/main/src/assets/images/UI-view-type.png" alt="interface" width="700" height="500"></br>
-  <i>Fig 12. View type interface.</i>
+   <img src="https://github.com/SPARC-FAIR-Codeathon/aqua/raw/main/src/assets/images/UI-viewtype.png" alt="interface" width="700" height="500"></br>
+  <i>Fig 13. View type interface.</i>
 </p>
 
 ## :hammer_and_wrench: Installation
-You can setup and deploy the Docker module for AQUA by following the steps in: [AQUA Docker](https://github.com/Niloofar-Sh/aqua/tree/main/aqua_docker#readme)
-## :electric_plug: Dependencies
 
-[Docker](https://www.docker.com/) is a platform that bundles and delivers software in packages called containers.
+**Step 1**: Git clone the AQUA project by running the following command:
+`git clone https://github.com/SPARC-FAIR-Codeathon/aqua.git`
+
+**Step 2**: Go into the `aqua` directory and run the following commands:
+```
+# install dependencies
+$ yarn install
+
+# serve with hot reload at localhost:3000
+$ yarn dev
+
+# build for production and launch server
+$ yarn build
+$ yarn start
+```
 
 # :mag_right: Testing
 
