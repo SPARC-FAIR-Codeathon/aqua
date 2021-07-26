@@ -2,42 +2,56 @@
 # About
 Docker module for AQUA SPARC
 
-Docker deployment:
-# Initial setup:
+# Docker deployment:
+## Initial setup:
   - git clone the project
-  - go to the containing directory (the that having docker-compose.yml):
+  - go to the containing directory (the one that having docker-compose.yml):
     - `cd aqua_docker`
-  - Start a new docker-machine:
-    - `docker-machine create -d virtualbox --virtualbox-memory 1024 aqua;`
-  - Attach to the machine:
-    - `eval "$(docker-machine env aqua)"`
+  - create `.env` file, set the value:
 
-## Local deployment
-  - Build the containers (This will take a while for the first time!):
-    -  `docker-compose build`
-  - Create and start containers:
-    - `docker-compose up -d`
-  - To get the machine IP
+        SANIC_LOGO="OVERRIDE LOGO USING CONFIG"
+        ES_API_KEY = "api-key to acces SciCrunch"
+        NM_EMAIL_USR = "email address for notifyme"
+        NM_EMAIL_PWD = "email password for notifyme"
+        DB_NAME = "sqlite3 file path"
+
+
+## Deployment using docker-machine
+  - Preparation
+    - Clone the project and go to the containing directory (the one that having docker-compose.yml):
+      - `cd aqua_docker`
+    - Make sure docker-machine is installed:
+      - `docker-machine version`
+    - If not, refer to [here](https://docs.docker.com/machine/install-machine/) to install docker-machine.
+    - Install a virtual machine application to create a docker machine. We use [VirtualBox](https://www.virtualbox.org/wiki/Downloads) to deploy locally.
+  - Create a new docker machine:
+      - `docker-machine create --driver virtualbox --virtualbox-memory 2048 aqua;`
+        - creating a docker machine on VirtualBox
+        - the minimum VirtualBox allocation is 2048 MB
+  - Point docker client to `aqua`:
+    - Mac OSX & Linux:
+      - `eval "$(docker-machine env aqua)"`
+    - Windows:
+      - Show the environment of `aqua`
+        - `docker-machine env --shell cmd aqua`
+      - Set the environment by running a command under
+        - `Run this command to configure your shell: `
+          - If you use CMD, the command can be:
+            - `@FOR /f "tokens=*" %i IN ('docker-machine env --shell cmd aqua') DO @%i`
+          - If you use Powershell:
+            - `docker-machine env --shell powershell aqua | Invoke-Expression`
+  - Build and start the containers:
+    - `docker-compose up -d --build`
+  - Get the machine IP
     - `docker-machine ip aqua`
   - Now you can access AQUA via web browser with given docker api
     - http://DOCKER-MACHINE-IP/
-
   - Rerun after computer restart:
     - `docker-machine start aqua`
 
-## Local rebuild
-  - Make sure the machine is started:
-    - `eval "$(docker-machine env aqua)"`
-  - Make sure the available container is down
-    - `docker-compose down`
-  - Rebuild, create, and start container
-    - `docker-compose up --build`
-  - Make sure the docker machine is running
-    - `docker-machine start aqua`
-
-## Cloud deployment
-  - Create a virtual machine instance in the cloud
-    (* for our purpose we create a Ubuntu 18.04 LTS (Bionic) amd64 VM in Nectar cloud services)
+## Cloud deployment using docker context
+  - Create a virtual machine instance in the cloud with minimum RAM 2048 MB
+    (for our purpose we create a Ubuntu 18.04 LTS (Bionic) amd64 VM in [Nectar](https://ardc.edu.au/services/nectar-research-cloud/) cloud services)
     - before creating the VM, make sure you have created RSA key pair,
       - setup the public key in the cloud and the VM
       - here are links how to create RSA key pair in different OS:
@@ -65,12 +79,11 @@ Docker deployment:
     - `docker context create --docker host=ssh://ubuntu@VM-PUBLIC-IP remote_aqua`
   - Set remote_aqua as default context
     - `docker context use remote_aqua`
-  - Build the containers in the VM (you do not need to run it if you already build locally):
-    - `docker-compose --context remote_aqua build`
-  - Run the containers in the VM:
-    - `docker-compose --context remote_aqua up -d`
+  - Build and run the containers in the VM:
+    - `docker-compose --context remote_aqua up -d --build`
   - Now you can access AQUA via web browser with your VM public IP
     - http://VM-PUBLIC-IP/
+
 
 ## Cloud rebuild
   - Set remote_aqua as default context
@@ -79,6 +92,8 @@ Docker deployment:
     - `docker-compose --context remote_aqua down`
   - Rebuild, create, and start container
     - `docker-compose --context remote_aqua up --build`
+
+MIT - **Free Software, Enjoy!**
 
 [//]: #URLs
    [sanic]: <https://github.com/channelcat/sanic>
