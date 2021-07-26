@@ -144,46 +144,51 @@ AQUA provides autocompletion for user's query as they type. This feature is powe
 </p>
 
 #### 2. Advanced search options
-There are currently 2 options for user's search query: "Exact match" or "Any of the words match". The default is "Any of the words match". If users want to return datasets for their exact search phrase, they can do that by clicking on "Advanced search" under the search box.
+There are currently 2 options for user's search query: "Exact match" or "Any of the words match". The default is "Any of the words match". If users want to return datasets for their exact search phrase, they can do that by clicking on "Advanced search" under the search box (Figure 8).
+
+<p align="center">
+   <img src="https://github.com/SPARC-FAIR-Codeathon/aqua/raw/main/src/assets/images/advanced-search.png" alt="interface" width="900" height="500"></br>
+  <i>Fig 8. Advanced Search interface.</i>
+</p>
 
 #### 3. Advanced Sorting
-The existing SPARC Portal allows sorting based on dataset titles (alphabetically) and by published date. AQUA adds a "Relevance" sorting criterion that returns results based on how relevant the results are to their search query. This is set as the default sorting option (Figure 8).
+The existing SPARC Portal allows sorting based on dataset titles (alphabetically) and by published date. AQUA adds a "Relevance" sorting criterion that returns results based on how relevant the results are to their search query. This is set as the default sorting option (Figure 9).
 
 <p align="center">
    <img src="https://github.com/SPARC-FAIR-Codeathon/aqua/raw/main/src/assets/images/UI-sorting.png" alt="interface" width="700" height="500"></br>
-  <i>Fig 8. Advanced sorting interface.</i>
+  <i>Fig 9. Advanced sorting interface.</i>
 </p>
 
 #### 4. Advanced Filtering
-The existing SPARC Portal only allows for filtering based on "Dataset status", which is either Published or Embargoed. Aqua adds more sophisticated filtering options: by "Published Date", "Keyword", "Author", and "Category". Users can filter datasets by one or several keywords, authors, and categories. Hit "Enter" after each "keyword", "author", or "category" in their respective box to register it. After the entries are registered, click "Apply" to filter dataset results (Filter 9).
+The existing SPARC Portal only allows for filtering based on "Dataset status", which is either Published or Embargoed. Aqua adds more sophisticated filtering options: by "Published Date", "Keyword", "Author", and "Category". Users can filter datasets by one or several keywords, authors, and categories. Hit "Enter" after each "keyword", "author", or "category" in their respective box to register it. After the entries are registered, click "Apply" to filter dataset results (Filter 10).
 
 <p align="center">
-   <img src="https://github.com/SPARC-FAIR-Codeathon/aqua/raw/main/src/assets/images/UI-filtering-feature.png" alt="interface" width="780" height="500"></br>
-  <i>Fig 9. Advanced filtering interface.</i>
+   <img src="https://github.com/SPARC-FAIR-Codeathon/aqua/raw/main/src/assets/images/UI-filtering-feature.png" alt="interface" width="740" height="500"></br>
+  <i>Fig 10. Advanced filtering interface.</i>
 </p>
 
 #### 5. Email notifications for new matched datasets
-Users can opt in to receive emails about new datasets that match their search query. AQUA believes this is a much needed option for users to stay updated about their search and SPARC datasets. Simply click on "Create alerts" under the search box and enter an email. AQUA will trigger an email send when newly added dataset(s) that match the search query are published by SPARC. This is a one-time only email subscription. Options to be alerted more than once can be added in the future. (Figure 10)
+Users can opt in to receive emails about new datasets that match their search query. AQUA believes this is a much needed option for users to stay updated about their search and SPARC datasets. Simply click on "Create alerts" under the search box and enter an email. AQUA will trigger an email send when newly added dataset(s) that match the search query are published by SPARC. This is a one-time only email subscription. Options to be alerted more than once can be added in the future. (Figure 11)
 
 <p align="center">
    <img src="https://github.com/SPARC-FAIR-Codeathon/aqua/raw/main/src/assets/images/UI-email.png" alt="interface" width="780" height="500"></br>
-  <i>Fig 10. Email Notification interface.</i>
+  <i>Fig 11. Email Notification interface.</i>
 </p>
 
 #### 6. Bold matched texts in result display
-When a dataset is returned, any matched text in the dataset title and description will be bolded for easy and convenient lookup (Figure 11). 
+When a dataset is returned, any matched text in the dataset title and description will be bolded for easy and convenient lookup (Figure 12). 
 
 <p align="center">
-   <img src="https://github.com/SPARC-FAIR-Codeathon/aqua/raw/main/src/assets/images/highlighted.png" alt="interface" width="780" height="500"></br>
-  <i>Fig 11. Bolded matched text in result display.</i>
+   <img src="https://github.com/SPARC-FAIR-Codeathon/aqua/raw/main/src/assets/images/highlighted.png" alt="interface" width="850" height="500"></br>
+  <i>Fig 12. Bolded matched text in result display.</i>
 </p>
 
 #### 7. View type
-AQUA adds view type to the existing SPARC Portal to enhance user experience with the website. The default option is List view, which is the SPARC Portal's existing view type. AQUA proposes to add a gallery view option in the future.
+AQUA adds view type to the existing SPARC Portal to enhance user experience with the website. The default option is List view, which is the SPARC Portal's existing view type. AQUA proposes to add a gallery view option in the future. (Figure 13)
 
 <p align="center">
    <img src="https://github.com/SPARC-FAIR-Codeathon/aqua/raw/main/src/assets/images/UI-viewtype.png" alt="interface" width="700" height="500"></br>
-  <i>Fig 12. View type interface.</i>
+  <i>Fig 13. View type interface.</i>
 </p>
 
 ## :hammer_and_wrench: Installation
