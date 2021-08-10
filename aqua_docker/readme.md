@@ -1,6 +1,6 @@
 # AQUA - docker
-# About
-Docker module for AQUA SPARK
+## About
+Docker module for AQUA SPARC
 
 # Docker deployment:
 ## Initial setup:
