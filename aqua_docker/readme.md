@@ -1,5 +1,5 @@
-# AQUA - docker
-## About
+# AQUA - Docker
+# About
 Docker module for AQUA SPARC
 
 # Docker deployment:
@@ -83,6 +83,15 @@ Docker module for AQUA SPARC
     - `docker-compose --context remote_aqua up -d --build`
   - Now you can access AQUA via web browser with your VM public IP
     - http://VM-PUBLIC-IP/
+
+
+## Cloud rebuild
+  - Set remote_aqua as default context
+    - `docker context use remote_aqua`
+  - Make sure the available container is down
+    - `docker-compose --context remote_aqua down`
+  - Rebuild, create, and start container
+    - `docker-compose --context remote_aqua up --build`
 
 MIT - **Free Software, Enjoy!**
 
