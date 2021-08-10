@@ -98,7 +98,7 @@ Table 1, shows the Mean Average Precision (MAP) of AQUA and Elasticsearch (ES) o
 | 3 typo          |           nan        |         nan        |              **0.540761** |           0.481212  |              **0.646919** |          0.621238   |
 
 
-Table 2 shows the Mean Average Precision (MAP) of AQUA and Elasticsearch (ES) over 22 test collections consisting of authors as queries. AQUA is better to correct a misspelling that appears in a two-term author query. A striking performance difference is AQUA's ability to fix author as a query that loses space where AQUA's MAP is 0.92 while ES is only 0.12.
+Table 2 shows the Mean Average Precision (MAP) of AQUA and Elasticsearch (ES) over 9 test collections consisting of authors as queries. AQUA is better to correct a misspelling that appears in a two-term author query. A striking performance difference is AQUA's ability to fix author as a query that loses space where AQUA's MAP is 0.92 while ES is only 0.12.
 
 | Typo      |   ('1 term', 'AQUA') |   ('1 term', 'ES') |   ('2 terms', 'AQUA') |   ('2 terms', 'ES') |
 |:----------|---------------------:|-------------------:|----------------------:|--------------------:|
