@@ -3,12 +3,14 @@ Yuda Munarko
 26 July 2021
 """
 
+from .notifyme_utils import add_new_single_entry
 import os
 import requests
 from sanic.response import json, html
 
 # loading api_key from environment
 api_key = os.getenv('ES_API_KEY', None)
+
 
 def loadMain():
     """
@@ -20,8 +22,9 @@ def loadMain():
         htmlText = f.read()
         f.close()
     except:
-        return html("We are sorry,there was an error ..., %s is not found"%fileName)
+        return html("We are sorry,there was an error ..., %s is not found" % fileName)
     return html(htmlText)
+
 
 def __find(element, JSON):
     """
@@ -37,13 +40,17 @@ def __find(element, JSON):
             if isinstance(data[p], dict):
                 data = data[p]
             elif isinstance(data[p], list):
-                data = [__find(element[element.__find(p)+len(p)+1:], lst) for lst in data[p]]
+                data = [__find(element[element.find(p)+len(p)+1:], lst)
+                        for lst in data[p]]
                 break
             elif len(paths)-1 == count:
                 return data[p]
+        if [] in data:
+            data.remove([])
         return data
     except:
         return []
+
 
 def getSearch(request):
     """
@@ -74,7 +81,7 @@ def getSearch(request):
     query = {
         "size": size,
         "from": 0,
-        "_source":{
+        "_source": {
             "includes": includes
         },
         "highlight": {
@@ -82,8 +89,8 @@ def getSearch(request):
                 "item.name": {},
                 "item.description": {},
                 "item.readme.description": {},
-             }
-         },
+            }
+        },
     }
     if 'query' in request.args:
         # get argument values
@@ -100,18 +107,20 @@ def getSearch(request):
             query['query']['query_string']['query'] = summary['suggestions'][0]
             summary['executed'] = summary['suggestions'][0]
         if match == 'yes':
-            query['query']['query_string']['query'] = '\"' + query['query']['query_string']['query'] +'\"'
+            query['query']['query_string']['query'] = '\"' + \
+                query['query']['query_string']['query'] + '\"'
 
     response = requests.post(url, json=query)
     summary['total'] = response.json()['hits']['total']
-    summary['filters'] = {'keywords':{}, 'authors':{}, 'status':{'public':[], 'embargoed':[]}}
-    summary['sorts'] = {'ranking':[],'date':[]}
+    summary['filters'] = {'keywords': {}, 'authors': {},
+                          'status': {'public': [], 'embargoed': []}}
+    summary['sorts'] = {'ranking': [], 'date': []}
     summary['hits'] = {}
     dates, srtDates, names, srtNames = [], [], [], []
     for hit in response.json()['hits']['hits']:
         idx = __find('_source.pennsieve.identifier', hit)
         if idx == []:
-            idx = 'dummy_' + str(len(summary['hits'])) # embargo and none
+            idx = 'dummy_' + str(len(summary['hits']))  # embargo and none
 
         # extract filters
         ## extract from keywords
@@ -122,7 +131,7 @@ def getSearch(request):
         ## extract from contributors
         firsts = __find('_source.contributors.first.name', hit)
         lasts = __find('_source.contributors.last.name', hit)
-        for name in [first+' '+last for first, last in (zip(firsts,lasts))]:
+        for name in [first+' '+last for first, last in (zip(firsts, lasts))]:
             if name not in summary['filters']['authors']:
                 summary['filters']['authors'][name] = []
             summary['filters']['authors'][name] += [idx]
@@ -155,7 +164,7 @@ def getSearch(request):
               'organisms': __find('_source.organisms.primary.species.originalName', hit),
               'publication': __find('_source.item.published.boolean', hit),
               'techniques': __find('_source.item.techniques.keyword', hit),
-               }
+              }
         if 'highlight' in hit:
             ht['highlight'] = {}
             for type, value in hit['highlight'].items():
@@ -163,22 +172,25 @@ def getSearch(request):
         summary['hits'][idx] = ht
 
     # sort based on dates and titles
-    if len(dates) > 0: # when there are results
-        dates, srtDates = zip(*sorted(zip(dates, srtDates),reverse=True))
+    if len(dates) > 0:  # when there are results
+        dates, srtDates = zip(*sorted(zip(dates, srtDates), reverse=True))
         names, srtNames = zip(*sorted(zip(names, srtNames)))
     summary['sorts']['date'] = list(srtDates)
     summary['sorts']['name'] = list(srtNames)
     return json(summary)
+
 
 def getSuggestions(request):
     """
     To get query suggestion from scigraph
         - see suggestions(request) in server.py
     """
-    if 'query' not in request.args: return json({})
+    if 'query' not in request.args:
+        return json({})
     query = request.args['query'][0]
     limit = request.args['limit'] if 'limit' in request.args else '10'
     return json(__getSuggestions(query, limit))
+
 
 def __getSuggestions(query, limit):
     """
@@ -188,38 +200,43 @@ def __getSuggestions(query, limit):
     correction = __getCorrection(query)
     # get suggestion from SciGraph
     url = 'https://scicrunch.org/api/1/scigraph/vocabulary/suggestions/'+query
-    params = {'api_key':api_key,'limit':limit}
+    params = {'api_key': api_key, 'limit': limit}
     rsp = requests.get(url, params=params)
     # return the correction and suggestions
     return [correction] + rsp.json()
+
 
 def getAutoComplete_sc(request):
     """
     To get autocomplete from SciGraph
         - see autocomplete_sc(request) in server.py
     """
-    if 'query' not in request.args: return json({})
+    if 'query' not in request.args:
+        return json({})
     query = request.args['query'][0]
     limit = request.args['limit'][0] if 'limit' in request.args else '10'
     verbose = 'no' if 'verbose' not in request.args else request.args['verbose'][0]
     return json(__getAutoComplete_sc(query, limit, verbose))
+
 
 def __getAutoComplete_sc(query, limit, verbose):
     """
     To get autocomplete as a list data type.
     """
     url = 'https://scicrunch.org/api/1/scigraph/vocabulary/autocomplete/'+query
-    params = {'api_key':api_key,'limit':limit,'searchSynonyms':'true',
-              'searchAbbreviations':'false','searchAcronyms':'false',
-              'includeDeprecated':'false'}
+    params = {'api_key': api_key, 'limit': limit, 'searchSynonyms': 'true',
+              'searchAbbreviations': 'false', 'searchAcronyms': 'false',
+              'includeDeprecated': 'false'}
     rsp = requests.get(url, params=params)
-    if verbose == 'yes': return rsp.json()
+    if verbose == 'yes':
+        return rsp.json()
     completions = []
     for completion in rsp.json():
         cmp = completion['completion'].lower()
         if cmp not in completions:
             completions += [cmp]
     return completions
+
 
 def __loadWordsCompletion():
     """
@@ -234,19 +251,23 @@ def __loadWordsCompletion():
     }
     return autocomplete_factory(content_files=content_files)
 
+
 # get fast_autocomplete pipeline
 autocomplete = __loadWordsCompletion()
+
 
 def getAutoComplete(request):
     """
     To get autocomplete from fast_autocomplete
         - see autocomplete(request) in server.py
     """
-    if 'query' not in request.args: return json([])
+    if 'query' not in request.args:
+        return json([])
     query = request.args['query'][0]
     limit = int(request.args['limit'][0]) if 'limit' in request.args else 10
     completions = autocomplete.search(word=query, max_cost=3, size=limit)
     return json([' '.join(completion) for completion in completions])
+
 
 def __loadSpellChecker():
     """
@@ -259,19 +280,22 @@ def __loadSpellChecker():
     sym_spell.load_pickle('/usr/src/app/resources/_spell_model')
     return sym_spell
 
+
 # get symspellpy pipeline
 sym_spell = __loadSpellChecker()
+
 
 def __getCorrection(query):
     """
     To get autocorrection as a string.
     """
-    max_edit_distance_lookup = 4
     result = sym_spell.word_segmentation(query)
     return result.corrected_string
 
+
 #importing add_new_single_entry for NotifyMe purpose
-from .notifyme_utils import add_new_single_entry
+
+
 def getNotifyMe(request):
     """
     To set email and keywords to get notification for new datasets
@@ -280,7 +304,7 @@ def getNotifyMe(request):
     try:
         email = request.form['email'][0]
         keywords = request.form['keywords'][0]
-        add_new_single_entry(email,keywords)
-        return json({'success':'true'})
+        add_new_single_entry(email, keywords)
+        return json({'success': 'true'})
     except:
-        return json({'success':'false'})
+        return json({'success': 'false'})
