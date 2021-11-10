@@ -205,7 +205,9 @@ AQUA adds view type to the existing SPARC Portal to enhance user experience with
 **Step 1**: Git clone the AQUA project by running the following command:
 `git clone https://github.com/SPARC-FAIR-Codeathon/aqua.git`
 
-**Step 2**: Go into the `aqua` directory and run the following commands:
+**Step 2**: Make sure you have Yarn installed on your computer. Yarn is a package manager (an alternative to [npm](https://www.npmjs.com/)). Installation instructions for Yarn is detailed [here](https://classic.yarnpkg.com/lang/en/docs/install/#windows-stable). Specifically, you can choose which operating system you are installing Yarn for to get a custom installation instructions. 
+
+**Step 3**: Go into the `aqua` directory and run the following commands:
 ```
 # install dependencies
 $ yarn install
