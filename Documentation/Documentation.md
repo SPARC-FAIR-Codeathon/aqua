@@ -207,7 +207,12 @@ AQUA adds view type to the existing SPARC Portal to enhance user experience with
 
 **Step 2**: Make sure you have Yarn installed on your computer. Yarn is a package manager (an alternative to [npm](https://www.npmjs.com/)). Installation instructions for Yarn is detailed [here](https://classic.yarnpkg.com/lang/en/docs/install/#windows-stable). Specifically, you can choose which operating system you are installing Yarn for to get a custom installation instructions. 
 
-**Step 3**: Go into the `aqua` directory and run the following commands:
+**Step 3**: In your terminal, go into the `aqua` directory and run the following command to install necessary python packages for AQUA:
+```
+pip install -r requirements.txt
+```
+
+**Step 4**: Run the following commands:
 ```
 # install dependencies
 $ yarn install
