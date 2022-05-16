@@ -1,0 +1,10 @@
+flask
+flask_restplus
+requests
+schedule
+sanic 
+numpy 
+pandas 
+plotly
+seaborn
+
